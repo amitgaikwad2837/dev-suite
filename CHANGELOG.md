@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.21.0
+- Added `payments-integration`. The idea came from reading three founder-skills repos (whawkinsiv/solo-founder-skills and others); the wording and method are new.
+
 ## 0.20.0
 - Added a test-guard hook (`hooks/guard-tests.js`) that asks for confirmation when an edit would skip or weaken a test, delete a test file, skip git hooks or detect a test run. `scripts/test-hooks.js` tests it and CI runs it. `honest-fixes` now mentions it.
 

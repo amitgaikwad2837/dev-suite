@@ -4,7 +4,7 @@ What's here: requirements interviews, UX research, new apps, design decisions, A
 
 ## Not covered yet
 
-Nothing is on the list. Areas that have only a light touch: mobile apps (no iOS or Android specifics), infrastructure as code and cloud cost, and data engineering beyond what `data-ml-work` covers.
+Nothing is on the list. Possible additions: a launch go/no-go gate for a first release, a codebase-onboarding skill that writes a starter `CLAUDE.md`. Areas that have only a light touch: mobile apps (no iOS or Android specifics), infrastructure as code and cloud cost, and data engineering beyond what `data-ml-work` covers.
 
 ## Known weak spots
 
