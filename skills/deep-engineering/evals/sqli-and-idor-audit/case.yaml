@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: sqli-and-idor-audit
+expected_outcome: |
+  Reports SQL injection, missing object-level authorization, forgeable role cookie and unsafe yaml.load with locations, exploit scenarios and root-level fixes.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: flaky-test-root-cause
+expected_outcome: |
+  Finds a nondeterminism or float-rounding root cause, makes it reproducible, fixes it at the source with a regression test, no retries.
