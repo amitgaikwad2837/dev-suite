@@ -1,6 +1,6 @@
 ---
 name: deep-engineering
-description: A disciplined workflow for hard engineering work. Use whenever the user has a bug they can't explain (flaky tests, "works locally but fails in CI", wrong numbers, races), asks for a security review or audit ("before we ship"), plans a migration or refactor across many files, wants to build a new application or feature from scratch, wants to upgrade a framework, language or major dependency ("upgrade to Angular 18", "move to Python 3.13"), wants several approaches compared before a hard-to-reverse design choice ("arena this"), hands over a long multi-step task, or has failing tests/CI that must be fixed for real, not silenced, even without saying "root cause". Also use when a stuck production issue tempts a risky shortcut (drop table, force push). Skip one-line fixes, simple questions and routine edits.
+description: A disciplined workflow for hard engineering work. Use whenever the user has a bug they can't explain (flaky tests, "works locally but fails in CI", wrong numbers, races), asks for a security review or audit ("before we ship"), plans a migration or refactor across many files, wants to build a new application or feature from scratch, wants to upgrade a framework, language or major dependency ("upgrade to Angular 18", "move to Python 3.13"), wants several approaches compared before a hard-to-reverse design choice ("arena this"), hands over a long multi-step task, wants to rebuild or replace an existing application, or has failing tests/CI that must be fixed for real, not silenced, even without saying "root cause". Also use when a stuck production issue tempts a risky shortcut (drop table, force push). Skip one-line fixes, simple questions and routine edits.
 ---
 
 # Deep Engineering
@@ -103,6 +103,19 @@ A green test run is only evidence that the code works. Making it green by other 
 - you lack access or information you can't get yourself (credentials, a service, real data, a log from their environment)
 
 **How to ask:** one message with (1) what you were trying to achieve, (2) what is failing, with the exact error, (3) what you tried and what each attempt showed, (4) your best current theory, and (5) two or three concrete options with your recommendation, for example "fix X, or confirm the test expectation is outdated and I'll update it". Don't ask open-ended "what should I do?", and don't hide a failure in the summary: if something still fails, say so first.
+
+## 10. Rebuilding an existing application (replica)
+
+Use when the user wants to recreate an application's behavior: replacing a legacy system they own, matching a vendor tool's feature set for internal use, or building something inspired by existing software. Rebuild from observed behavior, not from the original's code.
+
+**Boundaries first.** Confirm the user owns the original or has permission, or that the goal is a functionally similar product, not a lookalike. Never copy source code, assets, text, branding, trademarks or proprietary data, and never bypass access controls or licensing to inspect it. If the request is to impersonate another company's look and name, say so and ask for a distinct identity instead.
+
+1. **Scope.** What must match (workflows, data, integrations) and what may differ (UI, stack, features to drop or improve). Write both lists.
+2. **Observe as a black box.** Capture user flows, screens, data model, API contracts, validation rules, error states and edge cases from the running system, public docs or the user's own materials. Record them as a behavior spec and a parity checklist, one line per behavior.
+3. **Design your own.** Choose the stack, naming, structure and visual design yourself; use Mode 6 for choices that are costly to change.
+4. **Build fresh in slices** (Mode 7), each slice covering a group of checklist items, with tests that encode the spec.
+5. **Check parity** where it is legitimate to run both: feed the same inputs to the original and the replica and compare outputs, with differences either fixed or recorded as intentional.
+6. **Report** a parity table (matched / intentionally different / not yet), plus risks. For a legacy replacement, plan data migration, shadow running and rollback with Mode 4.
 
 ## Report shape
 
