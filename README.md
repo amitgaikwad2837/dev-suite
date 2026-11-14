@@ -34,7 +34,7 @@ What it changes about Claude's behavior:
 **One project** (commit it so your whole team gets it):
 
 ```bash
-git clone https://github.com/<your-user>/ClaudeSkills.git
+git clone https://github.com/amitgaikwad2837/ClaudeSkills.git
 mkdir -p your-project/.claude/skills
 cp -r ClaudeSkills/skills/deep-engineering your-project/.claude/skills/
 ```
