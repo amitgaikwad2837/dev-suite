@@ -8,7 +8,7 @@
     {
       "name": "dev-suite",
       "source": "./",
-      "description": "A full development suite: dev-lifecycle (router from idea to production), requirements-interview (get requirements answered before building), deep-engineering (bugs, security, migrations, upgrades, new apps, replicas, honest test fixing, clear writing) and skill-capture (turn repeated work into skills)."
+      "description": "A full development suite: dev-lifecycle (router), dev-orchestrator (manager plus specialist subagents, token-lean tiers), requirements-interview, deep-engineering (bugs, security, migrations, upgrades, new apps, replicas, honest test fixing, clear writing), change-review, test-strategy, release-engineering and skill-capture."
     }
   ]
 }

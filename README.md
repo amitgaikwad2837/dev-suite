@@ -1,11 +1,15 @@
 # dev-suite
 
-A development workflow suite for Claude Code: four skills that cover a job from idea to production, plus a plan for what is still missing (see [ROADMAP.md](ROADMAP.md)).
+A development workflow suite for Claude Code: eight skills and eight subagents that cover a job from idea to production, plus a plan for what is still missing (see [ROADMAP.md](ROADMAP.md)).
 
 | Phase | Skill |
 |---|---|
 | Entry point, routes the work | `dev-lifecycle` |
+| Team mode: manager plus specialist subagents | `dev-orchestrator` |
 | Discover: get requirements answered | `requirements-interview` |
+| Verify: decide what to test and write tests that catch bugs | `test-strategy` |
+| Review: PRs and diffs before merge | `change-review` |
+| Ship: pipelines, rollouts, rollback, release notes | `release-engineering` |
 | Design, build, change, verify, review, ship, write | `deep-engineering` (11 modes) |
 | Learn: turn repeated work into skills | `skill-capture` |
 
@@ -47,6 +51,31 @@ Spots repeated work and turns it into a reusable skill. When the same multi-step
 
 Gets the missing requirements before anything is built. Claude sorts what it needs to know into three groups: things it can look up, things it can safely default, and things only you can decide. It asks only the last group, in a short numbered round where every question has a proposed answer, so you can reply "defaults" or change a few numbers. Follow-up rounds happen only where answers open new decisions. It ends with a one-page brief (goal, decisions, assumptions, out of scope, risks) for you to confirm.
 
+## change-review
+
+Reviews a pull request or diff and returns a verdict with ranked, actionable comments. Claude first states what the change is meant to do and whether the description matches it, ranks the changed behaviors by what breaks if they are wrong, reads the riskiest code first, checks that tests would actually catch a failure (and runs them when it can), then writes comments with a location, a severity label (blocker, should fix, question, nit), the reason and a suggested fix. It ends with a verdict and what it did not review. It can also review your own change before you ask others.
+
+## test-strategy
+
+Decides what deserves a test and writes tests that catch real bugs. Behaviors are listed and ranked by risk, each is tested at the cheapest level that catches it, and tests are named for behavior, cover boundaries, stay deterministic and mock only at the edges. New tests are checked by deliberately breaking the code to see them fail. It also covers characterization tests for legacy code, flaky-test triage (fix the cause, quarantine only with an owner and a date) and slow suites.
+
+## release-engineering
+
+Designs and runs safe releases. It covers versioning, a build-once-promote pipeline, a pass/fail readiness checklist, rollout strategy chosen by risk (rolling, blue-green, canary, flags) with abort criteria written before starting, rollback and database expand/contract changes, and release notes for the reader. It asks for explicit confirmation before any production deploy, tag, publish or live migration.
+
+## dev-orchestrator and the agent team
+
+For work with a real design choice or risk, a manager runs a small team of specialist subagents (`agents/` folder): `requirements-analyst`, `solution-architect`, `implementer`, `test-engineer`, `change-reviewer`, `security-auditor`, `release-manager`, led by `dev-manager`. Each specialist loads the skill for its role. They propose designs independently, critique each other against written criteria, the manager decides and records the dissent, then the team implements in slices and reviews the result.
+
+Subagents report to the manager and share files in `.dev-suite/board/`; they can also message each other for short questions. Only the manager talks to you.
+
+It is built to spend few tokens:
+- **Tiers:** solo by default, a pair (implementer plus reviewer) for normal risk, a council only for hard-to-reverse choices.
+- **Short briefs, file paths instead of pasted text, summaries of at most about 100 words**, with details kept in files.
+- **Small models** for light roles (analyst, release prep), a mid model for implementer, tester and reviewers, and turn limits on every agent.
+
+Start it by asking for "use your agent team to ...", or run the whole session as the manager: `claude --agent dev-suite:dev-manager`. A team still costs more than one agent, so use it only when the decision is worth it.
+
 ### Install
 
 **As a plugin (recommended):** inside Claude Code, add the marketplace and install:
@@ -56,7 +85,7 @@ Gets the missing requirements before anything is built. Claude sorts what it nee
 /plugin install dev-suite@amitgaikwad2837-skills
 ```
 
-All four skills then load and trigger automatically when a task matches. The marketplace files are in `.claude-plugin/`.
+All eight skills and the agents then load and trigger automatically when a task matches. The marketplace files are in `.claude-plugin/`.
 
 **One project, without the plugin system** (commit it so your whole team gets it):
 
@@ -74,7 +103,7 @@ cp -r ClaudeSkills/skills/deep-engineering ~/.claude/skills/
 
 **claude.ai:** upload a single skill from `dist/` (for example `dist/deep-engineering.skill`) under Settings, Skills.
 
-**Everything at once, manually:** unzip `dist/dev-suite.zip` into `~/.claude/skills/` (or a project's `.claude/skills/`). It holds all four skills without the test cases.
+**Everything at once, manually:** unzip `dist/dev-suite.zip` into `~/.claude/skills/` (or a project's `.claude/skills/`). It holds all eight skills and the `agents/` folder (copy `agents/` to `~/.claude/agents/`), without the test cases.
 
 ### Prior art
 
@@ -100,7 +129,7 @@ Each skill has test cases in its `evals/` folder. Every case was run once with t
 | skill-capture | 5/5 | 3/5 |
 | Requirements interview (measured on the earlier wording) | 5/5 | 3/5 |
 
-Three of these skills were rewritten after the run and need a rerun. Caveats: single runs, graded by the author, not independent. Several cases tie, which means Claude already does that part well; the skills add the most on process and structure. The `dev-lifecycle` case has been written but not run, and the trigger descriptions have not been tuned. Treat this as a sanity check, not a benchmark. Contributions of harder cases are welcome.
+Three of these skills were rewritten after the run and need a rerun. Caveats: single runs, graded by the author, not independent. Several cases tie, which means Claude already does that part well; the skills add the most on process and structure. The cases for `dev-lifecycle`, `change-review`, `test-strategy` and `release-engineering` have been written but not run, and the trigger descriptions have not been tuned. Treat this as a sanity check, not a benchmark. Contributions of harder cases are welcome.
 
 ### Check the repo
 

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: pr-with-hidden-risks
+expected_outcome: |
+  States the intent, notices the description's no-behavior-change claim is false, ranks risks (SQL injection first), notes missing tests for the filter and refund helper, uses severity labels, gives a verdict and says what was not reviewed.

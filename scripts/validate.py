@@ -58,6 +58,8 @@ for skill in sorted(p for p in skills_dir.iterdir() if p.is_dir()):
         err(f"{skill.name}: name must be lowercase letters, digits and hyphens")
     if not desc:
         err(f"{skill.name}: description missing")
+    if desc and not desc.startswith(('"', "'")) and (": " in desc or " #" in desc):
+        err(f"{skill.name}: unquoted description contains ': ' or ' #', which breaks YAML; reword or quote it")
     if len(desc) > 1024:
         err(f"{skill.name}: description is {len(desc)} chars (max 1024)")
     elif len(desc) > 900:
@@ -111,6 +113,20 @@ if pj.exists() and mj.exists():
             err(f"plugin.json name '{pn}' is not listed in marketplace.json plugins {mn}")
     except Exception:  # noqa: BLE001
         pass
+
+agents_dir = ROOT / "agents"
+if agents_dir.exists():
+    for md in sorted(agents_dir.rglob("*.md")):
+        fm = frontmatter(md.read_text(encoding="utf8"))
+        if fm is None:
+            err(f"agents/{md.name}: frontmatter missing or malformed")
+            continue
+        if not fm.get("name") or not fm.get("description"):
+            err(f"agents/{md.name}: name and description are required")
+        elif ":" in fm["name"]:
+            err(f"agents/{md.name}: name must not contain a colon")
+        elif fm["name"] != md.stem:
+            warn(f"agents/{md.name}: name '{fm['name']}' differs from the file name")
 
 dist = ROOT / "dist"
 for s in skill_names:

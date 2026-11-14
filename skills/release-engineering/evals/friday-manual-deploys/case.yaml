@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: friday-manual-deploys
+expected_outcome: |
+  Proposes build-once-promote CI/CD, a readiness checklist, a rollout strategy with abort criteria, expand/contract for the migration, rollback, versioning and notes, a short first-step plan, and confirms before production actions.

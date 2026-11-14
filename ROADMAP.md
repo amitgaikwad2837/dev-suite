@@ -1,6 +1,6 @@
 # Roadmap: gaps in the suite
 
-What the suite covers today: requirements interviews (`requirements-interview`), the build/fix/upgrade/migrate/rebuild/review/write workflow (`deep-engineering`, 11 modes), repeated-work capture (`skill-capture`), and a router (`dev-lifecycle`).
+What the suite covers today: requirements interviews (`requirements-interview`), the build/fix/upgrade/migrate/rebuild/security/write workflow (`deep-engineering`, 11 modes), change review (`change-review`), testing (`test-strategy`), releases (`release-engineering`), repeated-work capture (`skill-capture`), and a router (`dev-lifecycle`).
 
 This list is the result of reading every skill and comparing it with what a full development lifecycle needs. Items are ordered by how often they come up and how much a dedicated skill would help.
 
@@ -8,9 +8,9 @@ This list is the result of reading every skill and comparing it with what a full
 
 | Priority | Gap | Why it matters | Today's coverage |
 |---|---|---|---|
-| High | **Code review of someone else's change** (PR review: correctness, tests, naming, risk, review comments) | Reviews are daily work; the security mode only covers vulnerabilities | None; Mode 2 touches security only |
-| High | **Test strategy and test writing** (what to test, unit vs integration, fixtures, coverage gaps, flaky-test hygiene) | Nearly every mode depends on good tests | Regression tests and characterization tests are mentioned, not taught |
-| High | **CI/CD and release engineering** (pipelines, environments, rollout, rollback, versioning, changelogs) | "Ship" is only a line in Modes 4 and 8 | Rollout notes only |
+| Done | **Code review of someone else's change** | Built as `change-review` | Needs a rerun and more cases |
+| Done | **Test strategy and test writing** | Built as `test-strategy` | Needs a rerun and more cases |
+| Done | **CI/CD and release engineering** | Built as `release-engineering` | Needs a rerun and more cases |
 | Medium | **Database and schema changes** (expand/contract migrations, backfills, locks, zero-downtime) | Common cause of outages | Mode 5 covers a stuck lock; no planning guidance |
 | Medium | **Incident response and postmortems** (triage, mitigation, comms, blameless review) | Production fires need a calm checklist | Mode 5 covers risky shortcuts only |
 | Medium | **Performance work** (measure, profile, fix the bottleneck, prove the gain) | Easy to optimize the wrong thing | None |
@@ -32,7 +32,7 @@ This list is the result of reading every skill and comparing it with what a full
 
 ## Suggested next steps
 
-1. Add `code-review`, `testing` and `release-engineering` skills (the three high-priority gaps).
+1. Run the three new skills against more cases and tune their descriptions; then build the medium-priority gaps (database changes, incident response, performance, API design, observability).
 2. Split `deep-engineering`, then rerun the evals on the split skills.
 3. Run `claude plugin validate .` and a clean install test; tag `v0.1.0`.
 4. Build the trigger-accuracy sets and tune descriptions.
