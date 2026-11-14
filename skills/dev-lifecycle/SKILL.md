@@ -11,7 +11,7 @@ A map for the whole job. It decides the order of work and hands each phase to th
 
 | # | Phase | Do this | Skill |
 |---|---|---|---|
-| 1 | **Discover** | Get requirements, constraints and success criteria answered by the user | `requirements-interview` |
+| 1 | **Discover** | Get requirements, constraints and success criteria answered by the user; for anything holding data or exposed to the internet, ask the security questions too | `requirements-interview`, `security-prompter` |
 | 2 | **Design** | One-page spec; choose between options that are hard to reverse | `new-app-build` (spec, plan), `design-decision` |
 | 3 | **Build** | Walking skeleton with CI first, then tested vertical slices | `new-app-build`, `coding-discipline` |
 | 4 | **Change existing code** | Bug, refactor, migration, version upgrade, or rebuild of a legacy app | `bug-investigation`, `migrate-and-upgrade`, `app-replica` |

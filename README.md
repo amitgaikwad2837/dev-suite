@@ -37,6 +37,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | bug-investigation | Bugs nobody can explain, flaky tests, "fails only in CI" |
 | migrate-and-upgrade | Library or framework migrations, big refactors, version upgrades |
 | app-replica | Rebuilding or replacing an existing application |
+| security-prompter | Before building: asks the security questions only you can answer and writes a one-page security brief |
 | security-review | A security audit before shipping |
 | change-review | Reviewing a PR or diff |
 | test-strategy | What to test, writing tests, flaky and slow suites |
@@ -90,7 +91,9 @@ The five frontend skills were run the same way later. With the skills: 25 of 25 
 | DESIGN.md from a described brand | 5/5 | 4/5 |
 | Slow, keyboard-unfriendly page | 5/5 | 4/5 |
 
-No page was rendered in any of these runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
+The security-prompter case (family photo app) passed 4/5 with the skill and 3/5 without: both found the invite-link and upload risks, but the baseline asked ten questions with no proposed answers, and the skill run left out the question about where secrets are kept.
+
+No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 
 Earlier single runs for the rest: requirements-interview 5/5 vs 3/5, skill-capture 5/5 vs 3/5, dev-lifecycle 5/5 vs 4/5, dev-orchestrator 5/5 vs 0/5 (plan only, no agents spawned), change-review 5/5 vs 2/5, test-strategy 5/5 vs 4/5, release-engineering 5/5 vs 2/5.
 

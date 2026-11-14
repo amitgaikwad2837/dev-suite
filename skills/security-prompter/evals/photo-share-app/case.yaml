@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: photo-share-app
+expected_outcome: |
+  Asks a short numbered list of security questions with proposed defaults, then writes a one-page security brief with testable requirements.

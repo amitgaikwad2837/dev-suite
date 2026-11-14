@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.0
+- Added `security-prompter`, which asks the security questions up front and writes a security brief.
+
 ## 0.6.0
 - Added five frontend skills: frontend-design, design-reference, ui-polish, browser-verify, web-quality. Each has an eval case. First eval run: 25/25 with the skills, 16/25 without (self-graded, nothing rendered in a browser).
 
