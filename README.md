@@ -22,6 +22,7 @@ What it changes about Claude's behavior:
 | Security review | Trace untrusted input to sinks; each finding gets a location, an exploit line, a fix; unverified items are labelled "suspected" |
 | Long multi-step work | Numbered plan where every step ends with "Done when ...", small verified increments, final done / unverified / left report |
 | Refactors and migrations | Safety net first, migrate in slices behind a flag, pin old-vs-new behavior differences with tests |
+| Arena (compare approaches) | For hard-to-reverse design choices: fix judging criteria first, generate 3 independent candidates, cross-judge with evidence, pick a base and graft strengths from the rest |
 | Risky shortcuts | Diagnose first, offer the least destructive option, confirm the exact action before anything irreversible |
 
 ### Install

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: arena-design-choice
+expected_outcome: |
+  Fixes criteria first, develops several independent candidates, judges them with evidence, picks a base and says what was grafted from the others.

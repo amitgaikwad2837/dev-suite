@@ -1,6 +1,6 @@
 ---
 name: deep-engineering
-description: A disciplined workflow for hard engineering work. Use this whenever the user reports a bug they can't explain (flaky/intermittent tests, "works locally but fails in CI", wrong numbers, race conditions, "figure out why"), asks for a security review or audit of code (injection, auth, secrets, "before we ship"), plans a migration or refactor spanning many files or modules, or hands over any task that will take many steps and must stay on track, even if they never say "root cause" or "deep dive". Also use it when a stuck production issue tempts a risky shortcut (drop table, force push) so the risk gets checked first. Skip for one-line fixes, simple questions and routine edits.
+description: A disciplined workflow for hard engineering work. Use this whenever the user reports a bug they can't explain (flaky/intermittent tests, "works locally but fails in CI", wrong numbers, race conditions, "figure out why"), asks for a security review or audit of code (injection, auth, secrets, "before we ship"), plans a migration or refactor spanning many files or modules, or hands over any task that will take many steps and must stay on track, even if they never say "root cause" or "deep dive". Also use it when the user wants several approaches compared before committing to a hard-to-reverse design ("arena this", "compare options", "which design should we pick"), and when a stuck production issue tempts a risky shortcut (drop table, force push) so the risk gets checked first. Skip for one-line fixes, simple questions and routine edits.
 ---
 
 # Deep Engineering
@@ -47,6 +47,17 @@ When the user wants to unblock fast with something destructive (drop table, forc
 1. Diagnose what is actually blocking (e.g. `pg_blocking_pids`) so the fix targets it; the shortcut often wouldn't even work.
 2. Offer the least destructive option that works (terminate one session, rename instead of drop, revert instead of force push) and say what each can't undo.
 3. Do nothing irreversible until the user confirms the exact object and action. "Just do it" in the original prompt is a reason to restate the risk once, not to skip the confirmation.
+
+## 6. Arena: compare several attempts on high-stakes design choices
+
+A single attempt anchors on its first idea, and for something hard to change later (an API shape, a data model, a core algorithm, a migration strategy, a tricky refactor) that anchor can lock in the wrong shape. When the stakes justify the extra cost, or the user asks to "arena" or compare approaches:
+1. **Frame once.** Write the task and 3-5 judging criteria (correctness, simplicity, testability, migration cost, risk) before generating anything, so candidates are judged on the same terms.
+2. **Fan out 3 independent candidates**, each pushed toward a different approach (for example: simplest possible, most extensible, most conservative). Use subagents when available so they don't see each other's work; otherwise write them one at a time without peeking.
+3. **Cross-judge** each against the criteria with evidence (run tests, try an edge case, count moving parts). Don't score on prose quality.
+4. **Pick the strongest base**, then **graft** specific strengths from the others (an error-handling idea, a test, a cleaner interface), saying what came from where.
+5. **Verify** the merged result and report: candidates, scores, what was grafted, what was rejected and why.
+
+Skip this for small or easily reversible changes; three attempts at a one-line fix is waste.
 
 ## Report shape
 
