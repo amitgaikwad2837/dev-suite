@@ -133,6 +133,11 @@ for s in skill_names:
     if not (dist / f"{s}.skill").exists():
         warn(f"dist/{s}.skill missing (run the packager)")
 
+for f in list(skills_dir.rglob("SKILL.md")) + list((ROOT / "agents").rglob("*.md")):
+    txt = f.read_text(encoding="utf8")
+    if re.search(r"\bMode \d+\b|deep-engineering", txt):
+        err(f"{f.relative_to(ROOT)}: stale reference to a retired mode number or the old deep-engineering skill")
+
 print(f"skills checked: {', '.join(skill_names)}")
 for w in warnings:
     print("WARN ", w)

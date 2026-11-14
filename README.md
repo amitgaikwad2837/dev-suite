@@ -1,6 +1,6 @@
 # dev-suite
 
-A development workflow suite for Claude Code: eight skills and eight subagents that cover a job from idea to production, plus a plan for what is still missing (see [ROADMAP.md](ROADMAP.md)).
+A development workflow suite for Claude Code: seventeen focused skills and eight subagents that cover a job from idea to production, plus a plan for what is still missing (see [ROADMAP.md](ROADMAP.md)).
 
 | Phase | Skill |
 |---|---|
@@ -10,38 +10,32 @@ A development workflow suite for Claude Code: eight skills and eight subagents t
 | Verify: decide what to test and write tests that catch bugs | `test-strategy` |
 | Review: PRs and diffs before merge | `change-review` |
 | Ship: pipelines, rollouts, rollback, release notes | `release-engineering` |
-| Design, build, change, verify, review, ship, write | `deep-engineering` (11 modes) |
+| Design | `new-app-build`, `design-decision` |
+| Change existing code | `bug-investigation`, `migrate-and-upgrade`, `app-replica` |
+| Fix for real, handle emergencies | `honest-fixes`, `risky-shortcuts` |
+| Security review | `security-review` |
+| Write documents | `plain-writing` |
+| Edit discipline for any code change | `coding-discipline` |
 | Learn: turn repeated work into skills | `skill-capture` |
 
-Each skill below can also be installed on its own.
+Each skill can also be installed on its own.
 
-## deep-engineering
+## The focused skills
 
-A disciplined workflow for hard engineering work. Claude uses it when you:
+Each skill is one method, short enough to load only when the task calls for it.
 
-- chase a bug you can't explain (flaky tests, "works locally, fails in CI")
-- ask for a security review or audit before shipping
-- plan a migration or refactor across many files or modules
-- hand over a long multi-step task that must stay on track
-- are tempted by a risky shortcut on a stuck production issue (drop table, force push)
-
-It does not trigger for one-line fixes, simple questions or routine edits.
-
-What it changes about Claude's behavior:
-
-| Mode | Behavior |
-|---|---|
-| Bug investigation | Reproduce first, keep competing hypotheses, fix the root cause, add a regression test that fails before the fix |
-| Security review | Trace untrusted input to sinks; each finding gets a location, an exploit line, a fix; unverified items are labelled "suspected" |
-| Long multi-step work | Numbered plan where every step ends with "Done when ...", small verified increments, final done / unverified / left report |
-| Refactors and migrations | Safety net first, migrate in slices behind a flag, pin old-vs-new behavior differences with tests |
-| Choosing between designs | Classify how hard the decision is to reverse, set criteria and must-haves, sketch three different options, stress them with the same scenarios, and record the decision and what would make you revisit it |
-| New application | Interview, one-page spec, plan with risky unknowns first, walking skeleton with CI, vertical slices with tests, then a hardening and security pass |
-| Version upgrade | Pin a green baseline, list breaking changes from the official guide as a checklist, one major at a time, vendor codemods in dry-run and in a separate commit, fix in layers, ship with a rollback |
-| Replica (rebuild an app) | Clean-room rebuild from observed behavior: ownership/permission check, scope, black-box behavior spec, fresh design and code, slices with parity tests, and a parity report |
-| Writing | Reader first, three passes (structure, sentences, facts), facts and code never altered, the user's own voice matched when a sample is given |
-| Integrity | Never deletes, skips or loosens tests, hardcodes expectations or swallows errors to get green; tries distinct approaches, and when stuck stops with a structured report and options for the user |
-| Risky shortcuts | Diagnose first, offer the least destructive option, confirm the exact action before anything irreversible |
+| Skill | Use it when | Method in one line |
+|---|---|---|
+| `coding-discipline` | Any non-trivial code change or multi-step task | State assumptions, make the smallest change, keep the diff clean, prove it with a command; every plan step ends with a "Done when" |
+| `bug-investigation` | A bug you cannot explain, flaky tests, "fails in CI" | Reproduce first, keep competing hypotheses, fix the root cause, add a regression test |
+| `security-review` | Audit or "before we ship" | Trace untrusted input to risky sinks; each finding has location, exploit and fix; unverified items marked suspected |
+| `migrate-and-upgrade` | Migrations, big refactors, framework or language upgrades | Safety net first, one major version at a time, codemods in their own commit, rollback ready |
+| `design-decision` | Choosing between designs that are hard to reverse | Criteria and must-haves first, three different options, same stress scenarios, a decision record with what would make you revisit it |
+| `new-app-build` | A new app or large feature | Interview, one-page spec, plan, walking skeleton with CI, tested vertical slices, hardening |
+| `app-replica` | Replacing or recreating an application | Ownership check, black-box behavior spec, fresh build in slices, parity checks, cutover with rollback |
+| `honest-fixes` | A check fails and the fix is not obvious | Never silence tests; bounded loop; stop and ask with options when stuck |
+| `risky-shortcuts` | Drop table, force push, "just do it" under pressure | Diagnose the real blocker, least destructive option, explicit confirmation of the exact action |
+| `plain-writing` | Writing or polishing any document | Reader first, three passes (structure, sentences, facts), facts and code never altered |
 
 ## skill-capture
 
@@ -85,25 +79,25 @@ Start it by asking for "use your agent team to ...", or run the whole session as
 /plugin install dev-suite@amitgaikwad2837-skills
 ```
 
-All eight skills and the agents then load and trigger automatically when a task matches. The marketplace files are in `.claude-plugin/`.
+All seventeen skills and the agents then load and trigger automatically when a task matches. The marketplace files are in `.claude-plugin/`.
 
 **One project, without the plugin system** (commit it so your whole team gets it):
 
 ```bash
 git clone https://github.com/amitgaikwad2837/dev-suite.git
 mkdir -p your-project/.claude/skills
-cp -r dev-suite/skills/deep-engineering your-project/.claude/skills/
+cp -r dev-suite/skills/* your-project/.claude/skills/
 ```
 
 **All your projects:**
 
 ```bash
-cp -r dev-suite/skills/deep-engineering ~/.claude/skills/
+cp -r dev-suite/skills/* ~/.claude/skills/
 ```
 
-**claude.ai:** upload a single skill from `dist/` (for example `dist/deep-engineering.skill`) under Settings, Skills.
+**claude.ai:** upload a single skill from `dist/` (for example `dist/bug-investigation.skill`) under Settings, Skills.
 
-**Everything at once, manually:** unzip `dist/dev-suite.zip` into `~/.claude/skills/` (or a project's `.claude/skills/`). It holds all eight skills and the `agents/` folder (copy `agents/` to `~/.claude/agents/`), without the test cases.
+**Everything at once, manually:** unzip `dist/dev-suite.zip` into `~/.claude/skills/` (or a project's `.claude/skills/`). It holds all seventeen skills and the `agents/` folder (copy `agents/` to `~/.claude/agents/`), without the test cases.
 
 ### Prior art
 
@@ -111,7 +105,7 @@ Interviewing before building, comparing designs, plain writing and test integrit
 
 ### How well does it work?
 
-Each skill has test cases in its `evals/` folder. Every case was run once with the skill and once without, and graded by the author against written checks. Results (checks passed, with skill vs without):
+Each skill has test cases in its `evals/` folder. The first eleven rows were measured on the single `deep-engineering` skill before it was split into focused skills; the text moved unchanged, but the split has not been re-measured. Every case was run once with the skill and once without, and graded by the author against written checks. Results (checks passed, with skill vs without):
 
 | Case | With | Without |
 |---|---|---|

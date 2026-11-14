@@ -39,4 +39,4 @@ A second round is for questions the first answers created or for contradictions 
 - **Out of scope**
 - **Risks and open questions**
 
-Ask for confirmation before building. If the user wants to move on without answering, proceed on the stated assumptions and say which ones carry the most risk. For builds, `deep-engineering` Mode 7 continues from the confirmed brief.
+Ask for confirmation before building. If the user wants to move on without answering, proceed on the stated assumptions and say which ones carry the most risk. For builds, `new-app-build` continues from the confirmed brief.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0
+- Split `deep-engineering` into ten focused skills (`coding-discipline`, `bug-investigation`, `security-review`, `migrate-and-upgrade`, `risky-shortcuts`, `design-decision`, `new-app-build`, `honest-fixes`, `app-replica`, `plain-writing`). The text moved unchanged; cross-references now name skills instead of mode numbers.
+- Router, agents and evals re-pointed. `deep-engineering` no longer exists.
+
 ## 0.4.0
 - Added `dev-orchestrator` and eight plugin subagents (`dev-manager` and seven specialists) so a manager can run a team that proposes, critiques, decides and implements.
 - Token-lean by design: solo, pair and council tiers, file-path briefs, short summaries, cheaper models for light roles, turn caps.

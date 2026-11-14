@@ -11,7 +11,7 @@ You are the **manager**. The specialists are this suite's subagents. Subagents c
 
 | Tier | When | Agents | Rough cost |
 |---|---|---|---|
-| **0 Solo** | Small, clear, reversible | None. Work yourself with `deep-engineering`. | 1x |
+| **0 Solo** | Small, clear, reversible | None. Work yourself with the focused skills (`coding-discipline` and the one that fits). | 1x |
 | **1 Pair** | Normal feature or fix with some risk | `implementer`, then `change-reviewer` | 2-3x |
 | **2 Council** | Hard to reverse choice, big migration, high risk | Analyst, 2 architects, tester, implementer, reviewers | 5-8x |
 
@@ -39,7 +39,7 @@ Default to Tier 0 or 1. Move up only when a decision is expensive to undo. Never
 3. **One critique pass.** A single spawn of `change-reviewer` plus `test-engineer` (add `security-auditor` only if the brief shows exposure) reads both proposals and writes a score table (1 to 5 per criterion) with one line of reasoning each and any must-have failure. They may `SendMessage` a peer one question if needed.
 4. **Decide.** Drop options that fail a must-have, pick the best, borrow a safeguard from the other. Write `30-decision.md` in under 15 lines: choice, why, rejected options, strongest dissent, what would make you revisit. If hard to reverse and close, ask the user with your recommendation.
 5. **Implement in slices.** `test-engineer` writes tests from the brief; `implementer` makes them pass with the smallest change. Parallel implementers only on disjoint files. You run the checks; never accept "tests pass" unverified.
-6. **Review.** `change-reviewer` (and `security-auditor` if flagged) review once; implementer fixes blockers; one re-check. A blocker surviving two rounds goes to the user with options (see `deep-engineering` Mode 9). Never weaken or delete tests to get green.
+6. **Review.** `change-reviewer` (and `security-auditor` if flagged) review once; implementer fixes blockers; one re-check. A blocker surviving two rounds goes to the user with options (see `honest-fixes`). Never weaken or delete tests to get green.
 7. **Ship (only if in scope).** `release-manager` prepares the plan; production actions need the user's explicit yes.
 
 ## Close

@@ -9,24 +9,24 @@ A map for the whole job. It decides the order of work and hands each phase to th
 
 ## The phases
 
-| # | Phase | Do this | Skill or mode |
+| # | Phase | Do this | Skill |
 |---|---|---|---|
 | 1 | **Discover** | Get requirements, constraints and success criteria answered by the user | `requirements-interview` |
-| 2 | **Design** | One-page spec; compare options for choices that are hard to reverse | `deep-engineering` Mode 7 (spec, plan), Mode 6 (choosing between designs) |
-| 3 | **Build** | Walking skeleton with CI first, then tested vertical slices | `deep-engineering` Mode 7, plus the four edit checks |
-| 4 | **Change existing code** | Bug, refactor, migration, version upgrade, or rebuild of a legacy app | Modes 1, 4, 8, 10 |
-| 5 | **Verify** | Decide what to test and write tests that catch real bugs; real fixes, no gamed tests; stop and ask when stuck | `test-strategy`, `deep-engineering` Mode 9 |
-| 6 | **Review** | Review a change before merge; security pass on what was built or changed | `change-review`, `deep-engineering` Mode 2 |
-| 7 | **Ship** | Pipeline, versioning, staged rollout with abort criteria, rollback, release notes | `release-engineering`, `deep-engineering` Mode 11 (writing) |
+| 2 | **Design** | One-page spec; choose between options that are hard to reverse | `new-app-build` (spec, plan), `design-decision` |
+| 3 | **Build** | Walking skeleton with CI first, then tested vertical slices | `new-app-build`, `coding-discipline` |
+| 4 | **Change existing code** | Bug, refactor, migration, version upgrade, or rebuild of a legacy app | `bug-investigation`, `migrate-and-upgrade`, `app-replica` |
+| 5 | **Verify** | Decide what to test and write tests that catch real bugs; fix failures for real, stop and ask when stuck | `test-strategy`, `honest-fixes` |
+| 6 | **Review** | Review a change before merge; security pass on what was built or changed | `change-review`, `security-review` |
+| 7 | **Ship** | Pipeline, versioning, staged rollout with abort criteria, rollback, release notes; careful handling of production emergencies | `release-engineering`, `plain-writing`, `risky-shortcuts` |
 | 8 | **Learn** | Capture repeated work as a skill | `skill-capture` |
 
-Mode 3 (plan every step with a "Done when") wraps all of it.
+`coding-discipline` (assumptions, smallest change, clean diff, evidence, a "Done when" on every step) wraps all of it.
 
 **Team mode.** For work with a hard-to-reverse choice or real risk, hand the whole job to `dev-orchestrator`: a manager with specialist subagents that propose, critique, decide and implement. It is tiered to keep tokens low (solo by default, a pair for normal risk, a council only when a decision is expensive to undo).
 
 ## How to use the map
 
-1. **Place the request.** Name the phase it starts in. "Build me an expense app" starts at Discover; "CI is red" starts at Change existing code or Verify; "upgrade to Django 5" starts at Change existing code (Mode 8). Say the phase in one line.
+1. **Place the request.** Name the phase it starts in. "Build me an expense app" starts at Discover; "CI is red" starts at Change existing code or Verify; "upgrade to Django 5" starts at Change existing code (`migrate-and-upgrade`). Say the phase in one line.
 2. **Don't skip an earlier phase that matters.** If requirements are vague, do Discover before Design. If tests are thin, build the safety net before changing behavior. If the user already has a spec, say so and start at Build.
 3. **Hand off, don't duplicate.** Follow the named skill or mode for the details instead of restating them here.
 4. **Gate between phases.** After Discover and Design, show the result and get a yes before the next phase. After Build and Change, run the checks before calling it done. Keep the gates light for small tasks.
@@ -34,4 +34,4 @@ Mode 3 (plan every step with a "Done when") wraps all of it.
 
 ## When the task falls outside the suite
 
-The suite does not yet have dedicated skills for performance tuning, incident response, database schema changes, API design and versioning, observability, or dependency and license audits (see `ROADMAP.md` in the repo). For those, say so, then apply the four edit checks and Mode 3 (plan with "Done when", small verified steps) and ask the user about anything that is their call.
+The suite does not yet have dedicated skills for performance tuning, incident response, database schema changes, API design and versioning, observability, or dependency and license audits (see `ROADMAP.md` in the repo). For those, say so, then apply `coding-discipline` (plan with "Done when", small verified steps) and ask the user about anything that is their call.

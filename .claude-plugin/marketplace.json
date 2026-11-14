@@ -8,7 +8,7 @@
     {
       "name": "dev-suite",
       "source": "./",
-      "description": "A full development suite: dev-lifecycle (router), dev-orchestrator (manager plus specialist subagents, token-lean tiers), requirements-interview, deep-engineering (bugs, security, migrations, upgrades, new apps, replicas, honest test fixing, clear writing), change-review, test-strategy, release-engineering and skill-capture."
+      "description": "A development suite of 17 focused skills and 8 subagents: dev-lifecycle (router), dev-orchestrator (manager plus specialists, token-lean tiers), requirements-interview, new-app-build, design-decision, bug-investigation, migrate-and-upgrade, app-replica, security-review, change-review, test-strategy, honest-fixes, release-engineering, risky-shortcuts, plain-writing, coding-discipline and skill-capture."
     }
   ]
 }
