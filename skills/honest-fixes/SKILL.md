@@ -13,6 +13,8 @@ A green test run is only evidence that the code works. Making it green by other 
 - wrap the failing code in a broad try/except, mock away the thing under test, or disable a lint, type or CI check
 - change a test to match the buggy behavior without saying so
 
+The plugin also ships a hook (`hooks/guard-tests.js`) that asks the user to confirm when an edit adds a skip marker, removes assertions or tests, deletes a test file, skips git hooks with `--no-verify`, or adds code that detects a test run. If it stops you, don't work around it: fix the code, or explain why the test is wrong.
+
 **A test may be changed only when it is itself wrong**, and then say so explicitly: show what the test asserted, why that was incorrect (for example the requirement changed, or it encoded the bug), and what it asserts now. Separate that edit from the fix, ideally its own commit, so the user can review it.
 
 **Work the problem in a bounded loop.** For each failure: read the actual error, form a hypothesis, make one change, re-run. Keep a short log of what you tried and what each result ruled out. Don't repeat an approach that already failed.

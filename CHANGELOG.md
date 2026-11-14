@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.20.0
+- Added a test-guard hook (`hooks/guard-tests.js`) that asks for confirmation when an edit would skip or weaken a test, delete a test file, skip git hooks or detect a test run. `scripts/test-hooks.js` tests it and CI runs it. `honest-fixes` now mentions it.
+
 ## 0.19.0
 - Added `data-ml-work`. The roadmap no longer lists any uncovered area, and its stale items were corrected.
 

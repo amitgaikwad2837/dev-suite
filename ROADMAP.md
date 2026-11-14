@@ -12,7 +12,7 @@ Nothing is on the list. Areas that have only a light touch: mobile apps (no iOS 
 - Routing from the descriptions was checked on 12 cases. Real-world triggering and the token cost of about 35 always-loaded descriptions haven't been measured, and several skills overlap in their trigger words (`web-quality` and `accessibility-review`, `incident-response` and `observability`).
 - Descriptions haven't been tuned with a larger set of should-trigger and should-not-trigger prompts.
 - The plugin validates with `claude plugin validate .` and loads in a fresh headless session, but hasn't been tried on a clean machine. The agent team ran live twice and worked, but nobody has compared it with one agent doing the same task.
-- `honest-fixes` is instructions only. A hook that blocks edits to test files would enforce it.
+- The test-guard hook catches skip markers, removed assertions and tests, deleted test files, `--no-verify` and test-run detection. It can't see a changed expected value, a looser tolerance or a swallowed error. It was live-tested with one Edit in a headless session; Write, MultiEdit and Bash are covered only by the unit tests, not by long real sessions. It is regex-based, so it can misfire.
 - `plain-writing` hasn't been tried on long documents written from scratch.
 - Release tags and a license holder name are still to do. The `.skill` files in `dist/` are rebuilt by hand.
 

@@ -64,6 +64,17 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | plain-writing | READMEs, specs, runbooks, PR text, release notes |
 | skill-capture | Spotting repeated work and turning it into a skill |
 
+## The test-guard hook
+
+The plugin includes a hook that backs up `honest-fixes`. Before an edit, write or shell command it checks for the usual ways of getting a green run without fixing anything, and asks you to confirm if it finds one:
+- a skip, xfail or ignore marker added to a test
+- assertions or test cases removed
+- a test file deleted
+- `git commit --no-verify` and similar
+- code that detects it is running under test
+
+It asks rather than blocks, so a legitimate change to a wrong test still goes through once you confirm. It can't see a changed expected value, a loosened tolerance or a swallowed error, so the skill's rules still matter. Turn it off for a session with `DEV_SUITE_GUARD=off`. `node scripts/test-hooks.js` runs its 22 checks. Run live, a headless Claude session asked to add a skip marker was stopped by it and the file was left unchanged. The idea of a hook for this came up while reading the [everything-claude-code](https://github.com/affaan-m/everything-claude-code) repo, which has a hook system; the code here is new.
+
 ## The agent team
 
 `dev-orchestrator` lets Claude act as a manager for a small team: `requirements-analyst`, `solution-architect`, `implementer`, `test-engineer`, `change-reviewer`, `security-auditor` and `release-manager`, with `dev-manager` as the lead. The architects write proposals independently, the reviewers score them against written criteria, the manager decides and records the strongest objection, and then the team builds and reviews in slices. Agents share notes in `.dev-suite/board/` and report to the manager. Only the manager talks to you.
@@ -133,7 +144,7 @@ No page was rendered in any of the frontend runs (no browser was available to th
 
 Earlier single runs for the rest: requirements-interview 5/5 vs 3/5, skill-capture 5/5 vs 3/5, dev-lifecycle 5/5 vs 4/5, dev-orchestrator 5/5 vs 0/5 (plan only, no agents spawned), change-review 5/5 vs 2/5, test-strategy 5/5 vs 4/5, release-engineering 5/5 vs 2/5.
 
-Treat these as a sanity check. Each case ran once, I wrote the checks and I graded them, so there's no independent grading. Some checks follow a skill's own method, which the no-skill runs couldn't know about. Several cases tie, which means Claude already handles that part fine. The agent team has not been run live, and the plugin hasn't been validated with the `claude` CLI.
+Treat these as a sanity check. Each case ran once, I wrote the checks and I graded them, so there's no independent grading. Some checks follow a skill's own method, which the no-skill runs couldn't know about. Several cases tie, which means Claude already handles that part fine. The agent team has run live twice but hasn't been compared with a single agent, and the plugin passes `claude plugin validate .` but hasn't been tried on a clean machine.
 
 ## Checking the repo
 
@@ -141,7 +152,7 @@ Treat these as a sanity check. Each case ran once, I wrote the checks and I grad
 python scripts/validate.py
 ```
 
-It checks frontmatter, folder names, description length, eval layout, plugin JSON and leftover references. A GitHub Action runs it on every push.
+It checks frontmatter, folder names, description length, eval layout, plugin JSON, hook files and leftover references. A GitHub Action runs it on every push.
 
 ## What's missing
 

@@ -114,6 +114,20 @@ if pj.exists() and mj.exists():
     except Exception:  # noqa: BLE001
         pass
 
+hooks_json = ROOT / "hooks/hooks.json"
+if hooks_json.exists():
+    try:
+        hd = json.loads(hooks_json.read_text(encoding="utf8"))
+        for event, groups in hd.get("hooks", {}).items():
+            for g in groups:
+                for h in g.get("hooks", []):
+                    cmd = h.get("command", "")
+                    for m in re.findall(r"\$\{CLAUDE_PLUGIN_ROOT\}/([^\"\s]+)", cmd):
+                        if not (ROOT / m).exists():
+                            err(f"hooks/hooks.json ({event}): {m} does not exist")
+    except Exception as ex:  # noqa: BLE001
+        err(f"hooks/hooks.json: not valid JSON or wrong shape ({ex})")
+
 agents_dir = ROOT / "agents"
 if agents_dir.exists():
     for md in sorted(agents_dir.rglob("*.md")):
