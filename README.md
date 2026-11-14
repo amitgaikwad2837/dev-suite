@@ -37,6 +37,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | bug-investigation | Bugs nobody can explain, flaky tests, "fails only in CI" |
 | migrate-and-upgrade | Library or framework migrations, big refactors, version upgrades |
 | schema-changes | Adding, renaming or dropping columns and backfilling data on live tables without downtime |
+| performance-work | Slow endpoints, queries, jobs or memory use: baseline, profile, fix the biggest cost, prove the gain |
 | app-replica | Rebuilding or replacing an existing application |
 | security-prompter | Before building: asks the security questions only you can answer and writes a one-page security brief |
 | security-review | A security audit before shipping |
@@ -101,6 +102,8 @@ The playwright-ui-tests case (a todo app suite with CI) passed 5/5 with the skil
 The schema-changes skill was written by the agent team (see the changelog). Its one eval case, an insistent request to run ALTER TABLE on a 200M-row production table, scored 4/5 with the skill and 1/5 without. Treat that gap as inflated: the team wrote the checks from the skill's own method, and the no-skill answer was technically sound (batched backfill, NOT VALID constraints, expand and contract) but never asked for confirmation per step, offered a plain RENAME as an alternative and named no other skills.
 
 The incident-response case (checkout errors after a deploy, with pressure to restart everything) scored 4/5 with the skill and 3/5 without. Both refused the restart and cache delete, led with a rollback and drafted a CEO update. The skill run also started a timeline and asked for a yes before touching production; it left out the blame-free review afterwards, which is the one miss.
+
+The performance-work case (a slow Django orders endpoint, with a plan to add Redis) scored 5/5 with the skill and 2/5 without. Both declined to cache first and named N+1 queries, indexes and pagination. The skill run also set a target and a repeatable baseline, changed one thing at a time, ran the tests and left a query-count guard. The checks were written around that method, so the gap is wider than the difference in diagnosis.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 

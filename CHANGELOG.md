@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.11.0
+- Added `performance-work`. Removed performance from the roadmap's gap list.
+
 ## 0.10.0
 - Added `incident-response`. Removed incident response from the roadmap's gap list.
 

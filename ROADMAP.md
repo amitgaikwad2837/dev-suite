@@ -6,7 +6,6 @@ What's here: requirements interviews, new apps, design decisions, bug hunting, m
 
 In rough order of how often they come up:
 
-- Performance work: measure, profile, fix the real bottleneck, prove the gain.
 - API design and versioning. `design-decision` helps with the choice but has nothing API-specific.
 - Observability: logs, metrics, traces, alerts.
 - Dependency and license audits. `security-review` mentions dependencies in one line.
