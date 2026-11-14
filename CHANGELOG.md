@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.19.0
+- Added `data-ml-work`. The roadmap no longer lists any uncovered area, and its stale items were corrected.
+
 ## 0.18.0
 - Added `ux-research`. Removed UX research from the roadmap's gap list.
 

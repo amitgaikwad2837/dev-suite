@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: too-good-churn-model
+expected_outcome: |
+  Does not just write deployment code. Identifies the cancellation_reason leakage, the misleading accuracy on a 4 percent positive class, the random split and normalization before splitting, asks about the cost of a wrong 20 percent discount, and plans a baseline, time-based split, honest metrics, a limited rollout and monitoring.

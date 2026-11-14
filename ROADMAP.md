@@ -1,26 +1,24 @@
 # Roadmap
 
-What's here: requirements interviews, new apps, design decisions, bug hunting, migrations and upgrades, app rebuilds, security and change review, testing, honest fixes, risky-shortcut handling, releases, writing, skill capture, plus a router and an agent team.
+What's here: requirements interviews, UX research, new apps, design decisions, API design, bug hunting, migrations and upgrades, schema changes, performance work, app rebuilds, data and ML work, security prompting and review, dependency audits, change review, testing, honest fixes, risky-shortcut handling, incident response, releases, observability, git hygiene, frontend design and accessibility, estimation, writing, skill capture, plus a router and an agent team.
 
 ## Not covered yet
 
-In rough order of how often they come up:
-
-- Data and ML projects.
+Nothing is on the list. Areas that have only a light touch: mobile apps (no iOS or Android specifics), infrastructure as code and cloud cost, and data engineering beyond what `data-ml-work` covers.
 
 ## Known weak spots
 
-- Evidence is thin. Every case ran once and I graded it myself. It needs repeat runs, an independent grader, multi-turn cases (a whole interview, a skill actually written and tested) and harder prompts. Several cases tie with no skill at all.
-- The split of one big skill into ten smaller ones has been checked for routing on 12 cases. Real-world triggering and the token cost of 17 always-loaded descriptions (about 1,700 tokens) haven't been measured.
+- Evidence is thin. Every case ran once and I graded it myself. It needs repeat runs, an independent grader, multi-turn cases (a whole interview, a skill actually written and tested) and harder prompts. Many cases tie or come close with no skill at all, which means Claude already handles them.
+- Routing from the descriptions was checked on 12 cases. Real-world triggering and the token cost of about 35 always-loaded descriptions haven't been measured, and several skills overlap in their trigger words (`web-quality` and `accessibility-review`, `incident-response` and `observability`).
 - Descriptions haven't been tuned with a larger set of should-trigger and should-not-trigger prompts.
-- The plugin install hasn't been validated with `claude plugin validate .` or tried on a clean machine, and the agent team hasn't run in a live session.
+- The plugin validates with `claude plugin validate .` and loads in a fresh headless session, but hasn't been tried on a clean machine. The agent team ran live twice and worked, but nobody has compared it with one agent doing the same task.
 - `honest-fixes` is instructions only. A hook that blocks edits to test files would enforce it.
 - `plain-writing` hasn't been tried on long documents written from scratch.
 - Release tags and a license holder name are still to do. The `.skill` files in `dist/` are rebuilt by hand.
 
 ## Next
 
-1. Schema changes, incidents and performance skills.
-2. Repeat runs of every case, with someone else grading.
-3. Validate the plugin and try the agent team on a real task.
-4. Tune the descriptions.
+1. Repeat runs of every case, with someone else grading.
+2. Tune the descriptions and measure how often the right skill is picked.
+3. Compare the agent team with a single agent on the same task.
+4. Release tags.
