@@ -1,0 +1,12 @@
+{
+  "name": "amitgaikwad2837-skills",
+  "description": "Engineering workflow skills for Claude Code",
+  "owner": { "name": "amitgaikwad2837" },
+  "plugins": [
+    {
+      "name": "deep-engineering",
+      "source": "./",
+      "description": "A disciplined workflow for hard engineering work: bug investigation, security review, migrations, version upgrades, new apps, replicas, and honest test fixing."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "deep-engineering",
+  "description": "A disciplined workflow for hard engineering work: bug investigation, security review, migrations, version upgrades, new apps, replicas, and honest test fixing.",
+  "version": "0.1.0",
+  "author": { "name": "amitgaikwad2837" },
+  "homepage": "https://github.com/amitgaikwad2837/ClaudeSkills",
+  "repository": "https://github.com/amitgaikwad2837/ClaudeSkills",
+  "license": "MIT"
+}

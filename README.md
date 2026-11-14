@@ -31,7 +31,16 @@ What it changes about Claude's behavior:
 
 ### Install
 
-**One project** (commit it so your whole team gets it):
+**As a plugin (recommended):** inside Claude Code, add the marketplace and install:
+
+```text
+/plugin marketplace add amitgaikwad2837/ClaudeSkills
+/plugin install deep-engineering@amitgaikwad2837-skills
+```
+
+The skill then appears as `deep-engineering` and triggers automatically when a task matches. The marketplace files are in `.claude-plugin/`.
+
+**One project, without the plugin system** (commit it so your whole team gets it):
 
 ```bash
 git clone https://github.com/amitgaikwad2837/ClaudeSkills.git
@@ -53,6 +62,7 @@ cp -r ClaudeSkills/skills/deep-engineering ~/.claude/skills/
 
 - [Superpowers](https://github.com/obra/superpowers): a broader development methodology (brainstorming, TDD, debugging, planning, review).
 - [GitHub Spec Kit](https://github.com/github/spec-kit): a specify, plan, tasks, implement flow with approval between phases; strong for greenfield work.
+- [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills): four short coding principles (think before coding, simplicity first, surgical changes, goal-driven execution) distilled from Andrej Karpathy's notes on LLM coding pitfalls. The "Coding discipline" section of `deep-engineering` reflects the same ideas in our own words.
 - [anthropics/skills](https://github.com/anthropics/skills): official skills such as `frontend-design`, `webapp-testing`, `mcp-builder` and `claude-api`.
 - Migration helpers such as `migrate-ops` and the Codemod registry skills, for framework-specific upgrade commands.
 

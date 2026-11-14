@@ -7,6 +7,14 @@ description: A disciplined workflow for hard engineering work. Use whenever the 
 
 Hard problems fail in predictable ways: fixing a symptom, trusting an assumption, changing too much at once, or acting irreversibly before understanding. Each mode below guards against one of these. Pick the modes that apply; Mode 3 usually wraps the others.
 
+## Coding discipline (applies to every mode)
+
+LLM-written changes go wrong in four familiar ways: silent assumptions, over-building, drive-by edits, and no definition of success. Counter each:
+- **Think before coding.** State your assumptions. If a request has several plausible readings, or something is confusing, say so and ask or lay out the options instead of picking one silently. If a simpler approach exists, say it.
+- **Simplicity first.** Write the least code that solves the stated problem: no features nobody asked for, no abstractions for single use, no configurability or error handling for cases that can't happen. If 200 lines could be 50, rewrite it.
+- **Surgical changes.** Touch only what the task needs and match the surrounding style. Don't refactor or reformat neighboring code. Remove only the unused code your own change created; mention unrelated problems you notice rather than fixing them. Every changed line should trace to the request.
+- **Goal-driven execution.** Turn the task into a check you can run ("reproduce the bug in a test, then make it pass"; "behavior identical before and after"), then loop until it passes. Weak goals like "make it work" need clarifying first.
+
 ## 1. Bug investigation
 
 1. **Reproduce first.** Get a failing command, test or log line, and make intermittent bugs deterministic (fixed seeds, `PYTHONHASHSEED` sweeps, fake clocks, N-run loops, permutations). If you can't reproduce, say so and gather evidence before theorizing.
