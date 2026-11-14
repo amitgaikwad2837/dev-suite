@@ -80,6 +80,18 @@ For the twelve cases that belong to the split skills, the agents were given the 
 | Rewrite a README intro | 5/5 | 5/5 |
 | Fix a typo without tidying | 5/5 | 3/5 |
 
+The five frontend skills were run the same way later. With the skills: 25 of 25 checks, and each agent picked the right main skill from the descriptions (the pricing-page agent also pulled in two it didn't need). Without: 16 of 25.
+
+| Case | With | Without |
+|---|---|---|
+| Pricing page from a brief | 5/5 | 2/5 |
+| Polish a signup form | 5/5 | 3/5 |
+| Playwright login test | 5/5 | 3/5 |
+| DESIGN.md from a described brand | 5/5 | 4/5 |
+| Slow, keyboard-unfriendly page | 5/5 | 4/5 |
+
+No page was rendered in any of these runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
+
 Earlier single runs for the rest: requirements-interview 5/5 vs 3/5, skill-capture 5/5 vs 3/5, dev-lifecycle 5/5 vs 4/5, dev-orchestrator 5/5 vs 0/5 (plan only, no agents spawned), change-review 5/5 vs 2/5, test-strategy 5/5 vs 4/5, release-engineering 5/5 vs 2/5.
 
 Treat these as a sanity check. Each case ran once, I wrote the checks and I graded them, so there's no independent grading. Some checks follow a skill's own method, which the no-skill runs couldn't know about. Several cases tie, which means Claude already handles that part fine. The agent team has not been run live, and the plugin hasn't been validated with the `claude` CLI.

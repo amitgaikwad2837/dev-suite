@@ -1,7 +1,7 @@
 # Changelog
 
 ## 0.6.0
-- Added five frontend skills: frontend-design, design-reference, ui-polish, browser-verify, web-quality. Each has an eval case. They are not yet run against baselines.
+- Added five frontend skills: frontend-design, design-reference, ui-polish, browser-verify, web-quality. Each has an eval case. First eval run: 25/25 with the skills, 16/25 without (self-graded, nothing rendered in a browser).
 
 ## 0.5.0
 - Split the single `deep-engineering` skill into ten smaller ones: coding-discipline, bug-investigation, security-review, migrate-and-upgrade, risky-shortcuts, design-decision, new-app-build, honest-fixes, app-replica, plain-writing. The text moved over as it was; references to mode numbers now name skills.
