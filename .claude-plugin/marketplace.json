@@ -1,6 +1,6 @@
 {
   "name": "amitgaikwad2837-skills",
-  "description": "Development workflow skills for Claude Code",
+  "description": "Development skills for Claude Code",
   "owner": {
     "name": "amitgaikwad2837"
   },
@@ -8,7 +8,7 @@
     {
       "name": "dev-suite",
       "source": "./",
-      "description": "A development suite of 17 focused skills and 8 subagents: dev-lifecycle (router), dev-orchestrator (manager plus specialists, token-lean tiers), requirements-interview, new-app-build, design-decision, bug-investigation, migrate-and-upgrade, app-replica, security-review, change-review, test-strategy, honest-fixes, release-engineering, risky-shortcuts, plain-writing, coding-discipline and skill-capture."
+      "description": "Skills and subagents for the whole development cycle: requirements, design, building, debugging, upgrades, review, testing and release."
     }
   ]
 }

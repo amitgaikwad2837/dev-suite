@@ -23,12 +23,12 @@ Many small fast tests and a few broad ones. If the only way to test something is
 
 ## 3. Write each test well
 
-- **Name the behavior**, not the function (`rejects_expired_coupon`, not `test_apply_2`).
-- **Arrange, act, assert**, with one reason to fail. Assert on observable results (return values, stored data, emitted events), not on private calls.
-- **Cover boundaries**: zero, one, many, maximum, just inside and outside limits, empty and null, duplicates, unicode and time zones where relevant, and each error path.
-- **Make it deterministic**: inject clocks, random seeds and IDs; no real network; no order dependence between tests; clean up what you create.
-- **Mock only at the edges** (network, clock, payment provider). Mocking the code under test, or its internals, proves nothing and breaks on every refactor.
-- **Use small builders or fixtures** for test data so each test shows only what matters to it.
+- Name the behavior, not the function (`rejects_expired_coupon`, not `test_apply_2`).
+- Arrange, act, assert, with one reason to fail. Assert on observable results (return values, stored data, emitted events), not on private calls.
+- Cover boundaries: zero, one, many, maximum, just inside and outside limits, empty and null, duplicates, unicode and time zones where relevant, and each error path.
+- Make it deterministic: inject clocks, random seeds and IDs; no real network; no order dependence between tests; clean up what you create.
+- Mock only at the edges (network, clock, payment provider). Mocking the code under test, or its internals, proves nothing and breaks on every refactor.
+- Use small builders or fixtures for test data so each test shows only what matters to it.
 - Keep a test readable enough that a failure message tells you what broke.
 
 ## 4. Check the test itself
@@ -41,8 +41,8 @@ Before changing behavior, pin what it does now with characterization tests at th
 
 ## 6. Flaky and slow tests
 
-- **Flaky**: reproduce by looping the test or varying order and seeds; the cause is nearly always shared state, time, ordering, randomness or an unawaited async step. Fix the cause. If you must quarantine, record an owner, a ticket and a date, and keep the test visible; deleting it hides the bug.
-- **Slow**: find the slowest tests by measurement, move logic checks down a level, share expensive setup carefully, and parallelize only when tests are isolated.
+- Flaky: reproduce by looping the test or varying order and seeds; the cause is nearly always shared state, time, ordering, randomness or an unawaited async step. Fix the cause. If you must quarantine, record an owner, a ticket and a date, and keep the test visible; deleting it hides the bug.
+- Slow: find the slowest tests by measurement, move logic checks down a level, share expensive setup carefully, and parallelize only when tests are isolated.
 
 ## 7. Suite hygiene
 

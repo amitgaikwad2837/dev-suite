@@ -1,38 +1,33 @@
-# Roadmap: gaps in the suite
+# Roadmap
 
-What the suite covers today: requirements interviews (`requirements-interview`), the build/fix/upgrade/migrate/rebuild/security/write workflow (ten focused skills), change review (`change-review`), testing (`test-strategy`), releases (`release-engineering`), repeated-work capture (`skill-capture`), and a router (`dev-lifecycle`).
+What's here: requirements interviews, new apps, design decisions, bug hunting, migrations and upgrades, app rebuilds, security and change review, testing, honest fixes, risky-shortcut handling, releases, writing, skill capture, plus a router and an agent team.
 
-This list is the result of reading every skill and comparing it with what a full development lifecycle needs. Items are ordered by how often they come up and how much a dedicated skill would help.
+## Not covered yet
 
-## Missing capabilities
+In rough order of how often they come up:
 
-| Priority | Gap | Why it matters | Today's coverage |
-|---|---|---|---|
-| Done | **Code review of someone else's change** | Built as `change-review` | Needs a rerun and more cases |
-| Done | **Test strategy and test writing** | Built as `test-strategy` | Needs a rerun and more cases |
-| Done | **CI/CD and release engineering** | Built as `release-engineering` | Needs a rerun and more cases |
-| Medium | **Database and schema changes** (expand/contract migrations, backfills, locks, zero-downtime) | Common cause of outages | `risky-shortcuts` covers a stuck lock; no planning guidance |
-| Medium | **Incident response and postmortems** (triage, mitigation, comms, blameless review) | Production fires need a calm checklist | `risky-shortcuts` covers shortcuts only |
-| Medium | **Performance work** (measure, profile, fix the bottleneck, prove the gain) | Easy to optimize the wrong thing | None |
-| Medium | **API design and versioning** (contracts, errors, pagination, breaking changes) | Hard to change once clients depend on it | `design-decision` helps the decision, no API guidance |
-| Medium | **Observability** (logs, metrics, traces, alerts, SLOs) | Hardening mentions logging only | Single line in `new-app-build` |
-| Low | **Dependency, license and supply-chain audit** | Security mode lists dependencies as a check | One line |
-| Low | **Git hygiene** (commit and PR conventions, branching, history rewrites safely) | Mostly handled by project rules | Partial (`risky-shortcuts` on force push) |
-| Low | **Accessibility and UX review**, **estimation**, **data/ML projects** | Domain-specific | None |
+- Database schema changes (expand/contract, backfills, locks, zero-downtime). `risky-shortcuts` only handles a stuck lock.
+- Incident response and postmortems.
+- Performance work: measure, profile, fix the real bottleneck, prove the gain.
+- API design and versioning. `design-decision` helps with the choice but has nothing API-specific.
+- Observability: logs, metrics, traces, alerts.
+- Dependency and license audits. `security-review` mentions dependencies in one line.
+- Git hygiene: commit and PR conventions, safe history rewrites.
+- Accessibility and UX review, estimation, data and ML projects.
 
-## Quality gaps in what exists
+## Known weak spots
 
-1. **Split done, effect unmeasured.** `deep-engineering` is now ten focused skills, which should trigger more reliably and load less text per task. The always-loaded descriptions grew in total, so the effect on tokens and on triggering still needs measuring.
-2. **Evidence is thin.** Each test case was run once and graded by the author. Needed: repeated runs, an independent grader, multi-turn cases (a full multi-round requirements interview, a skill actually written and tested), and harder prompts. Several cases did not separate the skill from no skill (replica, document rewrite, easy no-gaming).
-3. **Descriptions are untuned.** No trigger-accuracy test was run. Plan: build a 20-query should/should-not-trigger set per skill and run the description optimizer.
-4. **Plugin install not validated.** The `claude` CLI was not available when the marketplace files were written. Run `claude plugin validate .` and a test install.
-5. **No guard against editing tests.** `honest-fixes` asks Claude not to game tests; a hook that blocks test-file edits would enforce it. Not built.
-6. **Writing mode is untested on long documents** written from scratch (design docs, runbooks).
-7. **Maintenance.** License holder is a placeholder, no release tags, `dist/*.skill` files are rebuilt by hand. `scripts/validate.py` and the CI workflow check structure only.
+- Evidence is thin. Every case ran once and I graded it myself. It needs repeat runs, an independent grader, multi-turn cases (a whole interview, a skill actually written and tested) and harder prompts. Several cases tie with no skill at all.
+- The split of one big skill into ten smaller ones has been checked for routing on 12 cases. Real-world triggering and the token cost of 17 always-loaded descriptions (about 1,700 tokens) haven't been measured.
+- Descriptions haven't been tuned with a larger set of should-trigger and should-not-trigger prompts.
+- The plugin install hasn't been validated with `claude plugin validate .` or tried on a clean machine, and the agent team hasn't run in a live session.
+- `honest-fixes` is instructions only. A hook that blocks edits to test files would enforce it.
+- `plain-writing` hasn't been tried on long documents written from scratch.
+- Release tags and a license holder name are still to do. The `.skill` files in `dist/` are rebuilt by hand.
 
-## Suggested next steps
+## Next
 
-1. Run the three new skills against more cases and tune their descriptions; then build the medium-priority gaps (database changes, incident response, performance, API design, observability).
-2. Rerun the evals on the split skills and measure triggering.
-3. Run `claude plugin validate .` and a clean install test; tag `v0.1.0`.
-4. Build the trigger-accuracy sets and tune descriptions.
+1. Schema changes, incidents and performance skills.
+2. Repeat runs of every case, with someone else grading.
+3. Validate the plugin and try the agent team on a real task.
+4. Tune the descriptions.

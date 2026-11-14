@@ -33,10 +33,10 @@ A second round is for questions the first answers created or for contradictions 
 
 ## 4. Close with a one-page brief and get a yes
 
-- **Goal** in one sentence and the **success check**
-- **Decisions**, each with its reason
-- **Assumptions** you made, marked so they are easy to challenge
-- **Out of scope**
-- **Risks and open questions**
+- Goal in one sentence and the **success check**
+- Decisions, each with its reason
+- Assumptions you made, marked so they are easy to challenge
+- Out of scope
+- Risks and open questions
 
 Ask for confirmation before building. If the user wants to move on without answering, proceed on the stated assumptions and say which ones carry the most risk. For builds, `new-app-build` continues from the confirmed brief.

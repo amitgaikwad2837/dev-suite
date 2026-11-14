@@ -15,11 +15,11 @@ A release process is good when shipping is boring: the same artifact moves throu
 
 ## 2. Design the pipeline around a few principles
 
-- **Build once, promote the same artifact** through test, staging and production. Never rebuild per environment.
-- **Fast feedback first**: lint, unit tests and a build within minutes; slower integration and end-to-end checks after.
-- **Gate on evidence**: tests green on the exact commit, security and dependency checks, migration review. Gates that people routinely bypass should be fixed or removed.
-- **Environments alike**: same images, same config shape, secrets from a vault or the platform, never from the repo.
-- **Reproducible**: pinned dependencies and base images, a lockfile, no manual steps outside the pipeline.
+- Build once, promote the same artifact through test, staging and production. Never rebuild per environment.
+- Fast feedback first: lint, unit tests and a build within minutes; slower integration and end-to-end checks after.
+- Gate on evidence: tests green on the exact commit, security and dependency checks, migration review. Gates that people routinely bypass should be fixed or removed.
+- Environments alike: same images, same config shape, secrets from a vault or the platform, never from the repo.
+- Reproducible: pinned dependencies and base images, a lockfile, no manual steps outside the pipeline.
 
 ## 3. Check readiness before any production step
 

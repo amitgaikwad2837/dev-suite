@@ -19,12 +19,12 @@ Default to Tier 0 or 1. Move up only when a decision is expensive to undo. Never
 
 ## Token rules (always)
 
-- **Pass file paths, not content.** Subagents read files themselves.
-- **Brief each spawn in 10 lines or less**: role, input paths, output path, limits, "return under 100 words".
-- **Detail goes in files, summaries come back.** Read a file only when you need to; read score tables and verdict lines, not whole critiques.
-- **Spawn independent agents in one step** (parallel). Do not re-spawn an agent to redo work already on the board.
-- **Right-size the model**: analyst and release prep on a small model; implementer, tester and reviewers on a mid model; manager and architects on the strongest you have.
-- **Cap rounds**: one proposal round, one critique round, at most two review loops. Then decide or ask the user.
+- Pass file paths, not content. Subagents read files themselves.
+- Brief each spawn in 10 lines or less: role, input paths, output path, limits, "return under 100 words".
+- Detail goes in files, summaries come back. Read a file only when you need to; read score tables and verdict lines, not whole critiques.
+- Spawn independent agents in one step (parallel). Do not re-spawn an agent to redo work already on the board.
+- Right-size the model: analyst and release prep on a small model; implementer, tester and reviewers on a mid model; manager and architects on the strongest you have.
+- Cap rounds: one proposal round, one critique round, at most two review loops. Then decide or ask the user.
 - No repeated re-reading of the same files; note what you learned in `.dev-suite/board/notes.md`.
 
 ## Tier 1: pair
@@ -34,13 +34,13 @@ Default to Tier 0 or 1. Move up only when a decision is expensive to undo. Never
 
 ## Tier 2: council
 
-1. **Frame (cheap).** `requirements-analyst` sorts unknowns and writes `00-brief.md` with 3 to 5 criteria and must-haves. You put the user-only questions to the user in one message and get a yes.
-2. **Propose in parallel.** Two `solution-architect` agents, each given a different principle (for example simplest vs safest), write at most 10 lines each to `10-proposals/` without reading each other's. Add a third only if the first two are too alike.
-3. **One critique pass.** A single spawn of `change-reviewer` plus `test-engineer` (add `security-auditor` only if the brief shows exposure) reads both proposals and writes a score table (1 to 5 per criterion) with one line of reasoning each and any must-have failure. They may `SendMessage` a peer one question if needed.
-4. **Decide.** Drop options that fail a must-have, pick the best, borrow a safeguard from the other. Write `30-decision.md` in under 15 lines: choice, why, rejected options, strongest dissent, what would make you revisit. If hard to reverse and close, ask the user with your recommendation.
-5. **Implement in slices.** `test-engineer` writes tests from the brief; `implementer` makes them pass with the smallest change. Parallel implementers only on disjoint files. You run the checks; never accept "tests pass" unverified.
-6. **Review.** `change-reviewer` (and `security-auditor` if flagged) review once; implementer fixes blockers; one re-check. A blocker surviving two rounds goes to the user with options (see `honest-fixes`). Never weaken or delete tests to get green.
-7. **Ship (only if in scope).** `release-manager` prepares the plan; production actions need the user's explicit yes.
+1. Frame (cheap). `requirements-analyst` sorts unknowns and writes `00-brief.md` with 3 to 5 criteria and must-haves. You put the user-only questions to the user in one message and get a yes.
+2. Propose in parallel. Two `solution-architect` agents, each given a different principle (for example simplest vs safest), write at most 10 lines each to `10-proposals/` without reading each other's. Add a third only if the first two are too alike.
+3. One critique pass. A single spawn of `change-reviewer` plus `test-engineer` (add `security-auditor` only if the brief shows exposure) reads both proposals and writes a score table (1 to 5 per criterion) with one line of reasoning each and any must-have failure. They may `SendMessage` a peer one question if needed.
+4. Decide. Drop options that fail a must-have, pick the best, borrow a safeguard from the other. Write `30-decision.md` in under 15 lines: choice, why, rejected options, strongest dissent, what would make you revisit. If hard to reverse and close, ask the user with your recommendation.
+5. Implement in slices. `test-engineer` writes tests from the brief; `implementer` makes them pass with the smallest change. Parallel implementers only on disjoint files. You run the checks; never accept "tests pass" unverified.
+6. Review. `change-reviewer` (and `security-auditor` if flagged) review once; implementer fixes blockers; one re-check. A blocker surviving two rounds goes to the user with options (see `honest-fixes`). Never weaken or delete tests to get green.
+7. Ship (only if in scope). `release-manager` prepares the plan; production actions need the user's explicit yes.
 
 ## Close
 

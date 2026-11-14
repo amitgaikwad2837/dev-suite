@@ -32,19 +32,19 @@ Correctness and edge cases (empty, null, boundaries, ordering, time zones, retri
 ## 6. Write comments that can be acted on
 
 For each comment give: the location (`file:line`), a label, the problem and why it matters, and a concrete suggestion or question.
-- **Blocker**: wrong, unsafe or breaks something; must change before merge
-- **Should fix**: real weakness with a reasonable fix, not worth blocking if the author disagrees with a reason
-- **Question**: you need information to judge
-- **Nit**: taste or style; keep these few and group them
+- Blocker: wrong, unsafe or breaks something; must change before merge
+- Should fix: real weakness with a reasonable fix, not worth blocking if the author disagrees with a reason
+- Question: you need information to judge
+- Nit: taste or style; keep these few and group them
 
 Don't restyle code that matches the project's conventions, and don't rewrite their approach unless it fails a requirement. Mention what is done well when it is specific and useful.
 
 ## 7. Give a verdict
 
 Open the review with the verdict and the one to three things that decide it:
-- **Approve**: nothing blocks it
-- **Approve with comments**: merge after small fixes or at the author's discretion
-- **Request changes**: at least one blocker
+- Approve: nothing blocks it
+- Approve with comments: merge after small fixes or at the author's discretion
+- Request changes: at least one blocker
 
 Close with what you did not review (generated files, parts you could not run, areas outside your view) so nobody mistakes silence for approval.
 
