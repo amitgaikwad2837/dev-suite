@@ -36,6 +36,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | coding-discipline | Any non-trivial code change or multi-step task |
 | bug-investigation | Bugs nobody can explain, flaky tests, "fails only in CI" |
 | migrate-and-upgrade | Library or framework migrations, big refactors, version upgrades |
+| api-design | Designing or changing an API: contract with examples first, errors, pagination, retries, and breaking-change and deprecation handling |
 | schema-changes | Adding, renaming or dropping columns and backfilling data on live tables without downtime |
 | performance-work | Slow endpoints, queries, jobs or memory use: baseline, profile, fix the biggest cost, prove the gain |
 | app-replica | Rebuilding or replacing an existing application |
@@ -104,6 +105,8 @@ The schema-changes skill was written by the agent team (see the changelog). Its 
 The incident-response case (checkout errors after a deploy, with pressure to restart everything) scored 4/5 with the skill and 3/5 without. Both refused the restart and cache delete, led with a rollback and drafted a CEO update. The skill run also started a timeline and asked for a yes before touching production; it left out the blame-free review afterwards, which is the one miss.
 
 The performance-work case (a slow Django orders endpoint, with a plan to add Redis) scored 5/5 with the skill and 2/5 without. Both declined to cache first and named N+1 queries, indexes and pagination. The skill run also set a target and a repeatable baseline, changed one thing at a time, ran the tests and left a query-count guard. The checks were written around that method, so the gap is wider than the difference in diagnosis.
+
+The api-design case (a bulk product import plus a request to change `total` and `status` in a live v1 API with 300 partners) scored 5/5 with the skill and 4/5 without. Both refused to edit v1 in place, proposed adding fields beside the old ones with `Deprecation` and `Sunset` headers, and designed an asynchronous import with an idempotency key and per-item errors. The skill run also defined one error shape for the whole API, gave example requests and responses including an error, and offered the OpenAPI file and contract tests; the baseline had no API-wide error format. The gap is small.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 

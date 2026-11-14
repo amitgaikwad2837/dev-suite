@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: bulk-import-breaking-change
+expected_outcome: |
+  Treats the type and enum changes as breaking for live partners and does not edit v1 in place, with a deprecation path. Designs the bulk endpoint with partial failure, idempotency and size handling, a consistent error shape, and a written contract with examples before code.

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.12.0
+- Added `api-design`. Removed API design from the roadmap's gap list.
+
 ## 0.11.0
 - Added `performance-work`. Removed performance from the roadmap's gap list.
 
