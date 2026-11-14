@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.13.0
+- Added `observability`. Removed observability from the roadmap's gap list.
+
 ## 0.12.0
 - Added `api-design`. Removed API design from the roadmap's gap list.
 

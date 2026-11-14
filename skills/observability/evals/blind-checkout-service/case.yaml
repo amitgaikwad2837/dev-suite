@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: blind-checkout-service
+expected_outcome: |
+  Starts from what must work and how to measure it, adds request, error and latency metrics plus structured logs with a request ID, keeps secrets and card data out of logs, defines few symptom-based alerts each with an owner and first action, and tests that an alert actually fires.

@@ -52,6 +52,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | web-quality | Accessibility, page speed, mobile layouts |
 | honest-fixes | Failing tests or CI, without silencing them |
 | risky-shortcuts | Drop table, force push and similar under pressure |
+| observability | Logs, metrics, traces, dashboards and alerts that tell you it broke before customers do, without noisy paging |
 | incident-response | Live outages: stop the harm, one safe step at a time, status updates, blame-free review |
 | release-engineering | Pipelines, rollouts, rollback, versioning, release notes |
 | plain-writing | READMEs, specs, runbooks, PR text, release notes |
@@ -107,6 +108,8 @@ The incident-response case (checkout errors after a deploy, with pressure to res
 The performance-work case (a slow Django orders endpoint, with a plan to add Redis) scored 5/5 with the skill and 2/5 without. Both declined to cache first and named N+1 queries, indexes and pagination. The skill run also set a target and a repeatable baseline, changed one thing at a time, ran the tests and left a query-count guard. The checks were written around that method, so the gap is wider than the difference in diagnosis.
 
 The api-design case (a bulk product import plus a request to change `total` and `status` in a live v1 API with 300 partners) scored 5/5 with the skill and 4/5 without. Both refused to edit v1 in place, proposed adding fields beside the old ones with `Deprecation` and `Sunset` headers, and designed an asynchronous import with an idempotency key and per-item errors. The skill run also defined one error shape for the whole API, gave example requests and responses including an error, and offered the OpenAPI file and contract tests; the baseline had no API-wide error format. The gap is small.
+
+The observability case (a checkout service that was down 3 hours with no alert, Prometheus and Grafana available, an on-call person who doesn't want frequent pages) scored 5/5 with the skill and 4/5 without. Both paged on a few user-facing symptoms, kept declined cards out of the failure count, split pages from tickets and described testing the alerts. The baseline gave a fuller Alertmanager config; it didn't mention request IDs in logs or what must never be logged. The skill run did, and also listed the log fields it redacts. The gap is small, and the checks follow the skill's own method.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 
