@@ -1,6 +1,6 @@
 ---
 name: deep-engineering
-description: A disciplined workflow for hard engineering work. Use this whenever the user reports a bug they can't explain (flaky/intermittent tests, "works locally but fails in CI", wrong numbers, race conditions, "figure out why"), asks for a security review or audit of code (injection, auth, secrets, "before we ship"), plans a migration or refactor spanning many files or modules, or hands over any task that will take many steps and must stay on track, even if they never say "root cause" or "deep dive". Also use it when the user wants several approaches compared before committing to a hard-to-reverse design ("arena this", "compare options", "which design should we pick"), and when a stuck production issue tempts a risky shortcut (drop table, force push) so the risk gets checked first. Skip for one-line fixes, simple questions and routine edits.
+description: A disciplined workflow for hard engineering work. Use this whenever the user reports a bug they can't explain (flaky/intermittent tests, "works locally but fails in CI", wrong numbers, race conditions, "figure out why"), asks for a security review or audit of code (injection, auth, secrets, "before we ship"), plans a migration or refactor spanning many files or modules, wants to build a new application or feature from scratch, wants to upgrade a framework, language or major dependency to a new version ("upgrade to Angular 18", "move to Python 3.13", "bump Spring Boot"), or hands over any task that will take many steps and must stay on track, even if they never say "root cause" or "deep dive". Also use it when the user wants several approaches compared before committing to a hard-to-reverse design ("arena this", "compare options", "which design should we pick"), and when a stuck production issue tempts a risky shortcut (drop table, force push) so the risk gets checked first. Skip for one-line fixes, simple questions and routine edits.
 ---
 
 # Deep Engineering
@@ -58,6 +58,29 @@ A single attempt anchors on its first idea, and for something hard to change lat
 5. **Verify** the merged result and report: candidates, scores, what was grafted, what was rejected and why.
 
 Skip this for small or easily reversible changes; three attempts at a one-line fix is waste.
+
+## 7. Building a new application (greenfield)
+
+Most failed builds fail at the start: unclear requirements, or a big-bang implementation nobody can verify. Go in gated phases and show each result before the next:
+1. **Interview before code.** Ask only the questions that change the design (users and key flows, scale, data sensitivity, hosting, must-use stack, deadline, what "done" means). Where the user has no preference, pick a boring default and state it.
+2. **Spec.** One page: goals, non-goals, main user flows, data model, external integrations, acceptance criteria. Get a yes on this.
+3. **Plan.** Stack and architecture with the reason for each choice, plus the riskiest unknowns. Spike or prototype those first rather than last.
+4. **Walking skeleton.** The thinnest end-to-end path (UI/API to storage and back) with build, lint, tests and CI running from day one.
+5. **Vertical slices.** Build one user-visible feature at a time, each with tests written alongside (test first for logic-heavy code), each ending in a working, demoable state. Commit per slice.
+6. **Harden.** Auth and authorization, input validation, secrets out of code, error handling, logging, a README with run/test/deploy steps, then Mode 2 on the finished app.
+Use Mode 6 for choices that are expensive to reverse (data model, auth approach, framework).
+
+## 8. Upgrading to a new version (framework, language, major dependency)
+
+Upgrades break because the breaking changes were never listed. Make them explicit first:
+1. **Pin the starting point.** Record current versions, a green test run and a clean commit, so any later failure can be blamed on the upgrade. If tests are thin, add characterization tests around what the upgrade touches (Mode 4).
+2. **Read the sources of truth**: the official migration guide, changelog and deprecation list for every version in between. Write the applicable breaking changes as a checklist for this codebase (grep for each affected API and count the call sites).
+3. **Go one major version at a time** (or the vendor's recommended path) when jumping several; never skip straight across majors. Upgrade the language/runtime, then the framework, then its plugins, in the order the guide says.
+4. **Use deterministic tools before hand edits**: the vendor's upgrade command or codemod (for example `ng update`, framework codemods, `jscodeshift`, `ast-grep`, `pyupgrade`, `rector`, OpenRewrite), run as a dry run first, in its own commit so its changes review separately from your manual fixes.
+5. **Fix in layers**: build errors, then test failures, then deprecation warnings (turn warnings into errors to find them), then new lints. Re-run the full suite after each layer.
+6. **Check what tests can't see**: bundle size and performance, config and environment differences, CI images, Docker base images, and behavior changes with no compile error (defaults, serialization, time zones, ordering).
+7. **Ship safely**: staging first, canary or flag where possible, a rollback path (previous lockfile and image), and a list of removed deprecations for the release notes.
+Report: versions from/to, breaking changes hit (and not hit), what each codemod changed, tests before/after, and anything still deprecated.
 
 ## Report shape
 

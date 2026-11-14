@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: framework-major-upgrade
+expected_outcome: |
+  Pins a green baseline, lists breaking changes from the official guide, upgrades one major at a time with the Python version considered, uses deterministic tools in separate commits, and plans rollback.
