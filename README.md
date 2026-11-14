@@ -81,7 +81,7 @@ Start it by asking for "use your agent team to ...", or run the whole session as
 **As a plugin (recommended):** inside Claude Code, add the marketplace and install:
 
 ```text
-/plugin marketplace add amitgaikwad2837/ClaudeSkills
+/plugin marketplace add amitgaikwad2837/dev-suite
 /plugin install dev-suite@amitgaikwad2837-skills
 ```
 
@@ -90,15 +90,15 @@ All eight skills and the agents then load and trigger automatically when a task 
 **One project, without the plugin system** (commit it so your whole team gets it):
 
 ```bash
-git clone https://github.com/amitgaikwad2837/ClaudeSkills.git
+git clone https://github.com/amitgaikwad2837/dev-suite.git
 mkdir -p your-project/.claude/skills
-cp -r ClaudeSkills/skills/deep-engineering your-project/.claude/skills/
+cp -r dev-suite/skills/deep-engineering your-project/.claude/skills/
 ```
 
 **All your projects:**
 
 ```bash
-cp -r ClaudeSkills/skills/deep-engineering ~/.claude/skills/
+cp -r dev-suite/skills/deep-engineering ~/.claude/skills/
 ```
 
 **claude.ai:** upload a single skill from `dist/` (for example `dist/deep-engineering.skill`) under Settings, Skills.
@@ -128,8 +128,13 @@ Each skill has test cases in its `evals/` folder. Every case was run once with t
 | Fix a failing test (easy) | 5/5 | 5/5 |
 | skill-capture | 5/5 | 3/5 |
 | Requirements interview (measured on the earlier wording) | 5/5 | 3/5 |
+| Idea to production (`dev-lifecycle`) | 5/5 | 4/5 |
+| Team for a hard choice (`dev-orchestrator`, plan only) | 5/5 | 0/5 |
+| Review a PR with hidden risks (`change-review`) | 5/5 | 2/5 |
+| Tests for a shipping calculator (`test-strategy`) | 5/5 | 4/5 |
+| Release process for manual Friday deploys (`release-engineering`) | 5/5 | 2/5 |
 
-Three of these skills were rewritten after the run and need a rerun. Caveats: single runs, graded by the author, not independent. Several cases tie, which means Claude already does that part well; the skills add the most on process and structure. The cases for `dev-lifecycle`, `change-review`, `test-strategy` and `release-engineering` have been written but not run, and the trigger descriptions have not been tuned. Treat this as a sanity check, not a benchmark. Contributions of harder cases are welcome.
+Three of these skills were rewritten after the run and need a rerun. Caveats: single runs, graded by the author, not independent. Several cases tie, which means Claude already does that part well; the skills add the most on process and structure. The checks for the last five rows were written for each skill's own method, so the baseline loses points it could not know to earn (the team case was run as a plan only, without spawning agents). The agent team has not been run live, and the trigger descriptions have not been tuned. Treat this as a sanity check, not a benchmark. Contributions of harder cases are welcome.
 
 ### Check the repo
 
