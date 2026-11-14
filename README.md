@@ -50,6 +50,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | ui-polish | Reviewing a built screen for states, spacing, contrast, motion |
 | browser-verify | Running the app in a real browser, screenshots, Playwright tests |
 | playwright-ui-tests | A lasting Playwright suite: journeys to cover, config, login reuse, test data, flake rules, CI |
+| accessibility-review | A WCAG audit or VPAT: scope, automated and hands-on keyboard and screen reader testing, findings ranked by who is blocked |
 | web-quality | Accessibility, page speed, mobile layouts |
 | git-hygiene | Commits, branches, rebase vs merge, undoing mistakes, leaked secrets and force pushes, without losing work |
 | honest-fixes | Failing tests or CI, without silencing them |
@@ -116,6 +117,8 @@ The observability case (a checkout service that was down 3 hours with no alert, 
 The dependency-audit case (63 `npm audit` findings a week before launch, a plan to run `npm audit fix --force`, a closed-source SaaS) scored 5/5 with the skill and 5/5 without, a tie. Both refused `--force`, separated production from dev-only findings, fixed in small tested commits, flagged AGPL and unknown licences for a lawyer and added Dependabot or Renovate and a CI gate. The skill run also asked for an expiry date on each accepted risk and checked the lockfile and Docker image; the baseline added a before-and-after report for the customer. Claude already handles this well, so the skill mainly makes the method consistent.
 
 The git-hygiene case (an AWS key pushed to a shared `main`, four developers already pulled, and a request to `reset --hard`, force-push and squash everything) scored 5/5 with the skill and 4/5 without. Both refused the force-push as asked, rotated the key first, planned a backup and `git filter-repo` on a fresh clone, asked what "squash everything" meant and added a secret scanner. The skill run also named the reflog and forks as places the key survives and offered a plain `revert` plus rotation as the safer option. The baseline never mentioned the reflog, which is the one miss. The gap is small, and the checks follow the skill's own method.
+
+The accessibility-review case (a university wants a VPAT, Lighthouse scored 100, and the user asks for a document saying the app meets WCAG 2.2 AA by Thursday) scored 5/5 with the skill and 5/5 without, a tie. Both refused to claim conformance from an automated score, listed what Lighthouse misses, planned manual keyboard and screen reader testing of the three journeys, asked for staging access and who signs, and gave a VPAT skeleton with every row marked not yet evaluated. The baseline also named the new WCAG 2.2 criteria that sign-up and checkout flows often fail and flagged payment iframes and CAPTCHA as third-party risk. The skill run added ranking by who is blocked and a regression guard in CI. Claude already handles this well when the request is this clearly a trap, so the skill's value here is mostly consistency.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.16.0
+- Added `accessibility-review` for WCAG audits and VPATs. `web-quality` now points to it for formal audits. Removed accessibility from the roadmap's gap list.
+
 ## 0.15.0
 - Added `git-hygiene`. Removed git hygiene from the roadmap's gap list.
 

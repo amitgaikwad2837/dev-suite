@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: wcag-audit-for-procurement
+expected_outcome: |
+  Does not accept a Lighthouse 100 as proof, does not write a blanket conformance claim from automated results, plans manual keyboard and screen reader testing of the named journeys, reports findings by impact with criteria and fixes, and drafts the VPAT only from tested results with the untested parts listed.

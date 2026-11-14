@@ -1,6 +1,6 @@
 ---
 name: web-quality
-description: Checks a web page or app for accessibility, performance and responsive problems and fixes them. Use when the user says "is it accessible", "audit the page", "it loads slowly", "check Lighthouse", "works on mobile", "keyboard navigation", "screen reader", or before launching a frontend. Covers semantic HTML, keyboard and focus, labels, contrast, images, bundle size, render blocking, layout shift and mobile layouts, with measured before and after. Skip for backend performance.
+description: Checks a web page or app for accessibility, performance and responsive problems and fixes them. Use when the user says "is it accessible", "audit the page", "it loads slowly", "check Lighthouse", "works on mobile", "keyboard navigation", "screen reader", or before launching a frontend. Covers semantic HTML, keyboard and focus, labels, contrast, images, bundle size, render blocking, layout shift and mobile layouts, with measured before and after. Skip for backend performance, and for formal WCAG audits or VPATs (accessibility-review).
 ---
 
 # Web Quality
