@@ -1,12 +1,14 @@
 {
   "name": "amitgaikwad2837-skills",
-  "description": "Engineering workflow skills for Claude Code",
-  "owner": { "name": "amitgaikwad2837" },
+  "description": "Development workflow skills for Claude Code",
+  "owner": {
+    "name": "amitgaikwad2837"
+  },
   "plugins": [
     {
-      "name": "deep-engineering",
+      "name": "dev-suite",
       "source": "./",
-      "description": "Engineering workflow skills: deep-engineering (bugs, security, migrations, upgrades, new apps, honest test fixing, clear writing), skill-capture (turn repeated work into skills) and grill-me (get requirements answered before building)."
+      "description": "A full development suite: dev-lifecycle (router from idea to production), grill-me (requirements interview), deep-engineering (bugs, security, migrations, upgrades, new apps, replicas, honest test fixing, clear writing) and skill-capture (turn repeated work into skills)."
     }
   ]
 }

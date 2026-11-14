@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: idea-to-production
+expected_outcome: |
+  Places the request at Discover, lays out the phases in order with what each produces, names where requirements interview, spec, skeleton with CI, vertical slices, security review, staged rollout and docs fit, and does not start building.

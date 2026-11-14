@@ -1,6 +1,15 @@
-# ClaudeSkills
+# dev-suite
 
-Reusable skills for Claude Code and Claude.
+A development workflow suite for Claude Code: four skills that cover a job from idea to production, plus a plan for what is still missing (see [ROADMAP.md](ROADMAP.md)).
+
+| Phase | Skill |
+|---|---|
+| Entry point, routes the work | `dev-lifecycle` |
+| Discover: get requirements answered | `grill-me` |
+| Design, build, change, verify, review, ship, write | `deep-engineering` (11 modes) |
+| Learn: turn repeated work into skills | `skill-capture` |
+
+Each skill below can also be installed on its own.
 
 ## deep-engineering
 
@@ -44,10 +53,10 @@ Interviews you before anything is built. Claude reads what it can first, then as
 
 ```text
 /plugin marketplace add amitgaikwad2837/ClaudeSkills
-/plugin install deep-engineering@amitgaikwad2837-skills
+/plugin install dev-suite@amitgaikwad2837-skills
 ```
 
-The skill then appears as `deep-engineering` and triggers automatically when a task matches. The marketplace files are in `.claude-plugin/`.
+All four skills then load and trigger automatically when a task matches. The marketplace files are in `.claude-plugin/`.
 
 **One project, without the plugin system** (commit it so your whole team gets it):
 
@@ -63,7 +72,9 @@ cp -r ClaudeSkills/skills/deep-engineering your-project/.claude/skills/
 cp -r ClaudeSkills/skills/deep-engineering ~/.claude/skills/
 ```
 
-**claude.ai:** upload `dist/deep-engineering.skill` under Settings, Skills.
+**claude.ai:** upload a single skill from `dist/` (for example `dist/deep-engineering.skill`) under Settings, Skills.
+
+**Everything at once, manually:** unzip `dist/dev-suite.zip` into `~/.claude/skills/` (or a project's `.claude/skills/`). It holds all four skills without the test cases.
 
 ### Related skills worth installing alongside
 
@@ -79,7 +90,33 @@ Popularity figures for these vary between aggregator sites and are unverified.
 
 ### How well does it work?
 
-Four test cases live in `skills/deep-engineering/evals/` (flaky test root cause, security audit, migration plan, destructive-action confirmation). In a small first evaluation, outputs with the skill passed 20 of 20 assertions. Without it, the first three cases passed 12 of 16 and a harder destructive-action prompt passed 0 of 4. Caveats: single runs, graded by the author, no repeats, and the skill's trigger description has not been tuned. Treat these as a sanity check, not a benchmark. Contributions of harder test cases are welcome.
+Each skill has test cases in its `evals/` folder. Every case was run once with the skill and once without, and graded by the author against written checks. Results (checks passed, with skill vs without):
+
+| Case | With | Without |
+|---|---|---|
+| Flaky test root cause | 5/5 | 4/5 |
+| Security audit | 6/6 | 5/6 |
+| Migration plan | 5/5 | 3/5 |
+| Destructive action, user insists | 4/4 | 0/4 |
+| New app (greenfield) | 4/5 | 2/5 |
+| Django 3.2 to 5.x upgrade | 6/6 | 4/6 |
+| Arena (compare designs) | 5/5 | 3/5 |
+| Contradictory tests | 6/6 | 5/6 |
+| Rebuild legacy app | 5/5 | 5/5 |
+| Rewrite a README | 5/5 | 5/5 |
+| Fix a failing test (easy) | 5/5 | 5/5 |
+| skill-capture | 5/5 | 3/5 |
+| grill-me | 5/5 | 3/5 |
+
+Caveats: single runs, graded by the author, not independent. Several cases tie, which means Claude already does that part well; the skills add the most on process and structure. The `dev-lifecycle` case has been written but not run, and the trigger descriptions have not been tuned. Treat this as a sanity check, not a benchmark. Contributions of harder cases are welcome.
+
+### Check the repo
+
+```bash
+python scripts/validate.py
+```
+
+Checks frontmatter, name-to-folder match, description length, eval layout and plugin JSON.
 
 ### License
 

@@ -1,9 +1,20 @@
 {
-  "name": "deep-engineering",
-  "description": "Engineering workflow skills: deep-engineering (bugs, security, migrations, upgrades, new apps, honest test fixing, clear writing), skill-capture (turn repeated work into skills) and grill-me (get requirements answered before building).",
-  "version": "0.1.0",
-  "author": { "name": "amitgaikwad2837" },
+  "name": "dev-suite",
+  "description": "A full development suite: dev-lifecycle (router from idea to production), grill-me (requirements interview), deep-engineering (bugs, security, migrations, upgrades, new apps, replicas, honest test fixing, clear writing) and skill-capture (turn repeated work into skills).",
+  "version": "0.2.0",
+  "author": {
+    "name": "amitgaikwad2837"
+  },
   "homepage": "https://github.com/amitgaikwad2837/ClaudeSkills",
   "repository": "https://github.com/amitgaikwad2837/ClaudeSkills",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "engineering",
+    "debugging",
+    "security-review",
+    "migration",
+    "upgrade",
+    "workflow",
+    "skills"
+  ]
 }
