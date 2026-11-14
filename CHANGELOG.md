@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.18.0
+- Added `ux-research`. Removed UX research from the roadmap's gap list.
+
 ## 0.17.0
 - Added `estimation`. Removed estimation from the roadmap's gap list.
 

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: survey-to-validate-idea
+expected_outcome: |
+  Does not just write the yes/no survey. Points out that stated intent is weak evidence, ties the research to the build decision, uses behaviour and existing data and a small set of interviews about past behaviour, and if a survey is still used writes neutral questions with a sampling plan and honest limits.

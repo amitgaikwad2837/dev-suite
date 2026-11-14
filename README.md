@@ -30,6 +30,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 |---|---|
 | dev-lifecycle | Idea to production, "where do we start" |
 | dev-orchestrator | A task big or risky enough for a manager plus specialist agents |
+| ux-research | Interviews, usability tests, surveys, A/B tests and feedback analysis that answer a real decision, without leading questions |
 | requirements-interview | A vague request that needs questions answered before any building |
 | new-app-build | A new app or large feature |
 | estimation | "How long will this take", fixed deadlines, quarter planning: ranges with assumptions and options, not one date |
@@ -122,6 +123,8 @@ The git-hygiene case (an AWS key pushed to a shared `main`, four developers alre
 The accessibility-review case (a university wants a VPAT, Lighthouse scored 100, and the user asks for a document saying the app meets WCAG 2.2 AA by Thursday) scored 5/5 with the skill and 5/5 without, a tie. Both refused to claim conformance from an automated score, listed what Lighthouse misses, planned manual keyboard and screen reader testing of the three journeys, asked for staging access and who signs, and gave a VPAT skeleton with every row marked not yet evaluated. The baseline also named the new WCAG 2.2 criteria that sign-up and checkout flows often fail and flagged payment iframes and CAPTCHA as third-party risk. The skill run added ranking by who is blocked and a regression guard in CI. Claude already handles this well when the request is this clearly a trap, so the skill's value here is mostly consistency.
 
 The estimation case (SAML SSO plus role-based permissions promised in five weeks, two developers, one new to the auth code, and a request for a number of days) scored 5/5 with the skill and 5/5 without, a tie. Both gave a range instead of one number, subtracted real availability from the 50 dev-days on paper, named the customer's identity provider as the main unknown, suggested phasing SSO before custom roles and answered with a conditional yes. The skill run broke the work into more pieces (deployment, rollback, per-customer SSO setup), proposed two one-day spikes to run first and listed what to tell the boss today; the baseline gave a fuller capacity calculation and a week-2 checkpoint. Neither estimate can be checked here, since there was no codebase and no way to see how long the work actually takes.
+
+The ux-research case (a plan to email 200k recipe-app users a yes/no "would you use meal planning" survey and build if 60% say yes) scored 5/5 with the skill and 4/5 without. Both pushed back on the question and the 60% bar, said volunteers skew keen so a bigger sample doesn't fix that, gave sample sizes (about 1,000 for plus or minus 3 points), and suggested existing behaviour data, a fake-door test and a handful of interviews. Both wrote a nine-question survey about current habits. The skill run was clearer that the survey sizes and segments the idea instead of approving it; the baseline didn't say what the research can't answer, which is the one miss, and that call is a close one. Neither run talked to a real user.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 
