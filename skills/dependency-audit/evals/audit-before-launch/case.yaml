@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: audit-before-launch
+expected_outcome: |
+  Does not run npm audit fix --force blindly. Triages the findings by shipped vs dev-only and reachability, fixes in small tested steps, checks licences against closed-source distribution, and sets up ongoing guards, rather than chasing a zero count.

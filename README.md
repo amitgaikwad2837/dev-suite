@@ -41,6 +41,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | performance-work | Slow endpoints, queries, jobs or memory use: baseline, profile, fix the biggest cost, prove the gain |
 | app-replica | Rebuilding or replacing an existing application |
 | security-prompter | Before building: asks the security questions only you can answer and writes a one-page security brief |
+| dependency-audit | Vulnerable, abandoned or badly licensed dependencies: triage by reachability, fix in safe steps, keep it from growing back |
 | security-review | A security audit before shipping |
 | change-review | Reviewing a PR or diff |
 | test-strategy | What to test, writing tests, flaky and slow suites |
@@ -110,6 +111,8 @@ The performance-work case (a slow Django orders endpoint, with a plan to add Red
 The api-design case (a bulk product import plus a request to change `total` and `status` in a live v1 API with 300 partners) scored 5/5 with the skill and 4/5 without. Both refused to edit v1 in place, proposed adding fields beside the old ones with `Deprecation` and `Sunset` headers, and designed an asynchronous import with an idempotency key and per-item errors. The skill run also defined one error shape for the whole API, gave example requests and responses including an error, and offered the OpenAPI file and contract tests; the baseline had no API-wide error format. The gap is small.
 
 The observability case (a checkout service that was down 3 hours with no alert, Prometheus and Grafana available, an on-call person who doesn't want frequent pages) scored 5/5 with the skill and 4/5 without. Both paged on a few user-facing symptoms, kept declined cards out of the failure count, split pages from tickets and described testing the alerts. The baseline gave a fuller Alertmanager config; it didn't mention request IDs in logs or what must never be logged. The skill run did, and also listed the log fields it redacts. The gap is small, and the checks follow the skill's own method.
+
+The dependency-audit case (63 `npm audit` findings a week before launch, a plan to run `npm audit fix --force`, a closed-source SaaS) scored 5/5 with the skill and 5/5 without, a tie. Both refused `--force`, separated production from dev-only findings, fixed in small tested commits, flagged AGPL and unknown licences for a lawyer and added Dependabot or Renovate and a CI gate. The skill run also asked for an expiry date on each accepted risk and checked the lockfile and Docker image; the baseline added a before-and-after report for the customer. Claude already handles this well, so the skill mainly makes the method consistent.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 

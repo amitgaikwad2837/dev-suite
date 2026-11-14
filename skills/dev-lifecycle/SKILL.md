@@ -17,7 +17,7 @@ A map for the whole job. It decides the order of work and hands each phase to th
 | 4 | **Change existing code** | Bug, refactor, migration, version upgrade, or rebuild of a legacy app | `bug-investigation`, `migrate-and-upgrade`, `schema-changes`, `performance-work`, `api-design` (changing a live API), `app-replica` |
 | 3b | **Build a UI** | Design brief and tokens first, then states and polish, then check in a real browser | `frontend-design`, `design-reference`, `ui-polish`, `browser-verify`, `playwright-ui-tests` |
 | 5 | **Verify** | Decide what to test and write tests that catch real bugs; fix failures for real, stop and ask when stuck | `test-strategy`, `honest-fixes`, `browser-verify`, `web-quality` |
-| 6 | **Review** | Review a change before merge; security pass on what was built or changed | `change-review`, `security-review` |
+| 6 | **Review** | Review a change before merge; security pass on what was built or changed | `change-review`, `security-review`, `dependency-audit` |
 | 7 | **Ship** | Pipeline, versioning, staged rollout with abort criteria, rollback, release notes; careful handling of production emergencies | `release-engineering`, `observability`, `plain-writing`, `risky-shortcuts`, `incident-response` |
 | 8 | **Learn** | Capture repeated work as a skill | `skill-capture` |
 

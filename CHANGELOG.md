@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.14.0
+- Added `dependency-audit`. Removed dependency and licence audits from the roadmap's gap list.
+
 ## 0.13.0
 - Added `observability`. Removed observability from the roadmap's gap list.
 
