@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: brand-to-design-md
+expected_outcome: |
+  Writes a short DESIGN.md of tokens and rules from a described reference, without copying brand assets.

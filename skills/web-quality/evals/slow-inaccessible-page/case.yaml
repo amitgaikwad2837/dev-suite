@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: slow-inaccessible-page
+expected_outcome: |
+  Audits a page for accessibility and performance, measures first, and reports before and after.

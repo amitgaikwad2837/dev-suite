@@ -40,6 +40,11 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | security-review | A security audit before shipping |
 | change-review | Reviewing a PR or diff |
 | test-strategy | What to test, writing tests, flaky and slow suites |
+| frontend-design | Building or restyling a UI so it doesn't look like a default template |
+| design-reference | Matching a brand or reference site; writes a DESIGN.md of tokens and rules |
+| ui-polish | Reviewing a built screen for states, spacing, contrast, motion |
+| browser-verify | Running the app in a real browser, screenshots, Playwright tests |
+| web-quality | Accessibility, page speed, mobile layouts |
 | honest-fixes | Failing tests or CI, without silencing them |
 | risky-shortcuts | Drop table, force push and similar under pressure |
 | release-engineering | Pipelines, rollouts, rollback, versioning, release notes |
