@@ -70,7 +70,7 @@ Skip this for small or easily reversible changes; three attempts at a one-line f
 ## 7. Building a new application (greenfield)
 
 Most failed builds fail at the start: unclear requirements, or a big-bang implementation nobody can verify. Go in gated phases and show each result before the next:
-1. **Interview before code.** Ask only the questions that change the design (users and key flows, scale, data sensitivity, hosting, must-use stack, deadline, what "done" means). Where the user has no preference, pick a boring default and state it.
+1. **Interview before code** (the `grill-me` skill does this in depth). Ask only the questions that change the design (users and key flows, scale, data sensitivity, hosting, must-use stack, deadline, what "done" means). Where the user has no preference, pick a boring default and state it.
 2. **Spec.** One page: goals, non-goals, main user flows, data model, external integrations, acceptance criteria. Get a yes on this.
 3. **Plan.** Stack and architecture with the reason for each choice, plus the riskiest unknowns. Spike or prototype those first rather than last.
 4. **Walking skeleton.** The thinnest end-to-end path (UI/API to storage and back) with build, lint, tests and a CI workflow that runs them on every push. *Done when* CI is green on the skeleton, before any feature slice starts; list this in the plan as its own step, not as part of hardening.

@@ -6,7 +6,7 @@
     {
       "name": "deep-engineering",
       "source": "./",
-      "description": "A disciplined workflow for hard engineering work: bug investigation, security review, migrations, version upgrades, new apps, replicas, and honest test fixing."
+      "description": "Engineering workflow skills: deep-engineering (bugs, security, migrations, upgrades, new apps, honest test fixing, clear writing), skill-capture (turn repeated work into skills) and grill-me (get requirements answered before building)."
     }
   ]
 }

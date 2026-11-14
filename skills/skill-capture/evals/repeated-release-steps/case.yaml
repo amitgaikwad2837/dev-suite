@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: repeated-release-steps
+expected_outcome: |
+  Recognizes the repeated workflow, proposes a skill and asks where it should live before creating files, then writes a well-named skill with a triggering description, steps, output format, and a plan to test it.

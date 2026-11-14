@@ -30,6 +30,14 @@ What it changes about Claude's behavior:
 | Integrity | Never deletes, skips or loosens tests, hardcodes expectations or swallows errors to get green; tries distinct approaches, and when stuck stops with a structured report and options for the user |
 | Risky shortcuts | Diagnose first, offer the least destructive option, confirm the exact action before anything irreversible |
 
+## skill-capture
+
+Spots repeated work and turns it into a reusable skill. When the same multi-step procedure, the same correction or the same helper script comes up a second time (or you say "make this a skill"), Claude proposes the skill, asks where it should live (project, personal or shared), and only then writes it: a well-named folder, a description that triggers reliably, short imperative steps, bundled scripts for repeated code, no secrets, and a quick test with realistic prompts. For deeper evaluation it points to Anthropic's `skill-creator`.
+
+## grill-me
+
+Interviews you before anything is built. Claude reads what it can first, then asks one question at a time, each with a recommended answer, probes vague words like "fast" or "secure", follows the branches your answers open, and ends with a decision record (goal, decisions, assumptions, out of scope, open risks) for you to confirm. Say "grill me", or hand it a vague plan. The idea is popular in community skill packs; this version is written from scratch.
+
 ### Install
 
 **As a plugin (recommended):** inside Claude Code, add the marketplace and install:
