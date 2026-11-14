@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.10.0
+- Added `incident-response`. Removed incident response from the roadmap's gap list.
+
 ## 0.9.0
 - Added `schema-changes`, written by the agent team (two competing designs, a critique, then build and review). Removed schema changes from the roadmap's gap list.
 

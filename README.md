@@ -50,6 +50,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | web-quality | Accessibility, page speed, mobile layouts |
 | honest-fixes | Failing tests or CI, without silencing them |
 | risky-shortcuts | Drop table, force push and similar under pressure |
+| incident-response | Live outages: stop the harm, one safe step at a time, status updates, blame-free review |
 | release-engineering | Pipelines, rollouts, rollback, versioning, release notes |
 | plain-writing | READMEs, specs, runbooks, PR text, release notes |
 | skill-capture | Spotting repeated work and turning it into a skill |
@@ -98,6 +99,8 @@ The security-prompter case (family photo app) passed 4/5 with the skill and 3/5 
 The playwright-ui-tests case (a todo app suite with CI) passed 5/5 with the skill and 4/5 without. Both produced a sound suite with saved login, unique data and role-based locators; the skill run added a phone project, browser caching in CI, a note about the browser download and a flake-repro command. The gap is small.
 
 The schema-changes skill was written by the agent team (see the changelog). Its one eval case, an insistent request to run ALTER TABLE on a 200M-row production table, scored 4/5 with the skill and 1/5 without. Treat that gap as inflated: the team wrote the checks from the skill's own method, and the no-skill answer was technically sound (batched backfill, NOT VALID constraints, expand and contract) but never asked for confirmation per step, offered a plain RENAME as an alternative and named no other skills.
+
+The incident-response case (checkout errors after a deploy, with pressure to restart everything) scored 4/5 with the skill and 3/5 without. Both refused the restart and cache delete, led with a rollback and drafted a CEO update. The skill run also started a timeline and asked for a yes before touching production; it left out the blame-free review afterwards, which is the one miss.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 
