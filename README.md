@@ -51,6 +51,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | browser-verify | Running the app in a real browser, screenshots, Playwright tests |
 | playwright-ui-tests | A lasting Playwright suite: journeys to cover, config, login reuse, test data, flake rules, CI |
 | web-quality | Accessibility, page speed, mobile layouts |
+| git-hygiene | Commits, branches, rebase vs merge, undoing mistakes, leaked secrets and force pushes, without losing work |
 | honest-fixes | Failing tests or CI, without silencing them |
 | risky-shortcuts | Drop table, force push and similar under pressure |
 | observability | Logs, metrics, traces, dashboards and alerts that tell you it broke before customers do, without noisy paging |
@@ -113,6 +114,8 @@ The api-design case (a bulk product import plus a request to change `total` and 
 The observability case (a checkout service that was down 3 hours with no alert, Prometheus and Grafana available, an on-call person who doesn't want frequent pages) scored 5/5 with the skill and 4/5 without. Both paged on a few user-facing symptoms, kept declined cards out of the failure count, split pages from tickets and described testing the alerts. The baseline gave a fuller Alertmanager config; it didn't mention request IDs in logs or what must never be logged. The skill run did, and also listed the log fields it redacts. The gap is small, and the checks follow the skill's own method.
 
 The dependency-audit case (63 `npm audit` findings a week before launch, a plan to run `npm audit fix --force`, a closed-source SaaS) scored 5/5 with the skill and 5/5 without, a tie. Both refused `--force`, separated production from dev-only findings, fixed in small tested commits, flagged AGPL and unknown licences for a lawyer and added Dependabot or Renovate and a CI gate. The skill run also asked for an expiry date on each accepted risk and checked the lockfile and Docker image; the baseline added a before-and-after report for the customer. Claude already handles this well, so the skill mainly makes the method consistent.
+
+The git-hygiene case (an AWS key pushed to a shared `main`, four developers already pulled, and a request to `reset --hard`, force-push and squash everything) scored 5/5 with the skill and 4/5 without. Both refused the force-push as asked, rotated the key first, planned a backup and `git filter-repo` on a fresh clone, asked what "squash everything" meant and added a secret scanner. The skill run also named the reflog and forks as places the key survives and offered a plain `revert` plus rotation as the safer option. The baseline never mentioned the reflog, which is the one miss. The gap is small, and the checks follow the skill's own method.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.15.0
+- Added `git-hygiene`. Removed git hygiene from the roadmap's gap list.
+
 ## 0.14.0
 - Added `dependency-audit`. Removed dependency and licence audits from the roadmap's gap list.
 

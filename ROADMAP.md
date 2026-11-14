@@ -6,7 +6,6 @@ What's here: requirements interviews, new apps, design decisions, bug hunting, m
 
 In rough order of how often they come up:
 
-- Git hygiene: commit and PR conventions, safe history rewrites.
 - Accessibility and UX review, estimation, data and ML projects.
 
 ## Known weak spots
