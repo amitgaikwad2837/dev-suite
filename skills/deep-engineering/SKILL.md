@@ -1,6 +1,6 @@
 ---
 name: deep-engineering
-description: A disciplined workflow for hard engineering work. Use whenever the user has a bug they can't explain (flaky tests, "works locally but fails in CI", wrong numbers, races), asks for a security review or audit ("before we ship"), plans a migration or refactor across many files, wants to build a new application or feature from scratch, wants to upgrade a framework, language or major dependency ("upgrade to Angular 18", "move to Python 3.13"), wants several approaches compared before a hard-to-reverse design choice ("arena this"), hands over a long multi-step task, wants to rebuild or replace an existing application, or has failing tests/CI that must be fixed for real, not silenced, even without saying "root cause". Also use when a stuck production issue tempts a risky shortcut (drop table, force push). Skip one-line fixes, simple questions and routine edits.
+description: A disciplined workflow for hard engineering work. Use whenever the user has a bug they can't explain (flaky tests, "works locally but fails in CI", wrong numbers, races), asks for a security review or audit ("before we ship"), plans a migration or refactor across many files, wants to build a new application or feature from scratch, wants to upgrade a framework, language or major dependency ("upgrade to Angular 18", "move to Python 3.13"), wants several approaches compared before a hard-to-reverse design choice ("arena this"), hands over a long multi-step task, wants to rebuild or replace an existing application, writes or polishes documents (README, spec, report, PR text), or has failing tests/CI that must be fixed for real, not silenced, even without saying "root cause". Also use when a stuck production issue tempts a risky shortcut (drop table, force push). Skip one-line fixes, simple questions and routine edits.
 ---
 
 # Deep Engineering
@@ -124,6 +124,17 @@ Use when the user wants to recreate an application's behavior: replacing a legac
 4. **Build fresh in slices** (Mode 7), each slice covering a group of checklist items, with tests that encode the spec.
 5. **Check parity** where it is legitimate to run both: feed the same inputs to the original and the replica and compare outputs, with differences either fixed or recorded as intentional.
 6. **Report** a parity table (matched / intentionally different / not yet), plus risks. For a legacy replacement, plan data migration, shadow running and rollback with Mode 4.
+
+## 11. Writing documents that read like a person wrote them
+
+Applies to every document you produce or edit: READMEs, specs, design docs, runbooks, reports, PR and commit text, release notes, emails. Text that sounds machine-written gets skimmed and distrusted, and that hurts the engineering behind it.
+1. **Know the reader and the one thing they must do or decide.** Lead with it. Cut anything that does not serve that reader.
+2. **Write plainly and specifically.** Short sentences, concrete nouns, real numbers, names and examples instead of general claims. Say "the export takes 40 s on 10k rows", not "performance is significantly improved".
+3. **Remove the usual machine tells**: opening with praise or restating the question; "it's worth noting", "in today's fast-paced world", "plays a crucial role", "delve", "robust", "seamless", "leverage" and similar filler; inflated significance for ordinary facts; "not just X, but Y" and rule-of-three padding; piles of em dashes, bold lead-ins on every bullet, and headings over two-line sections; vague attributions ("experts say"); closing summaries that repeat the body; offers like "I hope this helps".
+4. **Vary rhythm and keep opinions where they belong.** Mix sentence lengths, state recommendations directly, admit uncertainty once and precisely instead of hedging every line.
+5. **Never trade accuracy for style.** Do not change code, commands, names, numbers, versions, quotes or facts while editing prose. Do not strip structure that helps (tables, steps, warnings) just to look casual.
+6. **Match the user's voice when they give a sample or an existing doc**: reuse their vocabulary, sentence length and formality instead of a generic tone.
+7. **Final pass.** Read it as the recipient would. Delete a sentence if the document still works without it. Then ask "does every claim here have evidence or a number behind it?"
 
 ## Report shape
 

@@ -26,6 +26,7 @@ What it changes about Claude's behavior:
 | New application | Interview, one-page spec, plan with risky unknowns first, walking skeleton with CI, vertical slices with tests, then a hardening and security pass |
 | Version upgrade | Pin a green baseline, list breaking changes from the official guide as a checklist, one major at a time, vendor codemods in dry-run and in a separate commit, fix in layers, ship with a rollback |
 | Replica (rebuild an app) | Clean-room rebuild from observed behavior: ownership/permission check, scope, black-box behavior spec, fresh design and code, slices with parity tests, and a parity report |
+| Writing | Documents for a named reader, plain and specific, machine-sounding filler removed, facts/code/names untouched, user voice matched when a sample is given |
 | Integrity | Never deletes, skips or loosens tests, hardcodes expectations or swallows errors to get green; tries distinct approaches, and when stuck stops with a structured report and options for the user |
 | Risky shortcuts | Diagnose first, offer the least destructive option, confirm the exact action before anything irreversible |
 

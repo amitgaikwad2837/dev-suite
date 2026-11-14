@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: humanized-doc-rewrite
+expected_outcome: |
+  A short plain rewrite that keeps every fact, command, number and version, removes promotional filler and machine tells, and leads with what the reader does.
