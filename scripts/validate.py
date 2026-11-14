@@ -138,6 +138,18 @@ for f in list(skills_dir.rglob("SKILL.md")) + list((ROOT / "agents").rglob("*.md
     if re.search(r"\bMode \d+\b|deep-engineering", txt):
         err(f"{f.relative_to(ROOT)}: stale reference to a retired mode number or the old deep-engineering skill")
 
+# "mode" as a skill-routing term (modes were retired; skills are the unit). Warn only.
+MODE_ROUTING = re.compile(
+    r"(?i)\bskills? or modes?\b|\bmodes? or skills?\b"
+    r"|(?<!dark )(?<!failure )(?<!test )(?<!debug )(?<!safe )\bmodes? (?:handles?|routes?)\b"
+    r"|\bwhich modes? (?:handles?|applies|to use)\b|\bmode \d+\b(?! ?(?:bytes|permissions?))"
+)
+for f in list(skills_dir.rglob("SKILL.md")) + list((ROOT / "agents").rglob("*.md")):
+    for n, line in enumerate(f.read_text(encoding="utf8").splitlines(), 1):
+        m = MODE_ROUTING.search(line)
+        if m:
+            warn(f"{f.relative_to(ROOT)}:{n}: 'mode' used as a routing term ('{m.group(0)}'); say skill instead")
+
 print(f"skills checked: {', '.join(skill_names)}")
 for w in warnings:
     print("WARN ", w)

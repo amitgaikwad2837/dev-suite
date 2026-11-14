@@ -29,7 +29,7 @@ A map for the whole job. It decides the order of work and hands each phase to th
 
 1. Place the request. Name the phase it starts in. "Build me an expense app" starts at Discover; "CI is red" starts at Change existing code or Verify; "upgrade to Django 5" starts at Change existing code (`migrate-and-upgrade`). Say the phase in one line.
 2. Don't skip an earlier phase that matters. If requirements are vague, do Discover before Design. If tests are thin, build the safety net before changing behavior. If the user already has a spec, say so and start at Build.
-3. Hand off, don't duplicate. Follow the named skill or mode for the details instead of restating them here.
+3. Hand off, don't duplicate. Follow the named skill for the details instead of restating them here.
 4. Gate between phases. After Discover and Design, show the result and get a yes before the next phase. After Build and Change, run the checks before calling it done. Keep the gates light for small tasks.
 5. Close the loop. At the end report done / unverified / left to do, and if a procedure repeated during the work, offer `skill-capture`.
 
