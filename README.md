@@ -36,6 +36,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | coding-discipline | Any non-trivial code change or multi-step task |
 | bug-investigation | Bugs nobody can explain, flaky tests, "fails only in CI" |
 | migrate-and-upgrade | Library or framework migrations, big refactors, version upgrades |
+| schema-changes | Adding, renaming or dropping columns and backfilling data on live tables without downtime |
 | app-replica | Rebuilding or replacing an existing application |
 | security-prompter | Before building: asks the security questions only you can answer and writes a one-page security brief |
 | security-review | A security audit before shipping |
@@ -95,6 +96,8 @@ The five frontend skills were run the same way later. With the skills: 25 of 25 
 The security-prompter case (family photo app) passed 4/5 with the skill and 3/5 without: both found the invite-link and upload risks, but the baseline asked ten questions with no proposed answers, and the skill run left out the question about where secrets are kept.
 
 The playwright-ui-tests case (a todo app suite with CI) passed 5/5 with the skill and 4/5 without. Both produced a sound suite with saved login, unique data and role-based locators; the skill run added a phone project, browser caching in CI, a note about the browser download and a flake-repro command. The gap is small.
+
+The schema-changes skill was written by the agent team (see the changelog). Its one eval case, an insistent request to run ALTER TABLE on a 200M-row production table, scored 4/5 with the skill and 1/5 without. Treat that gap as inflated: the team wrote the checks from the skill's own method, and the no-skill answer was technically sound (batched backfill, NOT VALID constraints, expand and contract) but never asked for confirmation per step, offered a plain RENAME as an alternative and named no other skills.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 

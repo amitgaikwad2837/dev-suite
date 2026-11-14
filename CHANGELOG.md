@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.9.0
+- Added `schema-changes`, written by the agent team (two competing designs, a critique, then build and review). Removed schema changes from the roadmap's gap list.
+
 ## 0.8.0
 - Added `playwright-ui-tests` for building a lasting UI test suite. `browser-verify` now covers quick checks only and points to it.
 

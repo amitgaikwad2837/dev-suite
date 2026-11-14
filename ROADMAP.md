@@ -6,7 +6,6 @@ What's here: requirements interviews, new apps, design decisions, bug hunting, m
 
 In rough order of how often they come up:
 
-- Database schema changes (expand/contract, backfills, locks, zero-downtime). `risky-shortcuts` only handles a stuck lock.
 - Incident response and postmortems.
 - Performance work: measure, profile, fix the real bottleneck, prove the gain.
 - API design and versioning. `design-decision` helps with the choice but has nothing API-specific.
