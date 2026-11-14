@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: todo-app-suite
+expected_outcome: |
+  Sets up a small Playwright suite with config, saved login, isolated data, stable locators, and a CI workflow, and avoids flaky patterns.

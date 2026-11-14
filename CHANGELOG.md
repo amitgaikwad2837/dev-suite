@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.8.0
+- Added `playwright-ui-tests` for building a lasting UI test suite. `browser-verify` now covers quick checks only and points to it.
+
 ## 0.7.0
 - Added `security-prompter`, which asks the security questions up front and writes a security brief.
 

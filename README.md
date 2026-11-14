@@ -45,6 +45,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | design-reference | Matching a brand or reference site; writes a DESIGN.md of tokens and rules |
 | ui-polish | Reviewing a built screen for states, spacing, contrast, motion |
 | browser-verify | Running the app in a real browser, screenshots, Playwright tests |
+| playwright-ui-tests | A lasting Playwright suite: journeys to cover, config, login reuse, test data, flake rules, CI |
 | web-quality | Accessibility, page speed, mobile layouts |
 | honest-fixes | Failing tests or CI, without silencing them |
 | risky-shortcuts | Drop table, force push and similar under pressure |
@@ -92,6 +93,8 @@ The five frontend skills were run the same way later. With the skills: 25 of 25 
 | Slow, keyboard-unfriendly page | 5/5 | 4/5 |
 
 The security-prompter case (family photo app) passed 4/5 with the skill and 3/5 without: both found the invite-link and upload risks, but the baseline asked ten questions with no proposed answers, and the skill run left out the question about where secrets are kept.
+
+The playwright-ui-tests case (a todo app suite with CI) passed 5/5 with the skill and 4/5 without. Both produced a sound suite with saved login, unique data and role-based locators; the skill run added a phone project, browser caching in CI, a note about the browser download and a flake-repro command. The gap is small.
 
 No page was rendered in any of the frontend runs (no browser was available to the agents), so they test the method and the written output, not how the result looks.
 
