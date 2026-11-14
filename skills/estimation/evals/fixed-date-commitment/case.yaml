@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: fixed-date-commitment
+expected_outcome: |
+  Does not give a single number of days. Breaks the work into pieces including the forgotten ones, gives ranges with assumptions, names the dominant unknowns and how to resolve them quickly, and answers the fixed-date question with options instead of a bare yes or no.

@@ -6,7 +6,7 @@ What's here: requirements interviews, new apps, design decisions, bug hunting, m
 
 In rough order of how often they come up:
 
-- Estimation, UX research and data and ML projects.
+- UX research and data and ML projects.
 
 ## Known weak spots
 
