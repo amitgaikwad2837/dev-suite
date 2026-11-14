@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: vague-notification-idea
+expected_outcome: |
+  Does not start building. States what it understands, separates what it can assume from what only the user can decide, asks a short numbered round with a proposed answer for each, and promises a brief to confirm before building.

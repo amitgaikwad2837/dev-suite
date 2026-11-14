@@ -1,19 +1,19 @@
 ---
 name: deep-engineering
-description: A disciplined workflow for hard engineering work. Use whenever the user has a bug they can't explain (flaky tests, "works locally but fails in CI", wrong numbers, races), asks for a security review or audit ("before we ship"), plans a migration or refactor across many files, wants to build a new application or feature from scratch, wants to upgrade a framework, language or major dependency ("upgrade to Angular 18", "move to Python 3.13"), wants several approaches compared before a hard-to-reverse design choice ("arena this"), hands over a long multi-step task, wants to rebuild or replace an existing application, writes or polishes documents (README, spec, report, PR text), or has failing tests/CI that must be fixed for real, not silenced, even without saying "root cause". Also use when a stuck production issue tempts a risky shortcut (drop table, force push). Skip one-line fixes, simple questions and routine edits.
+description: A disciplined workflow for hard engineering work. Use whenever the user has a bug they can't explain (flaky tests, "works locally but fails in CI", wrong numbers, races), asks for a security review or audit ("before we ship"), plans a migration or refactor across many files, wants to build a new application or feature from scratch, wants to upgrade a framework, language or major dependency ("upgrade to Angular 18", "move to Python 3.13"), must choose between designs that are hard to reverse ("which approach should we take"), hands over a long multi-step task, wants to rebuild or replace an existing application, writes or polishes documents (README, spec, report, PR text), or has failing tests/CI that must be fixed for real, not silenced, even without saying "root cause". Also use when a stuck production issue tempts a risky shortcut (drop table, force push). Skip one-line fixes, simple questions and routine edits.
 ---
 
 # Deep Engineering
 
 Hard problems fail in predictable ways: fixing a symptom, trusting an assumption, changing too much at once, or acting irreversibly before understanding. Each mode below guards against one of these. Pick the modes that apply; Mode 3 usually wraps the others.
 
-## Coding discipline (applies to every mode)
+## Four checks around every edit (applies to every mode)
 
-LLM-written changes go wrong in four familiar ways: silent assumptions, over-building, drive-by edits, and no definition of success. Counter each:
-- **Think before coding.** State your assumptions. If a request has several plausible readings, or something is confusing, say so and ask or lay out the options instead of picking one silently. If a simpler approach exists, say it.
-- **Simplicity first.** Write the least code that solves the stated problem: no features nobody asked for, no abstractions for single use, no configurability or error handling for cases that can't happen. If 200 lines could be 50, rewrite it.
-- **Surgical changes.** Touch only what the task needs and match the surrounding style. Don't refactor or reformat neighboring code. Remove only the unused code your own change created; mention unrelated problems you notice rather than fixing them. Every changed line should trace to the request.
-- **Goal-driven execution.** Turn the task into a check you can run ("reproduce the bug in a test, then make it pass"; "behavior identical before and after"), then loop until it passes. Weak goals like "make it work" need clarifying first.
+Generated code goes wrong when assumptions stay hidden, the change grows past the request, side edits sneak in, and nobody says how success will be judged. Run these checks:
+- **Before: assumption check.** Write down what you are assuming about the request, the code and the environment. If a request has more than one plausible reading, or you are confused, say so and ask or list the options rather than choosing silently.
+- **Before: size check.** Ask what the smallest change is that fully solves the stated problem. Leave out features, abstractions for a single use and handling of cases that cannot occur. If a simpler route exists, say so.
+- **After: diff check.** Every changed line should trace to the request and match the surrounding style. Do not tidy or reformat neighboring code. Delete only what your own change made unused, and list unrelated problems you noticed instead of fixing them.
+- **After: evidence check.** Name the command or test that proves the result, run it, and report what it showed ("reproduced in a test, then made it pass"; "output identical before and after"). A vague goal like "make it work" needs to be pinned down first.
 
 ## 1. Bug investigation
 
@@ -56,21 +56,19 @@ When the user wants to unblock fast with something destructive (drop table, forc
 2. Offer the least destructive option that works (terminate one session, rename instead of drop, revert instead of force push) and say what each can't undo.
 3. Do nothing irreversible until the user confirms the exact object and action. "Just do it" in the original prompt is a reason to restate the risk once, not to skip the confirmation.
 
-## 6. Arena: compare several attempts on high-stakes design choices
+## 6. Choosing between designs
 
-A single attempt anchors on its first idea, and for something hard to change later (an API shape, a data model, a core algorithm, a migration strategy, a tricky refactor) that anchor can lock in the wrong shape. When the stakes justify the extra cost, or the user asks to "arena" or compare approaches:
-1. **Frame once.** Write the task and 3-5 judging criteria (correctness, simplicity, testability, migration cost, risk) before generating anything, so candidates are judged on the same terms.
-2. **Fan out 3 independent candidates**, each pushed toward a different approach (for example: simplest possible, most extensible, most conservative). Use subagents when available so they don't see each other's work; otherwise write them one at a time without peeking.
-3. **Cross-judge** each against the criteria with evidence (run tests, try an edge case, count moving parts). Don't score on prose quality.
-4. **Pick the strongest base**, then **graft** specific strengths from the others (an error-handling idea, a test, a cleaner interface), saying what came from where.
-5. **Verify** the merged result and report: candidates, scores, what was grafted, what was rejected and why.
-
-Skip this for small or easily reversible changes; three attempts at a one-line fix is waste.
+Some choices are expensive to undo once users, data or other teams depend on them: an API shape, a data model, an auth approach, a framework, a migration strategy. For these, one idea written quickly tends to win by default. Slow down in proportion to the cost of being wrong.
+1. **Classify the decision.** If it is cheap to reverse (a refactor behind an interface, an internal helper), choose quickly and move on. Only continue below for decisions that are hard to reverse.
+2. **Set the bar before looking at options.** List 3 to 5 criteria, mark any as must-haves that eliminate an option outright (for example "must not lose events", "must run on our current hosting"), and note which criteria matter most.
+3. **Sketch three genuinely different options**, each in about ten lines: the idea, what it makes easy, what it makes hard. Make them differ in principle (for example centralized vs local state, build vs buy, synchronous vs queued), not in minor details. Use subagents for independent sketches if available.
+4. **Stress each option with the same scenarios**: a failure in the middle of an operation, ten times the load, and one realistic change request next quarter. Where possible run something real (a spike, a query plan, a prototype of the risky part) instead of arguing from memory.
+5. **Decide and record it.** Eliminate options that fail a must-have, pick the best of the rest, and borrow a specific safeguard or idea from a rejected option when it fits. Write a short decision record: what was chosen, why, what was rejected and why, and the evidence that would make you revisit it.
 
 ## 7. Building a new application (greenfield)
 
 Most failed builds fail at the start: unclear requirements, or a big-bang implementation nobody can verify. Go in gated phases and show each result before the next:
-1. **Interview before code** (the `grill-me` skill does this in depth). Ask only the questions that change the design (users and key flows, scale, data sensitivity, hosting, must-use stack, deadline, what "done" means). Where the user has no preference, pick a boring default and state it.
+1. **Interview before code** (the `requirements-interview` skill does this in depth). Ask only the questions that change the design (users and key flows, scale, data sensitivity, hosting, must-use stack, deadline, what "done" means). Where the user has no preference, pick a boring default and state it.
 2. **Spec.** One page: goals, non-goals, main user flows, data model, external integrations, acceptance criteria. Get a yes on this.
 3. **Plan.** Stack and architecture with the reason for each choice, plus the riskiest unknowns. Spike or prototype those first rather than last.
 4. **Walking skeleton.** The thinnest end-to-end path (UI/API to storage and back) with build, lint, tests and a CI workflow that runs them on every push. *Done when* CI is green on the skeleton, before any feature slice starts; list this in the plan as its own step, not as part of hardening.
@@ -125,16 +123,15 @@ Use when the user wants to recreate an application's behavior: replacing a legac
 5. **Check parity** where it is legitimate to run both: feed the same inputs to the original and the replica and compare outputs, with differences either fixed or recorded as intentional.
 6. **Report** a parity table (matched / intentionally different / not yet), plus risks. For a legacy replacement, plan data migration, shadow running and rollback with Mode 4.
 
-## 11. Writing documents that read like a person wrote them
+## 11. Writing documents people will read
 
-Applies to every document you produce or edit: READMEs, specs, design docs, runbooks, reports, PR and commit text, release notes, emails. Text that sounds machine-written gets skimmed and distrusted, and that hurts the engineering behind it.
-1. **Know the reader and the one thing they must do or decide.** Lead with it. Cut anything that does not serve that reader.
-2. **Write plainly and specifically.** Short sentences, concrete nouns, real numbers, names and examples instead of general claims. Say "the export takes 40 s on 10k rows", not "performance is significantly improved".
-3. **Remove the usual machine tells**: opening with praise or restating the question; "it's worth noting", "in today's fast-paced world", "plays a crucial role", "delve", "robust", "seamless", "leverage" and similar filler; inflated significance for ordinary facts; "not just X, but Y" and rule-of-three padding; piles of em dashes, bold lead-ins on every bullet, and headings over two-line sections; vague attributions ("experts say"); closing summaries that repeat the body; offers like "I hope this helps".
-4. **Vary rhythm and keep opinions where they belong.** Mix sentence lengths, state recommendations directly, admit uncertainty once and precisely instead of hedging every line.
-5. **Never trade accuracy for style.** Do not change code, commands, names, numbers, versions, quotes or facts while editing prose. Do not strip structure that helps (tables, steps, warnings) just to look casual.
-6. **Match the user's voice when they give a sample or an existing doc**: reuse their vocabulary, sentence length and formality instead of a generic tone.
-7. **Final pass.** Read it as the recipient would. Delete a sentence if the document still works without it. Then ask "does every claim here have evidence or a number behind it?"
+Applies to every document you produce or edit: READMEs, specs, design docs, runbooks, reports, PR and commit text, release notes, emails. Readers skim text that sounds generic, so the aim is writing that is specific enough to be trusted and short enough to be read.
+1. **Start from the reader.** Name who will read it, what they should do or decide afterward, and what they already know. Put that first and cut what does not serve it.
+2. **Pass 1, structure.** Order the content by what the reader needs, not by how you found it out. Use headings, tables and steps only where they help someone find or follow something.
+3. **Pass 2, sentences.** Prefer concrete subjects and verbs, numbers, names and examples over adjectives and general claims ("the export takes 40 s on 10k rows", not "performance is significantly improved"). Cut openers that restate the question, praise, hedging on every line, stacked intensifiers, promotional words, and closers that repeat the body or offer more help. Vary sentence length; state recommendations plainly and mark uncertainty once, precisely.
+4. **Pass 3, facts.** Check that every claim has a number, source or example behind it. Never alter code, commands, names, numbers, versions or quotations while editing prose.
+5. **Match the writer.** If the user supplies a sample or an existing document, follow its vocabulary, sentence length and formality instead of a generic tone.
+6. **Delete test.** Remove any sentence the document still works without.
 
 ## Report shape
 

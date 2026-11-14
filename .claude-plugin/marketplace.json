@@ -8,7 +8,7 @@
     {
       "name": "dev-suite",
       "source": "./",
-      "description": "A full development suite: dev-lifecycle (router from idea to production), grill-me (requirements interview), deep-engineering (bugs, security, migrations, upgrades, new apps, replicas, honest test fixing, clear writing) and skill-capture (turn repeated work into skills)."
+      "description": "A full development suite: dev-lifecycle (router from idea to production), requirements-interview (get requirements answered before building), deep-engineering (bugs, security, migrations, upgrades, new apps, replicas, honest test fixing, clear writing) and skill-capture (turn repeated work into skills)."
     }
   ]
 }

@@ -11,9 +11,9 @@ A map for the whole job. It decides the order of work and hands each phase to th
 
 | # | Phase | Do this | Skill or mode |
 |---|---|---|---|
-| 1 | **Discover** | Get requirements, constraints and success criteria answered by the user | `grill-me` |
-| 2 | **Design** | One-page spec; compare options for choices that are hard to reverse | `deep-engineering` Mode 7 (spec, plan), Mode 6 (arena) |
-| 3 | **Build** | Walking skeleton with CI first, then tested vertical slices | `deep-engineering` Mode 7, plus Coding discipline |
+| 1 | **Discover** | Get requirements, constraints and success criteria answered by the user | `requirements-interview` |
+| 2 | **Design** | One-page spec; compare options for choices that are hard to reverse | `deep-engineering` Mode 7 (spec, plan), Mode 6 (choosing between designs) |
+| 3 | **Build** | Walking skeleton with CI first, then tested vertical slices | `deep-engineering` Mode 7, plus the four edit checks |
 | 4 | **Change existing code** | Bug, refactor, migration, version upgrade, or rebuild of a legacy app | Modes 1, 4, 8, 10 |
 | 5 | **Verify** | Real fixes, no gamed tests; stop and ask when stuck | Mode 9 |
 | 6 | **Review** | Security pass on what was built or changed | Mode 2 |
@@ -32,4 +32,4 @@ Mode 3 (plan every step with a "Done when") wraps all of it.
 
 ## When the task falls outside the suite
 
-The suite does not yet have dedicated skills for code review of other people's changes, performance tuning, incident response, CI/CD pipeline design, database schema changes, API design and versioning, observability, or dependency and license audits (see `ROADMAP.md` in the repo). For those, say so, then apply the Coding discipline and Mode 3 (plan with "Done when", small verified steps) and ask the user about anything that is their call.
+The suite does not yet have dedicated skills for code review of other people's changes, performance tuning, incident response, CI/CD pipeline design, database schema changes, API design and versioning, observability, or dependency and license audits (see `ROADMAP.md` in the repo). For those, say so, then apply the four edit checks and Mode 3 (plan with "Done when", small verified steps) and ask the user about anything that is their call.

@@ -5,7 +5,7 @@ A development workflow suite for Claude Code: four skills that cover a job from 
 | Phase | Skill |
 |---|---|
 | Entry point, routes the work | `dev-lifecycle` |
-| Discover: get requirements answered | `grill-me` |
+| Discover: get requirements answered | `requirements-interview` |
 | Design, build, change, verify, review, ship, write | `deep-engineering` (11 modes) |
 | Learn: turn repeated work into skills | `skill-capture` |
 
@@ -31,11 +31,11 @@ What it changes about Claude's behavior:
 | Security review | Trace untrusted input to sinks; each finding gets a location, an exploit line, a fix; unverified items are labelled "suspected" |
 | Long multi-step work | Numbered plan where every step ends with "Done when ...", small verified increments, final done / unverified / left report |
 | Refactors and migrations | Safety net first, migrate in slices behind a flag, pin old-vs-new behavior differences with tests |
-| Arena (compare approaches) | For hard-to-reverse design choices: fix judging criteria first, generate 3 independent candidates, cross-judge with evidence, pick a base and graft strengths from the rest |
+| Choosing between designs | Classify how hard the decision is to reverse, set criteria and must-haves, sketch three different options, stress them with the same scenarios, and record the decision and what would make you revisit it |
 | New application | Interview, one-page spec, plan with risky unknowns first, walking skeleton with CI, vertical slices with tests, then a hardening and security pass |
 | Version upgrade | Pin a green baseline, list breaking changes from the official guide as a checklist, one major at a time, vendor codemods in dry-run and in a separate commit, fix in layers, ship with a rollback |
 | Replica (rebuild an app) | Clean-room rebuild from observed behavior: ownership/permission check, scope, black-box behavior spec, fresh design and code, slices with parity tests, and a parity report |
-| Writing | Documents for a named reader, plain and specific, machine-sounding filler removed, facts/code/names untouched, user voice matched when a sample is given |
+| Writing | Reader first, three passes (structure, sentences, facts), facts and code never altered, the user's own voice matched when a sample is given |
 | Integrity | Never deletes, skips or loosens tests, hardcodes expectations or swallows errors to get green; tries distinct approaches, and when stuck stops with a structured report and options for the user |
 | Risky shortcuts | Diagnose first, offer the least destructive option, confirm the exact action before anything irreversible |
 
@@ -43,9 +43,9 @@ What it changes about Claude's behavior:
 
 Spots repeated work and turns it into a reusable skill. When the same multi-step procedure, the same correction or the same helper script comes up a second time (or you say "make this a skill"), Claude proposes the skill, asks where it should live (project, personal or shared), and only then writes it: a well-named folder, a description that triggers reliably, short imperative steps, bundled scripts for repeated code, no secrets, and a quick test with realistic prompts. For deeper evaluation it points to Anthropic's `skill-creator`.
 
-## grill-me
+## requirements-interview
 
-Interviews you before anything is built. Claude reads what it can first, then asks one question at a time, each with a recommended answer, probes vague words like "fast" or "secure", follows the branches your answers open, and ends with a decision record (goal, decisions, assumptions, out of scope, open risks) for you to confirm. Say "grill me", or hand it a vague plan. The idea is popular in community skill packs; this version is written from scratch.
+Gets the missing requirements before anything is built. Claude sorts what it needs to know into three groups: things it can look up, things it can safely default, and things only you can decide. It asks only the last group, in a short numbered round where every question has a proposed answer, so you can reply "defaults" or change a few numbers. Follow-up rounds happen only where answers open new decisions. It ends with a one-page brief (goal, decisions, assumptions, out of scope, risks) for you to confirm.
 
 ### Install
 
@@ -76,17 +76,9 @@ cp -r ClaudeSkills/skills/deep-engineering ~/.claude/skills/
 
 **Everything at once, manually:** unzip `dist/dev-suite.zip` into `~/.claude/skills/` (or a project's `.claude/skills/`). It holds all four skills without the test cases.
 
-### Related skills worth installing alongside
+### Prior art
 
-`deep-engineering` is a workflow layer. It pairs well with these community and official skills (we did not copy their content; check each repo and read its SKILL.md before installing, since skills run with your agent's permissions):
-
-- [Superpowers](https://github.com/obra/superpowers): a broader development methodology (brainstorming, TDD, debugging, planning, review).
-- [GitHub Spec Kit](https://github.com/github/spec-kit): a specify, plan, tasks, implement flow with approval between phases; strong for greenfield work.
-- [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills): four short coding principles (think before coding, simplicity first, surgical changes, goal-driven execution) distilled from Andrej Karpathy's notes on LLM coding pitfalls. The "Coding discipline" section of `deep-engineering` reflects the same ideas in our own words.
-- [anthropics/skills](https://github.com/anthropics/skills): official skills such as `frontend-design`, `webapp-testing`, `mcp-builder` and `claude-api`.
-- Migration helpers such as `migrate-ops` and the Codemod registry skills, for framework-specific upgrade commands.
-
-Popularity figures for these vary between aggregator sites and are unverified.
+Interviewing before building, comparing designs, plain writing and test integrity are all long-standing engineering practice, and other collections of skills for Claude touch some of the same ground. The methods and wording in this repo were written for it, from the failure cases we tested, and no text was copied from other skill packs.
 
 ### How well does it work?
 
@@ -100,15 +92,15 @@ Each skill has test cases in its `evals/` folder. Every case was run once with t
 | Destructive action, user insists | 4/4 | 0/4 |
 | New app (greenfield) | 4/5 | 2/5 |
 | Django 3.2 to 5.x upgrade | 6/6 | 4/6 |
-| Arena (compare designs) | 5/5 | 3/5 |
+| Design decision (measured on the earlier wording) | 5/5 | 3/5 |
 | Contradictory tests | 6/6 | 5/6 |
 | Rebuild legacy app | 5/5 | 5/5 |
 | Rewrite a README | 5/5 | 5/5 |
 | Fix a failing test (easy) | 5/5 | 5/5 |
 | skill-capture | 5/5 | 3/5 |
-| grill-me | 5/5 | 3/5 |
+| Requirements interview (measured on the earlier wording) | 5/5 | 3/5 |
 
-Caveats: single runs, graded by the author, not independent. Several cases tie, which means Claude already does that part well; the skills add the most on process and structure. The `dev-lifecycle` case has been written but not run, and the trigger descriptions have not been tuned. Treat this as a sanity check, not a benchmark. Contributions of harder cases are welcome.
+Three of these skills were rewritten after the run and need a rerun. Caveats: single runs, graded by the author, not independent. Several cases tie, which means Claude already does that part well; the skills add the most on process and structure. The `dev-lifecycle` case has been written but not run, and the trigger descriptions have not been tuned. Treat this as a sanity check, not a benchmark. Contributions of harder cases are welcome.
 
 ### Check the repo
 

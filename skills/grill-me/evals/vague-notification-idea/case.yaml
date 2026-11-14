@@ -1,4 +1,0 @@
-schema_version: "1.1"
-name: vague-notification-idea
-expected_outcome: |
-  Does not start building. Reads what it can, then interviews the user one question at a time with recommended answers, probes vague terms, and ends with a decision record for confirmation.

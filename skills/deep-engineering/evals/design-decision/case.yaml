@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: design-decision
+expected_outcome: |
+  Treats the choice as hard to reverse, sets criteria and must-haves first, sketches distinct options, stress-tests them with the same scenarios using evidence, and records the decision with what would make you revisit it.
