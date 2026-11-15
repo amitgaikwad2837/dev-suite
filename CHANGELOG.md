@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.35.0
+- Added `scripts/routing/prompts_hardening.json` (11 prompts); routing with the new skill present scored 11 of 11.
+- Added `security-hardening`: inventory what is exposed, fix the riskiest first (leaked secrets, missing MFA, open databases, public storage, over-powerful pipelines, no audit log), and change production one step at a time without locking yourself out. `security-review` keeps application code.
+
 ## 0.34.0
 - Added `scripts/routing/prompts_docs.json` (11 prompts); routing with the new skill present scored 11 of 11. Three older README prompts now also accept `documentation`, and `plain-writing` gained a skip pointer to it.
 - Added `documentation`: audit docs by following them, organise by reader need (tutorial, how-to, reference, explanation), generate and test what can be generated, tie upkeep to pull requests, decision records and runbooks. `plain-writing` keeps the wording of single documents.

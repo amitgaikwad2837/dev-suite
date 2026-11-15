@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: startup-aws-weekend-fix
+expected_outcome: |
+  Does not approve the one-script plan. Ranks the problems by risk, rotating the leaked keys and securing the root account first, makes the database private and replaces open SSH, moves the pipeline to a least-privilege role and keeps secrets from fork builds, adds audit logging and a tested restore, and rolls changes out one at a time with a way back and without locking the team out.

@@ -1,0 +1,13 @@
+[
+{"p":"lock down our aws account before the customer's security audit","e":["security-hardening"]},
+{"p":"our pen test found open ports and missing security headers. fix them","e":["security-hardening"]},
+{"p":"is our github actions pipeline secure? it deploys to production","e":["security-hardening"]},
+{"p":"set up mfa and least privilege for the whole team","e":["security-hardening"]},
+{"p":"how do we harden our docker images and linux servers?","e":["security-hardening"]},
+{"p":"audit this code for sql injection and broken access control","e":["security-review"]},
+{"p":"i committed an aws key to a public repo","e":["git-hygiene","security-hardening"]},
+{"p":"what security questions should i answer before building a payments feature?","e":["security-prompter"]},
+{"p":"we're being attacked right now, traffic is spiking and the db is slow","e":["incident-response"]},
+{"p":"npm audit shows 40 vulnerabilities","e":["dependency-audit"]},
+{"p":"write terraform for a private subnet and a database","e":["infrastructure-as-code"]}
+]
