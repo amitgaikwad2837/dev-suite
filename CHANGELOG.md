@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.23.0
+- Added `launch-gate`, a go/no-go check for a first public release. The idea came from reading founder-skills repos; the checks and wording are new.
+
 ## 0.22.0
 - `frontend-design` now has a landing-page reference (`references/landing-page.md`): intake, page structure, conversion copy, no invented facts, motion and a ship list. Adapted from the MIT-licensed elayadesign/ai-design-skills; wording is new and its fixed font and icon bans were left out.
 
