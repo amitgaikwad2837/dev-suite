@@ -1,0 +1,12 @@
+[
+{"p":"add a chatbot to our app that answers questions from our documentation using an llm api","e":["llm-app-work"]},
+{"p":"our rag assistant gives wrong answers sometimes, how do we measure and fix it","e":["llm-app-work"]},
+{"p":"users keep tricking our ai agent into ignoring its instructions","e":["llm-app-work","security-review"]},
+{"p":"the openai bill tripled and responses got slower since we added summaries","e":["llm-app-work","cloud-cost"]},
+{"p":"the model sometimes returns invalid json and breaks our parser","e":["llm-app-work"]},
+{"p":"we want an agent that can read emails and book meetings with tool calls","e":["llm-app-work"]},
+{"p":"train a model to classify support tickets from our labelled csv","e":["data-ml-work"]},
+{"p":"my random forest overfits, how do i check for leakage","e":["data-ml-work"]},
+{"p":"scan this code for sql injection and xss","e":["security-review"]},
+{"p":"design the rest api for our chat service: endpoints, errors and pagination","e":["api-design"]}
+]

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: support-bot-with-refunds
+expected_outcome: |
+  Does not approve the plan as written. Asks for a real eval set instead of five questions, treats customer text as untrusted and moves refund authority into server-side limits and approval, moves the API key to a backend, uses retrieval and validated structured output with a pinned model instead of the full docs, a json.loads and the latest alias, and launches in steps with monitoring, a cost cap and a kill switch.

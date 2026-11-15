@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.31.0
+- Added `scripts/routing/prompts_llm.json` (10 prompts); routing with the new skill present scored 10 of 10 on it and 46 of 46 on the hard set.
+- Added `llm-app-work` for apps that call a language model: build the eval set first, treat all input as untrusted, limit what tools may do, validate structured output, pin the model version, watch cost and launch in steps. Provider-neutral.
+
 ## 0.30.0
 - Shortened 19 skill descriptions (the descriptions loaded in every session went from about 23,600 to 18,300 characters, roughly 22% fewer, about 5,900 to 4,600 tokens). Kept the trigger situations and the skip pointers between neighbouring skills. Added a skip pointer to `design-reference`.
 - Added a pair set (`scripts/routing/prompts_pair.json`) of 10 prompts for the `frontend-design` and `design-reference` confusion; the added skip clause got 10 of 10.
