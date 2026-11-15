@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: docs-are-a-mess
+expected_outcome: |
+  Does not approve the plan as written. Audits first by following the quickstart on a clean machine and marking pages accurate, stale or missing, deletes or archives stale wiki pages instead of carrying them all over, organises by reader need (tutorial, how-to, reference, explanation), generates the API reference from the code, ties updates to pull requests and CI checks instead of monthly reminders, and starts with the onboarding path.

@@ -1,6 +1,6 @@
 ---
 name: plain-writing
-description: Writes and edits documents people will actually read, such as README, spec, design doc, runbook, report, PR text, release notes or email. Reader first, three passes on structure, sentences and facts, never altering code or numbers, matching the user's voice. Use when asked to write, tidy or polish any document.
+description: Writes and edits documents people will actually read, such as README, spec, design doc, runbook, report, PR text, release notes or email. Reader first, three passes on structure, sentences and facts, never altering code or numbers, matching the user's voice. Use when asked to write, tidy or polish any document. Skip for planning or auditing a whole documentation set (documentation).
 ---
 
 # Plain Writing

@@ -1,0 +1,13 @@
+[
+{"p":"our docs are out of date and new people can't get the project running. what do we do?","e":["documentation"]},
+{"p":"what documentation does an open source project need?","e":["documentation"]},
+{"p":"set up a docs site with mkdocs for our internal tools","e":["documentation"]},
+{"p":"how do we keep the api reference in sync with the code?","e":["documentation","api-design"]},
+{"p":"write a runbook for our database failover","e":["documentation","plain-writing"]},
+{"p":"we need a way to record why we chose postgres, like an adr","e":["documentation","design-decision"]},
+{"p":"tidy this design doc, it rambles","e":["plain-writing"]},
+{"p":"proofread this email to our customers about the outage","e":["plain-writing"]},
+{"p":"write a claude.md for this project","e":["codebase-onboarding"]},
+{"p":"write release notes for version 3.2 from this changelog","e":["plain-writing","release-engineering"]},
+{"p":"explain this function to me","e":[]}
+]

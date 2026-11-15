@@ -544,7 +544,8 @@
 {
 "p": "rewrite this readme so a new hire can follow it",
 "e": [
-"plain-writing"
+"plain-writing",
+"documentation"
 ]
 },
 {

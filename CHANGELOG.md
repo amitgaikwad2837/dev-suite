@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.34.0
+- Added `scripts/routing/prompts_docs.json` (11 prompts); routing with the new skill present scored 11 of 11. Three older README prompts now also accept `documentation`, and `plain-writing` gained a skip pointer to it.
+- Added `documentation`: audit docs by following them, organise by reader need (tutorial, how-to, reference, explanation), generate and test what can be generated, tie upkeep to pull requests, decision records and runbooks. `plain-writing` keeps the wording of single documents.
+
 ## 0.33.0
 - Added `scripts/routing/prompts_lib.json` (10 prompts); routing with the new skill present scored 10 of 10. One easy-set prompt about versioning and publishing a library now accepts either `release-engineering` or `library-cli-work`.
 - Added `library-cli-work` for reusable libraries and command-line tools: a small public surface, semantic versioning and deprecation, CLI conventions, dependencies, testing the built package and publishing carefully.

@@ -18,7 +18,7 @@ A map for the whole job. It decides the order of work and hands each phase to th
 | 3b | **Build a UI** | Design brief and tokens first, then states and polish, then check in a real browser | `frontend-design`, `design-reference`, `ui-polish`, `browser-verify`, `playwright-ui-tests` |
 | 5 | **Verify** | Decide what to test and write tests that catch real bugs; fix failures for real, stop and ask when stuck | `test-strategy`, `honest-fixes`, `browser-verify`, `web-quality`, `accessibility-review` |
 | 6 | **Review** | Review a change before merge; security pass on what was built or changed | `change-review`, `security-review`, `dependency-audit` |
-| 7 | **Ship** | Pipeline, versioning, staged rollout with abort criteria, rollback, release notes; careful handling of production emergencies | `infrastructure-as-code` (cloud resources in code), `cloud-cost` (a high or rising cloud bill), `privacy-compliance` (personal data), `launch-gate` (first public release), `release-engineering`, `git-hygiene`, `observability`, `plain-writing`, `risky-shortcuts`, `incident-response` |
+| 7 | **Ship** | Pipeline, versioning, staged rollout with abort criteria, rollback, release notes; careful handling of production emergencies | `infrastructure-as-code` (cloud resources in code), `cloud-cost` (a high or rising cloud bill), `privacy-compliance` (personal data), `documentation` (docs that stay true), `launch-gate` (first public release), `release-engineering`, `git-hygiene`, `observability`, `plain-writing`, `risky-shortcuts`, `incident-response` |
 | 8 | **Learn** | Capture repeated work as a skill | `skill-capture` |
 
 `coding-discipline` (assumptions, smallest change, clean diff, evidence, a "Done when" on every step) wraps all of it.

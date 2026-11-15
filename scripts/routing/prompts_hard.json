@@ -1,48 +1,274 @@
 [
-{"p":"the signup form fails WCAG 2.2 AA contrast in six places. i need a report i can send to our legal team","e":["accessibility-review"]},
-{"p":"my page gets 55 on lighthouse performance and the layout jumps while loading","e":["web-quality"]},
-{"p":"api p99 latency doubled after friday's deploy, find the slow query","e":["performance-work"]},
-{"p":"nobody can log in and it started five minutes ago","e":["incident-response"]},
-{"p":"one user keeps getting logged out; no outage, just reproduce it and find the root cause","e":["bug-investigation"]},
-{"p":"add an index to the 200 million row events table","e":["schema-changes"]},
-{"p":"add a column to the sqlite file my hobby script uses","e":[]},
-{"p":"fix the off-by-one in this loop, it's on line 40","e":[]},
-{"p":"change the submit button colour to blue","e":[]},
-{"p":"write unit tests for the date parsing function","e":["test-strategy"]},
-{"p":"one test fails with 'expected 3, got 4', make it pass","e":["honest-fixes","bug-investigation"]},
-{"p":"we need to get this hotfix to production tonight, lay out the release steps","e":["release-engineering"]},
-{"p":"our first public launch is next week and the deploy pipeline already works. are we ready?","e":["launch-gate"]},
-{"p":"rewrite our legacy cobol billing app so it behaves identically, but in a modern stack","e":["app-replica","migrate-and-upgrade"]},
-{"p":"bump node from 16 to 20 and fix whatever breaks","e":["migrate-and-upgrade"]},
-{"p":"are any of our npm packages abandoned or known to be vulnerable?","e":["dependency-audit"]},
-{"p":"review this code for sql injection and broken access control","e":["security-review"]},
-{"p":"review this pull request for logic bugs and style","e":["change-review"]},
-{"p":"kafka or rabbitmq for our order events?","e":["design-decision"]},
-{"p":"what should the bulk delete endpoint look like and which status codes should it return?","e":["api-design"]},
-{"p":"pick colours and typography for our new product site","e":["frontend-design"]},
-{"p":"copy the look of stripe.com for our pricing page","e":["design-reference"]},
-{"p":"this form works but looks unfinished: spacing, hover and error states","e":["ui-polish"]},
-{"p":"do our users even want a dark mode? how would we find out cheaply","e":["ux-research"]},
-{"p":"build an airflow job that prepares the training dataset every night","e":["data-engineering","data-ml-work"]},
-{"p":"how do i split train and test so the model doesn't see the future?","e":["data-ml-work"]},
-{"p":"stripe says the webhook signature doesn't match","e":["payments-integration"]},
-{"p":"we log everything but still can't see why checkout is slow in production","e":["observability","performance-work"]},
-{"p":"write a readme for this repo that explains what it is and how to install","e":["plain-writing","codebase-onboarding"]},
-{"p":"add dark mode to the mobile app on ios and android","e":["mobile-app-work","frontend-design"]},
-{"p":"you keep getting our branch naming wrong, remember how we do it","e":["skill-capture"]},
-{"p":"interview me about what the app should do before you write code","e":["requirements-interview"]},
-{"p":"get a team of agents to build the whole billing system, with critique rounds","e":["dev-orchestrator"]},
-{"p":"build a recipe sharing app","e":["new-app-build","requirements-interview","dev-lifecycle"]},
-{"p":"write a terraform module for an s3 bucket behind cloudfront","e":["infrastructure-as-code"]},
-{"p":"which aws service is costing us the most this month?","e":["cloud-cost"]},
-{"p":"i need to force push to main to undo a bad merge and prod is on fire","e":["risky-shortcuts","git-hygiene","incident-response"]},
-{"p":"clean up my commit history before I open the PR","e":["git-hygiene"]},
-{"p":"our playwright locator is flaky on the checkout page","e":["playwright-ui-tests"]},
-{"p":"the tests are slow and flaky, decide what we should even be testing","e":["test-strategy"]},
-{"p":"something feels slow when i click around the app in the browser","e":["web-quality","performance-work"]},
-{"p":"what's the difference between a savings plan and a reserved instance?","e":[]},
-{"p":"explain what git rebase does","e":[]},
-{"p":"what is idempotency?","e":[]},
-{"p":"write me a regex that matches us phone numbers","e":[]},
-{"p":"why is my python list comprehension slower than a for loop here?","e":[]}
+{
+"p": "the signup form fails WCAG 2.2 AA contrast in six places. i need a report i can send to our legal team",
+"e": [
+"accessibility-review"
+]
+},
+{
+"p": "my page gets 55 on lighthouse performance and the layout jumps while loading",
+"e": [
+"web-quality"
+]
+},
+{
+"p": "api p99 latency doubled after friday's deploy, find the slow query",
+"e": [
+"performance-work"
+]
+},
+{
+"p": "nobody can log in and it started five minutes ago",
+"e": [
+"incident-response"
+]
+},
+{
+"p": "one user keeps getting logged out; no outage, just reproduce it and find the root cause",
+"e": [
+"bug-investigation"
+]
+},
+{
+"p": "add an index to the 200 million row events table",
+"e": [
+"schema-changes"
+]
+},
+{
+"p": "add a column to the sqlite file my hobby script uses",
+"e": []
+},
+{
+"p": "fix the off-by-one in this loop, it's on line 40",
+"e": []
+},
+{
+"p": "change the submit button colour to blue",
+"e": []
+},
+{
+"p": "write unit tests for the date parsing function",
+"e": [
+"test-strategy"
+]
+},
+{
+"p": "one test fails with 'expected 3, got 4', make it pass",
+"e": [
+"honest-fixes",
+"bug-investigation"
+]
+},
+{
+"p": "we need to get this hotfix to production tonight, lay out the release steps",
+"e": [
+"release-engineering"
+]
+},
+{
+"p": "our first public launch is next week and the deploy pipeline already works. are we ready?",
+"e": [
+"launch-gate"
+]
+},
+{
+"p": "rewrite our legacy cobol billing app so it behaves identically, but in a modern stack",
+"e": [
+"app-replica",
+"migrate-and-upgrade"
+]
+},
+{
+"p": "bump node from 16 to 20 and fix whatever breaks",
+"e": [
+"migrate-and-upgrade"
+]
+},
+{
+"p": "are any of our npm packages abandoned or known to be vulnerable?",
+"e": [
+"dependency-audit"
+]
+},
+{
+"p": "review this code for sql injection and broken access control",
+"e": [
+"security-review"
+]
+},
+{
+"p": "review this pull request for logic bugs and style",
+"e": [
+"change-review"
+]
+},
+{
+"p": "kafka or rabbitmq for our order events?",
+"e": [
+"design-decision"
+]
+},
+{
+"p": "what should the bulk delete endpoint look like and which status codes should it return?",
+"e": [
+"api-design"
+]
+},
+{
+"p": "pick colours and typography for our new product site",
+"e": [
+"frontend-design"
+]
+},
+{
+"p": "copy the look of stripe.com for our pricing page",
+"e": [
+"design-reference"
+]
+},
+{
+"p": "this form works but looks unfinished: spacing, hover and error states",
+"e": [
+"ui-polish"
+]
+},
+{
+"p": "do our users even want a dark mode? how would we find out cheaply",
+"e": [
+"ux-research"
+]
+},
+{
+"p": "build an airflow job that prepares the training dataset every night",
+"e": [
+"data-engineering",
+"data-ml-work"
+]
+},
+{
+"p": "how do i split train and test so the model doesn't see the future?",
+"e": [
+"data-ml-work"
+]
+},
+{
+"p": "stripe says the webhook signature doesn't match",
+"e": [
+"payments-integration"
+]
+},
+{
+"p": "we log everything but still can't see why checkout is slow in production",
+"e": [
+"observability",
+"performance-work"
+]
+},
+{
+"p": "write a readme for this repo that explains what it is and how to install",
+"e": [
+"plain-writing",
+"codebase-onboarding",
+"documentation"
+]
+},
+{
+"p": "add dark mode to the mobile app on ios and android",
+"e": [
+"mobile-app-work",
+"frontend-design"
+]
+},
+{
+"p": "you keep getting our branch naming wrong, remember how we do it",
+"e": [
+"skill-capture"
+]
+},
+{
+"p": "interview me about what the app should do before you write code",
+"e": [
+"requirements-interview"
+]
+},
+{
+"p": "get a team of agents to build the whole billing system, with critique rounds",
+"e": [
+"dev-orchestrator"
+]
+},
+{
+"p": "build a recipe sharing app",
+"e": [
+"new-app-build",
+"requirements-interview",
+"dev-lifecycle"
+]
+},
+{
+"p": "write a terraform module for an s3 bucket behind cloudfront",
+"e": [
+"infrastructure-as-code"
+]
+},
+{
+"p": "which aws service is costing us the most this month?",
+"e": [
+"cloud-cost"
+]
+},
+{
+"p": "i need to force push to main to undo a bad merge and prod is on fire",
+"e": [
+"risky-shortcuts",
+"git-hygiene",
+"incident-response"
+]
+},
+{
+"p": "clean up my commit history before I open the PR",
+"e": [
+"git-hygiene"
+]
+},
+{
+"p": "our playwright locator is flaky on the checkout page",
+"e": [
+"playwright-ui-tests"
+]
+},
+{
+"p": "the tests are slow and flaky, decide what we should even be testing",
+"e": [
+"test-strategy"
+]
+},
+{
+"p": "something feels slow when i click around the app in the browser",
+"e": [
+"web-quality",
+"performance-work"
+]
+},
+{
+"p": "what's the difference between a savings plan and a reserved instance?",
+"e": []
+},
+{
+"p": "explain what git rebase does",
+"e": []
+},
+{
+"p": "what is idempotency?",
+"e": []
+},
+{
+"p": "write me a regex that matches us phone numbers",
+"e": []
+},
+{
+"p": "why is my python list comprehension slower than a for loop here?",
+"e": []
+}
 ]
