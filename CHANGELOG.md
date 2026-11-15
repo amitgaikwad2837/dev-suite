@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.22.0
+- `frontend-design` now has a landing-page reference (`references/landing-page.md`): intake, page structure, conversion copy, no invented facts, motion and a ship list. Adapted from the MIT-licensed elayadesign/ai-design-skills; wording is new and its fixed font and icon bans were left out.
+
 ## 0.21.0
 - Added `payments-integration`. The idea came from reading three founder-skills repos (whawkinsiv/solo-founder-skills and others); the wording and method are new.
 

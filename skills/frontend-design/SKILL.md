@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Makes a user interface look deliberately designed instead of generic. Use before building or restyling any page, component or app screen, when the user says "build the UI", "make it look good", "design this page", "landing page", "dashboard", or when output so far looks like a default template. Fixes a design brief first (audience, tone, one memorable element, type, colour, spacing, layout), then builds from tokens. Skip for backend work and for tiny copy or colour tweaks.
+description: Makes a user interface look deliberately designed instead of generic. Use before building or restyling any page, component or app screen, when the user says "build the UI", "make it look good", "design this page", "landing page", "dashboard", or when output so far looks like a default template. Fixes a design brief first (audience, tone, one memorable element, type, colour, spacing, layout), then builds from tokens. For landing and launch pages it also sets the offer, audience, page structure and conversion copy. Skip for backend work and for tiny copy or colour tweaks.
 ---
 
 # Frontend Design
@@ -17,6 +17,8 @@ Default UI output looks the same everywhere: a centered hero, three feature card
 - Spacing: a base unit (4 or 8 px) and a layout grid; a max content width.
 
 If the user gave a reference, brand or existing app, take the brief from it (see `design-reference`). If the project already has tokens or a component library, use those and skip this step.
+
+**Landing, marketing or launch page?** Read `references/landing-page.md` before the brief. It adds the part a visual brief misses: one offer, one audience, one primary action, then page structure, conversion copy, no invented facts and a ship list. Fill its intake first, then do the six lines above.
 
 ## 2. Build from tokens, not literals
 
