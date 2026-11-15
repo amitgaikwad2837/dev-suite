@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: invoice-parser-to-pypi
+expected_outcome: |
+  Does not publish as is. Makes the public surface small and keeps print and sys.exit out of the library by raising exceptions, separates a thin CLI with proper exit codes and stdout and stderr use, drops heavy unused dependencies and widens supported versions, uses 0.x until the API is stable and deprecates the old name instead of deleting it, and publishes through a test index and CI or an API token with two-factor authentication instead of a password, after installing the built wheel in a clean environment.

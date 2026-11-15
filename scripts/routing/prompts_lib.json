@@ -1,0 +1,12 @@
+[
+{"p":"i want to publish my python helper functions on pypi so others can pip install them","e":["library-cli-work"]},
+{"p":"design the command line flags and exit codes for my backup tool","e":["library-cli-work"]},
+{"p":"how do i version my npm package when i change a function's return type?","e":["library-cli-work","api-design"]},
+{"p":"turn this script into an installable cli with a --help and a --json option","e":["library-cli-work"]},
+{"p":"what belongs in the public api of my rust crate and what should stay private?","e":["library-cli-work","api-design"]},
+{"p":"set up a pipeline that deploys our web app to production on every merge","e":["release-engineering"]},
+{"p":"design the rest endpoints for our orders service","e":["api-design"]},
+{"p":"upgrade the library from python 3.9 to 3.12 across the repo","e":["migrate-and-upgrade"]},
+{"p":"write the readme for my open source package so people can get started in a minute","e":["library-cli-work","plain-writing"]},
+{"p":"build me a new expense tracking web app","e":["new-app-build","requirements-interview","dev-lifecycle"]}
+]

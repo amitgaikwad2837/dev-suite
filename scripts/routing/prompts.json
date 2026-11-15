@@ -587,7 +587,8 @@
 {
 "p": "how should we version and publish this library?",
 "e": [
-"release-engineering"
+"release-engineering",
+"library-cli-work"
 ]
 },
 {

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.33.0
+- Added `scripts/routing/prompts_lib.json` (10 prompts); routing with the new skill present scored 10 of 10. One easy-set prompt about versioning and publishing a library now accepts either `release-engineering` or `library-cli-work`.
+- Added `library-cli-work` for reusable libraries and command-line tools: a small public surface, semantic versioning and deprecation, CLI conventions, dependencies, testing the built package and publishing carefully.
+
 ## 0.32.0
 - Added `scripts/routing/prompts_privacy.json` (12 prompts); routing with the new skill present scored 12 of 12.
 - Added `privacy-compliance`: map the data, find which rules probably apply, collect less, build deletion and export that reach every copy and vendor, retention, breach plan and a policy that matches the product. It is not legal advice and never certifies compliance.
