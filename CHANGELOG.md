@@ -2,6 +2,7 @@
 
 ## 0.30.0
 - Shortened 19 skill descriptions (the descriptions loaded in every session went from about 23,600 to 18,300 characters, roughly 22% fewer, about 5,900 to 4,600 tokens). Kept the trigger situations and the skip pointers between neighbouring skills. Added a skip pointer to `design-reference`.
+- Added a pair set (`scripts/routing/prompts_pair.json`) of 10 prompts for the `frontend-design` and `design-reference` confusion; the added skip clause got 10 of 10.
 - Added a routing test (`scripts/routing/`): 179 prompts, run by fresh subagents that see only the description list. Before the change 132 of 133 and 45 of 46 chose an accepted skill; after, 133 of 133 and 45 of 46.
 
 ## 0.29.0
