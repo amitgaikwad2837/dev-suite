@@ -35,4 +35,4 @@ A map for the whole job. It decides the order of work and hands each phase to th
 
 ## When the task falls outside the suite
 
-The suite does not yet have dedicated skills for performance tuning, incident response, database schema changes, API design and versioning, observability, or dependency and license audits (see `ROADMAP.md` in the repo). For those, say so, then apply `coding-discipline` (plan with "Done when", small verified steps) and ask the user about anything that is their call.
+If a task fits no skill above (see `ROADMAP.md` for known gaps), say so, then apply `coding-discipline` (plan with "Done when", small verified steps) and ask the user about anything that is their call.

@@ -10,3 +10,4 @@ description: Finds the root cause of bugs people cannot explain. Use for flaky o
 3. Fix the root cause, the thing that makes the bug impossible, not retries, sleeps, wider tolerances or broad try/except.
 4. Add a regression test that fails before the fix and passes after. Writing the test is part of the fix; advice to "assert X" is not enough.
 5. Check the blast radius: grep for the same pattern elsewhere and run the wider suite.
+6. Keep the fix surgical and prove it, as in `coding-discipline`: change only the lines the cause requires, list unrelated problems instead of fixing them, and report the command that showed the bug and then showed it gone. If a test fails and the cause is not clear, use `honest-fixes` rather than loosening the test.

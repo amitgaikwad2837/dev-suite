@@ -35,7 +35,7 @@ Start with `dev-lifecycle` if you aren't sure where a job begins. It places the 
 | new-app-build | A new app or large feature |
 | estimation | "How long will this take", fixed deadlines, quarter planning: ranges with assumptions and options, not one date |
 | design-decision | Choosing between designs that are hard to undo |
-| coding-discipline | Any non-trivial code change or multi-step task |
+| coding-discipline | Any non-trivial code change, bug fix or multi-step task (`templates/CLAUDE.md` is a four-rule always-on version to paste into a project) |
 | bug-investigation | Bugs nobody can explain, flaky tests, "fails only in CI" |
 | migrate-and-upgrade | Library or framework migrations, big refactors, version upgrades |
 | payments-integration | Taking payments with Stripe or similar: hosted card entry, access from verified webhooks, repeat-safe handlers, test-mode testing |
