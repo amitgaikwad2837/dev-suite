@@ -1,6 +1,6 @@
 ---
 name: infrastructure-as-code
-description: Writes and changes cloud infrastructure as code (Terraform, OpenTofu, Pulumi, CloudFormation, CDK, Bicep) without destroying production or leaking secrets. Use when the user says "terraform", "write the infra as code", "terraform plan shows destroy", "terraform apply", "state file", "set up AWS or Azure or GCP with code", "we click around in the console", "drift", "import existing resources", "split dev and prod" or "CI for infrastructure". Reads the plan like a diff, treats any destroy or replace of stateful resources as a stop sign, keeps state remote and locked and out of git, keeps secrets out of code, separates environments, and applies from CI. Skip for application deployment pipelines (release-engineering) and for choosing between cloud architectures (design-decision).
+description: Writes and changes cloud infrastructure as code (Terraform, OpenTofu, Pulumi, CloudFormation, CDK, Bicep) without destroying production or leaking secrets. Use for terraform plan and apply, state files, drift, importing console-built resources and splitting environments. Skip for app deploy pipelines (release-engineering), cloud bills (cloud-cost) and choosing architectures (design-decision).
 ---
 
 # Infrastructure as Code

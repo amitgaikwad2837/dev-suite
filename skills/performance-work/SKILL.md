@@ -1,6 +1,6 @@
 ---
 name: performance-work
-description: Makes slow software faster by measuring, finding the real bottleneck and proving the gain. Use when the user says "it's slow", "speed this up", "optimize this", "high CPU", "memory leak", "the endpoint takes 5 seconds", "slow query", "reduce latency", "can it handle more load" or "profile this". Sets a target, takes a baseline, profiles before changing anything, fixes the biggest cost first, re-measures and adds a guard against regression. Never optimizes by guesswork and never trades correctness for speed silently. Skip for slow web pages in the browser (web-quality) and for tiny scripts that run once.
+description: Makes slow software faster by measuring, finding the real bottleneck and proving the gain. Use for slow endpoints or queries, high CPU, memory leaks, latency, load capacity and profiling. Sets a target, takes a baseline and fixes the biggest cost first. Skip for slow web pages in the browser (web-quality) and tiny scripts that run once.
 ---
 
 # Performance Work

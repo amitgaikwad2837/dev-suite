@@ -1,6 +1,6 @@
 ---
 name: design-reference
-description: Turns a visual reference into a written design guide a team and Claude can build from. Use when the user says "make it look like this site", "match our brand", "here's a screenshot", "create a design system", "write a DESIGN.md", "extract the styles", or shares a URL or mockup to follow. Observes colours, type, spacing and component patterns, records them as tokens and rules in one file, and builds with those. Does not copy logos, images, text or code from other sites.
+description: Turns a visual reference into a written design guide a team and Claude can build from. Use when the user says "make it look like this site", "match our brand", "here's a screenshot", "create a design system", "write a DESIGN.md", "extract the styles", or shares a URL or mockup to follow. Observes colours, type, spacing and component patterns, records them as tokens and rules in one file, and builds with those. Does not copy logos, images, text or code from other sites. Skip when there is no reference to follow and the user wants colours, type or a layout chosen (frontend-design).
 ---
 
 # Design Reference

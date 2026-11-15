@@ -1,6 +1,6 @@
 ---
 name: security-prompter
-description: Asks the security questions that only the user can answer, before or while something is built, and turns the answers into security requirements. Use when starting a new app, feature, API, integration or deployment that handles user data, logins, payments, files, admin access or the internet, or when the user says "what should I think about for security", "threat model this", "security checklist", "is this safe to build this way", or "prompt me for security". Asks a short numbered list with a proposed answer for each, then writes a brief the design, tests and review can use. Skip for auditing finished code (security-review) and for tasks with no data or exposure.
+description: Asks the security questions only the user can answer, before or while something is built, and turns the answers into security requirements. Use when starting an app, feature, API or integration that handles user data, logins, payments, files, admin access or the internet, or for threat models and security checklists. Skip for auditing finished code (security-review) and tasks with no data or exposure.
 ---
 
 # Security Prompter

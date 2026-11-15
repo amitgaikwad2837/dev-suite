@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.30.0
+- Shortened 19 skill descriptions (the descriptions loaded in every session went from about 23,600 to 18,300 characters, roughly 22% fewer, about 5,900 to 4,600 tokens). Kept the trigger situations and the skip pointers between neighbouring skills. Added a skip pointer to `design-reference`.
+- Added a routing test (`scripts/routing/`): 179 prompts, run by fresh subagents that see only the description list. Before the change 132 of 133 and 45 of 46 chose an accepted skill; after, 133 of 133 and 45 of 46.
+
 ## 0.29.0
 - Added `cloud-cost`: read the bill breakdown first, safe savings, commitments only after right-sizing, never trading backups or logging for a number, and budgets, tags and anomaly alerts. Tool-neutral.
 

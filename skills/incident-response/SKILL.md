@@ -1,6 +1,6 @@
 ---
 name: incident-response
-description: Guides the handling of a live production incident and the review afterwards. Use when the user says "production is down", "we have an outage", "users are seeing errors", "site is slow right now", "something broke after the deploy", "we got paged", "write the postmortem", "incident review" or "what went wrong last night". Puts stopping the harm before finding the cause, keeps a timeline and status updates, proposes the least risky mitigation and waits for a yes before touching production, then writes a blame-free review with follow-up actions. Skip for bugs that are not hurting users now (bug-investigation).
+description: Guides the handling of a live production incident and the review afterwards. Use when production is down or erroring, the site is slow right now, something broke after a deploy, someone got paged, or for postmortems. Stops the harm before finding the cause, keeps a timeline, waits for a yes before touching production. Skip for bugs that are not hurting users now (bug-investigation).
 ---
 
 # Incident Response

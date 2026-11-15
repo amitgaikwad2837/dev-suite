@@ -1,6 +1,6 @@
 ---
 name: ux-research
-description: Finds out what users actually need and where a product confuses them, with small studies that answer a real decision. Use when the user says "user research", "interview users", "usability test", "survey", "personas", "is this the right feature", "why aren't people using it", "customers say they want X", "A/B test", "validate this idea", "what should we ask users" or "analyse this feedback". Starts from the decision the research must inform, picks the lightest method that can answer it, writes unbiased questions and tasks, and reports findings with evidence and how sure they are. Skip for visual design (frontend-design), for polish of a built screen (ui-polish) and for deciding requirements with a stakeholder (requirements-interview).
+description: Finds out what users need and whether a design works, before or after building. Use for user interviews, surveys, usability tests, personas, whether people want a feature, why trial users do not convert, and reading feedback. Skip for visual design (frontend-design), polishing a built screen (ui-polish) and deciding requirements with a stakeholder (requirements-interview).
 ---
 
 # UX Research

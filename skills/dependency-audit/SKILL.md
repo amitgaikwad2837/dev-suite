@@ -1,6 +1,6 @@
 ---
 name: dependency-audit
-description: Audits a project's third-party dependencies for known vulnerabilities, licence problems, abandoned packages and risky update habits, then fixes what matters in safe steps. Use when the user says "audit our dependencies", "npm audit shows 40 issues", "are we using anything vulnerable", "check licences", "can we ship this under MIT", "what's outdated", "set up Dependabot or Renovate", "is this package safe to add" or "SBOM". Judges whether each finding is reachable and fixable, groups updates, keeps lockfiles in order and never runs a blanket force-upgrade. Skip for upgrading one major framework (migrate-and-upgrade) and for reviewing the project's own code (security-review).
+description: Audits third-party dependencies for known vulnerabilities, licence problems, abandoned packages and risky update habits, then fixes what matters in safe steps. Use for npm audit noise, licence questions such as GPL in closed source, outdated packages, Dependabot or Renovate setup, SBOMs and whether a package is safe to add. Skip for upgrading one major framework (migrate-and-upgrade) and reviewing the project's own code (security-review).
 ---
 
 # Dependency Audit

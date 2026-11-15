@@ -1,6 +1,6 @@
 ---
 name: mobile-app-work
-description: Builds and ships iOS and Android apps without the mistakes that only show up on phones and in the app stores. Use when the user says "mobile app", "iOS app", "Android app", "React Native", "Flutter", "Expo", "Swift", "Kotlin", "submit to the App Store", "Play Store release", "app got rejected", "push notifications", "works on simulator but not on my phone", "offline mode" or "force users to update". Plans for store review time and no instant hotfix, asks for permissions in context with a way to say no, treats the network as unreliable, keeps old app versions working against the API, and tests on real devices. Skip for responsive websites (web-quality) and for the backend API alone (api-design).
+description: Builds and ships iOS and Android apps without store and device surprises. Use for React Native, Flutter, Expo, Swift or Kotlin work, App Store or Play Store submission and rejections, push notifications, permissions, offline mode, forcing updates and bugs that only show on real phones. Skip for responsive websites (web-quality) and the backend API alone (api-design).
 ---
 
 # Mobile App Work

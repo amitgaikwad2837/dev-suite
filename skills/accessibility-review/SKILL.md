@@ -1,6 +1,6 @@
 ---
 name: accessibility-review
-description: Audits a product against WCAG and tests it the way disabled people use it, then reports findings by who is blocked and how to fix each. Use when the user says "accessibility audit", "WCAG", "VPAT", "ADA or Section 508 or EAA compliance", "will a screen reader work with this", "can you use it without a mouse", "colour blind", "accessibility statement", "we got an accessibility complaint" or "review the UX for accessibility". Sets scope and target level, runs automated checks, then tests keyboard, screen reader, zoom and motion by hand, because tools find only part of the problems. Skip for quick fixes while building a page (web-quality) and for visual polish (ui-polish).
+description: Audits a product against WCAG and tests it the way disabled people use it, reporting findings by who is blocked and how to fix each. Use for accessibility audits, VPATs, ADA, Section 508 or EAA compliance, screen reader and keyboard-only checks, colour blindness and accessibility complaints. Skip for quick fixes while building a page (web-quality) and visual polish (ui-polish).
 ---
 
 # Accessibility Review

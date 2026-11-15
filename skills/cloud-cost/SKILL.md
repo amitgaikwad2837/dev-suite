@@ -1,6 +1,6 @@
 ---
 name: cloud-cost
-description: Finds out why a cloud bill is high or jumped, and cuts it without breaking things or losing data. Use when the user says "our AWS bill doubled", "reduce cloud costs", "cost optimization", "FinOps", "what is costing us money", "reserved instances or savings plans", "unused resources", "budget alert", "NAT gateway cost", "egress costs", "rightsizing" or "estimate what this will cost". Starts from the bill broken down by service, account and owner, finds the few items that make most of it, takes safe savings first, buys commitments only after usage is steady, and adds budgets, tags and anomaly alerts so it does not creep back. Skip for making code faster (performance-work) and for writing the infrastructure code itself (infrastructure-as-code).
+description: Finds why a cloud bill is high or jumped and cuts it safely. Use for rising AWS, Azure or GCP bills, idle or oversized resources, NAT and egress costs, savings plans or reserved instances, budgets and cost estimates. Reads the bill breakdown first, takes safe savings, commits only after right-sizing. Skip for making code faster (performance-work) and for writing the infrastructure code (infrastructure-as-code).
 ---
 
 # Cloud Cost

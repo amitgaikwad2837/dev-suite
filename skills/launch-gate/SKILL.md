@@ -1,6 +1,6 @@
 ---
 name: launch-gate
-description: Runs a go/no-go check before a first public release or a big launch, and gives a clear verdict with named owners for anything open. Use when the user says "are we ready to launch", "go live checklist", "launch tomorrow", "first release", "can we open it to customers", "pre-launch review", "go or no-go" or "what could go wrong on launch day". Checks that the real money path works end to end, a backup can be restored, someone is told when it breaks, rollback takes minutes, and the first hour is staffed. Skip for routine releases of an established product (release-engineering) and for a live outage (incident-response).
+description: Runs a go or no-go check before a first public release or big launch and gives a verdict with named owners for open items. Use for are we ready to launch, go-live checklists, pre-launch reviews and what could go wrong on launch day. Checks a real payment, a restored backup, alerts, rollback and on-call. Skip for routine releases (release-engineering) and live outages (incident-response).
 ---
 
 # Launch Gate

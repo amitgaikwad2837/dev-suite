@@ -1,6 +1,6 @@
 ---
 name: observability
-description: Makes a running system easy to understand and alert on, with logs, metrics, traces, dashboards and alerts. Use when the user says "add logging", "add monitoring", "set up alerts", "we found out from customers", "I can't tell what's happening in production", "add metrics", "tracing", "dashboard", "SLO", "error budget" or "on-call is noisy". Starts from the questions someone will ask during an outage, picks the few signals that answer them, keeps secrets and personal data out, and ties every alert to an action. Skip for debugging one known bug (bug-investigation) and for handling a live outage (incident-response).
+description: Makes a running system easy to understand and alert on, with logs, metrics, traces, dashboards and alerts. Use for adding logging or monitoring, finding out about problems from customers, noisy or missing alerts, SLOs, error budgets and tracing. Starts from the questions asked during an outage and ties every alert to an action. Skip for debugging one known bug (bug-investigation) and a live outage (incident-response).
 ---
 
 # Observability

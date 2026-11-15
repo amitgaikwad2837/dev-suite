@@ -1,6 +1,6 @@
 ---
 name: estimation
-description: Estimates how long software work will take, and says how sure it is. Use when the user says "how long will this take", "estimate this", "can we ship by the 30th", "give me a timeline", "story points", "t-shirt size", "what can we fit in the quarter", "my manager wants a date", "we're behind, can we still make it" or "scope vs deadline". Breaks the work into pieces, estimates each as a range with its assumptions, lists the unknowns that dominate the risk, adds the work people forget, and answers with a range and a confidence instead of one date. Skip for deciding what to build (requirements-interview) and for the build itself (new-app-build).
+description: Estimates how long software work will take and how sure the estimate is. Use for how long will this take, can we ship by a date, timelines, story points, sizing tickets, what fits in a quarter and scope versus deadline. Gives a range with assumptions and the unknowns that dominate risk. Skip for deciding what to build (requirements-interview) and the build itself (new-app-build).
 ---
 
 # Estimation

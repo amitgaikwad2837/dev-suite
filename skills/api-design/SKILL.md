@@ -1,6 +1,6 @@
 ---
 name: api-design
-description: Designs and changes HTTP, GraphQL or library APIs so callers don't get broken. Use when the user says "design the API", "add an endpoint", "REST or GraphQL", "what should this return", "rename this field", "change the response", "version the API", "deprecate this", "is this a breaking change" or "write the OpenAPI spec". Works out who calls it, writes the contract with examples before code, fixes the details people regret later (errors, pagination, idempotency, naming), and treats every change to a live API as a compatibility question with a deprecation path. Skip for choosing between whole architectures (design-decision) and for internal functions with one caller.
+description: Designs and changes HTTP, GraphQL or library APIs so callers do not get broken. Use for designing endpoints, REST or GraphQL, response shapes, errors, pagination, naming, OpenAPI specs, versioning, deprecation and whether a change is breaking. Writes the contract with examples before code. Skip for choosing whole architectures (design-decision) and internal functions with one caller.
 ---
 
 # API Design

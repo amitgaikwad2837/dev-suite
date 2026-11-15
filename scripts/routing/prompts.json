@@ -1,0 +1,814 @@
+[
+{
+"p": "we're selling to a school district and their procurement wants a VPAT. where do we even start?",
+"e": [
+"accessibility-review"
+]
+},
+{
+"p": "a blind customer emailed that they can't get through checkout. can someone go through the whole flow with a screen reader and tell me what's broken",
+"e": [
+"accessibility-review",
+"web-quality"
+]
+},
+{
+"p": "does our date picker work for people who can't use a mouse?",
+"e": [
+"accessibility-review",
+"web-quality"
+]
+},
+{
+"p": "should the orders endpoint return a 404 or an empty list when a customer has no orders, and how should paging work?",
+"e": [
+"api-design"
+]
+},
+{
+"p": "we want to rename user_name to username in the public JSON response but some partners depend on it",
+"e": [
+"api-design"
+]
+},
+{
+"p": "write the openapi spec for the invoice service we're about to build",
+"e": [
+"api-design"
+]
+},
+{
+"p": "our vendor is shutting down the booking tool we use, we want our own that behaves the same for staff",
+"e": [
+"app-replica"
+]
+},
+{
+"p": "can you recreate this old internal inventory system from how it behaves? we lost the source code",
+"e": [
+"app-replica"
+]
+},
+{
+"p": "rebuild the features of this saas tool for our internal use, here is a walkthrough video of what it does",
+"e": [
+"app-replica"
+]
+},
+{
+"p": "i changed the login page, can you open it and click through to make sure it still works",
+"e": [
+"browser-verify"
+]
+},
+{
+"p": "take screenshots of the checkout at phone and desktop width and tell me if anything looks broken",
+"e": [
+"browser-verify",
+"ui-polish"
+]
+},
+{
+"p": "the button does nothing for users but the code looks fine. run it in a real browser and see what happens",
+"e": [
+"browser-verify",
+"bug-investigation"
+]
+},
+{
+"p": "this test passes on my laptop and fails about one run in ten in CI. no idea why",
+"e": [
+"bug-investigation",
+"test-strategy"
+]
+},
+{
+"p": "monthly totals are off by a few cents sometimes and we can't tell where it comes from",
+"e": [
+"bug-investigation"
+]
+},
+{
+"p": "users get logged out at random, maybe once a day. figure out why",
+"e": [
+"bug-investigation"
+]
+},
+{
+"p": "here's the diff for the cart refactor, can you go over it before I merge",
+"e": [
+"change-review"
+]
+},
+{
+"p": "my coworker opened PR 482, give me feedback on it",
+"e": [
+"change-review"
+]
+},
+{
+"p": "look at the changes on this branch and tell me if anything is risky",
+"e": [
+"change-review"
+]
+},
+{
+"p": "why did our gcp spend double in october",
+"e": [
+"cloud-cost"
+]
+},
+{
+"p": "we pay for a ton of idle servers, how do we get the cloud bill down",
+"e": [
+"cloud-cost"
+]
+},
+{
+"p": "should we buy savings plans for our workloads?",
+"e": [
+"cloud-cost"
+]
+},
+{
+"p": "i started on monday and this repo has no docs, help me understand how it fits together",
+"e": [
+"codebase-onboarding"
+]
+},
+{
+"p": "write a CLAUDE.md for this project",
+"e": [
+"codebase-onboarding"
+]
+},
+{
+"p": "i inherited this codebase, how do i run the tests and what are the main modules?",
+"e": [
+"codebase-onboarding"
+]
+},
+{
+"p": "implement caching for the product lookups, it touches the service layer and the tests",
+"e": [
+"coding-discipline"
+]
+},
+{
+"p": "the task is vague: make the importer better. plan it before we edit anything",
+"e": [
+"coding-discipline",
+"requirements-interview"
+]
+},
+{
+"p": "refactor the error handling in the payment module across five files",
+"e": [
+"coding-discipline"
+]
+},
+{
+"p": "our airflow dag loads yesterday's sales into snowflake and sometimes it loads twice",
+"e": [
+"data-engineering"
+]
+},
+{
+"p": "the numbers in the warehouse don't match the source system, how do we find the gap",
+"e": [
+"data-engineering"
+]
+},
+{
+"p": "design an incremental load from postgres to bigquery that handles updates and deletes",
+"e": [
+"data-engineering"
+]
+},
+{
+"p": "my model scores 99% on the test set, is that real?",
+"e": [
+"data-ml-work"
+]
+},
+{
+"p": "we want to predict which customers will cancel, how should we set this up",
+"e": [
+"data-ml-work"
+]
+},
+{
+"p": "i trained a classifier on last year's data and worry about leakage. evaluate it",
+"e": [
+"data-ml-work"
+]
+},
+{
+"p": "npm install says 38 vulnerabilities, which ones actually matter",
+"e": [
+"dependency-audit"
+]
+},
+{
+"p": "is it ok to use this GPL library in our closed source product",
+"e": [
+"dependency-audit"
+]
+},
+{
+"p": "set up renovate so we stop falling behind on packages",
+"e": [
+"dependency-audit"
+]
+},
+{
+"p": "postgres or dynamodb for our new event store? we can't easily switch later",
+"e": [
+"design-decision"
+]
+},
+{
+"p": "monolith or microservices for a team of six?",
+"e": [
+"design-decision"
+]
+},
+{
+"p": "we need an auth approach: sessions, jwt or an identity provider. compare them",
+"e": [
+"design-decision"
+]
+},
+{
+"p": "make our app look like linear.app, here's the url",
+"e": [
+"design-reference"
+]
+},
+{
+"p": "pull the colours and fonts out of this screenshot into a style guide",
+"e": [
+"design-reference"
+]
+},
+{
+"p": "write a design file from our brand pdf so you build on-brand screens",
+"e": [
+"design-reference"
+]
+},
+{
+"p": "take this idea from nothing to production, i don't know the steps. it's a team scheduling app",
+"e": [
+"dev-lifecycle",
+"new-app-build"
+]
+},
+{
+"p": "what is the right process to build and ship a feature end to end here?",
+"e": [
+"dev-lifecycle"
+]
+},
+{
+"p": "do this properly: we need to launch a customer portal",
+"e": [
+"dev-lifecycle",
+"new-app-build"
+]
+},
+{
+"p": "get a few agents to give opinions on how to restructure our billing code, then build the winner",
+"e": [
+"dev-orchestrator"
+]
+},
+{
+"p": "this migration is risky. have several specialists propose approaches and critique each other before anyone implements",
+"e": [
+"dev-orchestrator"
+]
+},
+{
+"p": "run this as a small team: analyst, architect, implementer, reviewer",
+"e": [
+"dev-orchestrator"
+]
+},
+{
+"p": "how long will it take to add SSO to our app? my manager wants a number",
+"e": [
+"estimation"
+]
+},
+{
+"p": "can we ship this by the end of the quarter with three devs?",
+"e": [
+"estimation"
+]
+},
+{
+"p": "size these twelve tickets for me",
+"e": [
+"estimation"
+]
+},
+{
+"p": "build me a landing page for my pottery studio",
+"e": [
+"frontend-design"
+]
+},
+{
+"p": "the dashboard looks like every other generated template. make it look designed",
+"e": [
+"frontend-design",
+"ui-polish"
+]
+},
+{
+"p": "design the settings screen for our app",
+"e": [
+"frontend-design"
+]
+},
+{
+"p": "i accidentally pushed my .env to github",
+"e": [
+"git-hygiene"
+]
+},
+{
+"p": "squash my last 8 commits into something readable",
+"e": [
+"git-hygiene"
+]
+},
+{
+"p": "i ran git reset --hard and lost my work, can i get it back",
+"e": [
+"git-hygiene"
+]
+},
+{
+"p": "CI is red, just make the tests pass",
+"e": [
+"honest-fixes"
+]
+},
+{
+"p": "three tests fail after my change, fix it",
+"e": [
+"honest-fixes",
+"bug-investigation"
+]
+},
+{
+"p": "the build fails with a type error i don't understand, get it green",
+"e": [
+"honest-fixes",
+"bug-investigation"
+]
+},
+{
+"p": "prod is returning 500s for everyone right now",
+"e": [
+"incident-response"
+]
+},
+{
+"p": "we had an outage last night, help me write the review",
+"e": [
+"incident-response"
+]
+},
+{
+"p": "the site went down right after the deploy ten minutes ago, what do we do",
+"e": [
+"incident-response"
+]
+},
+{
+"p": "write terraform for a vpc with two private subnets and an rds database",
+"e": [
+"infrastructure-as-code"
+]
+},
+{
+"p": "terraform says it will recreate our database, why?",
+"e": [
+"infrastructure-as-code"
+]
+},
+{
+"p": "we built everything by clicking in the aws console, how do we get it into code",
+"e": [
+"infrastructure-as-code"
+]
+},
+{
+"p": "we go live with real customers on thursday, are we ready?",
+"e": [
+"launch-gate"
+]
+},
+{
+"p": "give me a pre-launch checklist and a go or no-go call for our first release",
+"e": [
+"launch-gate"
+]
+},
+{
+"p": "what could go wrong on launch day for our new app?",
+"e": [
+"launch-gate"
+]
+},
+{
+"p": "upgrade our rails app from 6 to 7",
+"e": [
+"migrate-and-upgrade"
+]
+},
+{
+"p": "move the codebase from javascript to typescript",
+"e": [
+"migrate-and-upgrade"
+]
+},
+{
+"p": "replace moment.js with date-fns across the whole project",
+"e": [
+"migrate-and-upgrade"
+]
+},
+{
+"p": "our ios app was rejected in app review, what now",
+"e": [
+"mobile-app-work"
+]
+},
+{
+"p": "react native or flutter for our delivery app?",
+"e": [
+"mobile-app-work",
+"design-decision"
+]
+},
+{
+"p": "the android app crashes on older phones but works on my pixel",
+"e": [
+"mobile-app-work",
+"bug-investigation"
+]
+},
+{
+"p": "build me an expense tracker app from scratch",
+"e": [
+"new-app-build",
+"requirements-interview",
+"dev-lifecycle"
+]
+},
+{
+"p": "new project: a booking site for a yoga studio, we have nothing yet",
+"e": [
+"new-app-build",
+"requirements-interview",
+"dev-lifecycle"
+]
+},
+{
+"p": "i want an internal tool to manage on-call rotations, build it",
+"e": [
+"new-app-build",
+"requirements-interview",
+"dev-lifecycle"
+]
+},
+{
+"p": "we only find out about problems when customers tweet. what should we do",
+"e": [
+"observability"
+]
+},
+{
+"p": "our alerts fire all night and nobody reads them anymore",
+"e": [
+"observability"
+]
+},
+{
+"p": "add structured logging and tracing to the checkout service",
+"e": [
+"observability"
+]
+},
+{
+"p": "add stripe checkout so people can buy credits",
+"e": [
+"payments-integration"
+]
+},
+{
+"p": "how do we deal with failed card renewals on subscriptions",
+"e": [
+"payments-integration"
+]
+},
+{
+"p": "customers got charged twice and our webhook seems to run twice",
+"e": [
+"payments-integration"
+]
+},
+{
+"p": "this endpoint takes 6 seconds, make it faster",
+"e": [
+"performance-work"
+]
+},
+{
+"p": "the server's memory keeps growing until it falls over",
+"e": [
+"performance-work",
+"bug-investigation"
+]
+},
+{
+"p": "can our service handle ten times the traffic?",
+"e": [
+"performance-work"
+]
+},
+{
+"p": "rewrite this readme so a new hire can follow it",
+"e": [
+"plain-writing"
+]
+},
+{
+"p": "write release notes for 3.2 from this changelog",
+"e": [
+"plain-writing",
+"release-engineering"
+]
+},
+{
+"p": "tidy this design doc, it rambles",
+"e": [
+"plain-writing"
+]
+},
+{
+"p": "set up end to end browser tests for signup and checkout",
+"e": [
+"playwright-ui-tests"
+]
+},
+{
+"p": "our e2e tests are flaky, fix them and get them running in ci",
+"e": [
+"playwright-ui-tests"
+]
+},
+{
+"p": "add visual regression tests to the frontend",
+"e": [
+"playwright-ui-tests"
+]
+},
+{
+"p": "set up a pipeline that deploys to staging and then production",
+"e": [
+"release-engineering"
+]
+},
+{
+"p": "how should we version and publish this library?",
+"e": [
+"release-engineering"
+]
+},
+{
+"p": "plan a staged rollout with a way back for the new version",
+"e": [
+"release-engineering"
+]
+},
+{
+"p": "i want an app for my dental clinic. not sure what it should do",
+"e": [
+"requirements-interview",
+"new-app-build"
+]
+},
+{
+"p": "ask me whatever you need to know before we build this",
+"e": [
+"requirements-interview"
+]
+},
+{
+"p": "turn this vague idea into clear requirements",
+"e": [
+"requirements-interview"
+]
+},
+{
+"p": "the migration is stuck holding a lock in prod, just kill everything and drop the table so we're unblocked",
+"e": [
+"risky-shortcuts"
+]
+},
+{
+"p": "prod is wedged, force push the old commit over main and skip the checks, i'm in a hurry",
+"e": [
+"risky-shortcuts",
+"git-hygiene",
+"incident-response"
+]
+},
+{
+"p": "just disable the failing health check so the deploy goes through, we'll fix it later",
+"e": [
+"risky-shortcuts",
+"honest-fixes"
+]
+},
+{
+"p": "add a nullable column to the 80 million row orders table without taking the app down",
+"e": [
+"schema-changes"
+]
+},
+{
+"p": "rename a column on a live database",
+"e": [
+"schema-changes"
+]
+},
+{
+"p": "write a migration to backfill the new status field for existing rows",
+"e": [
+"schema-changes"
+]
+},
+{
+"p": "what should i think about for security before building a file upload feature?",
+"e": [
+"security-prompter"
+]
+},
+{
+"p": "threat model our new public api",
+"e": [
+"security-prompter"
+]
+},
+{
+"p": "is it safe to build login this way? we're starting the design",
+"e": [
+"security-prompter",
+"security-review"
+]
+},
+{
+"p": "audit this code for vulnerabilities before we ship",
+"e": [
+"security-review"
+]
+},
+{
+"p": "can anyone read other users' invoices by changing the id in the url?",
+"e": [
+"security-review"
+]
+},
+{
+"p": "check this handler for injection problems",
+"e": [
+"security-review"
+]
+},
+{
+"p": "i keep doing the same weekly report steps by hand, can we make that repeatable",
+"e": [
+"skill-capture"
+]
+},
+{
+"p": "save how we do code reviews here so you do it our way next time",
+"e": [
+"skill-capture"
+]
+},
+{
+"p": "turn this workflow into a skill",
+"e": [
+"skill-capture"
+]
+},
+{
+"p": "what should i test in this payment module?",
+"e": [
+"test-strategy"
+]
+},
+{
+"p": "our test suite takes 40 minutes and half of it is flaky",
+"e": [
+"test-strategy"
+]
+},
+{
+"p": "is this test any good? it never seems to fail",
+"e": [
+"test-strategy"
+]
+},
+{
+"p": "it looks off and unfinished, can you polish this page",
+"e": [
+"ui-polish"
+]
+},
+{
+"p": "check the empty, loading and error states on this screen",
+"e": [
+"ui-polish"
+]
+},
+{
+"p": "make this settings page feel professional",
+"e": [
+"ui-polish",
+"frontend-design"
+]
+},
+{
+"p": "we want to learn why trial users don't convert, should we send a survey",
+"e": [
+"ux-research"
+]
+},
+{
+"p": "how do we figure out if people actually want this feature before building",
+"e": [
+"ux-research"
+]
+},
+{
+"p": "plan five user interviews for our onboarding",
+"e": [
+"ux-research"
+]
+},
+{
+"p": "lighthouse says our page scores 40 on mobile, fix it",
+"e": [
+"web-quality"
+]
+},
+{
+"p": "the page jumps around while it loads and images are huge",
+"e": [
+"web-quality"
+]
+},
+{
+"p": "check this page works with keyboard navigation and on small screens",
+"e": [
+"web-quality",
+"accessibility-review"
+]
+},
+{
+"p": "what does the python zip function do?",
+"e": []
+},
+{
+"p": "translate this paragraph to spanish",
+"e": []
+},
+{
+"p": "write a haiku about mondays",
+"e": []
+},
+{
+"p": "fix the typo in line 12 of the readme",
+"e": []
+},
+{
+"p": "explain what a closure is",
+"e": []
+},
+{
+"p": "rename this variable to count",
+"e": []
+},
+{
+"p": "what's the difference between a list and a tuple",
+"e": []
+}
+]

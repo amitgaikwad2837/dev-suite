@@ -1,6 +1,6 @@
 ---
 name: payments-integration
-description: Adds payments to an app safely, with Stripe or a similar provider. Use when the user says "add Stripe", "take payments", "subscriptions", "billing", "checkout", "webhooks", "failed payments", "refunds", "invoices", "free trial", "customer portal", "PCI" or "sales tax". Keeps card data off your servers, grants access only from verified webhooks, makes handlers safe to repeat, stores money as integers, tests failure paths in the provider's test mode, and reconciles against the provider. Never uses live keys or moves real money without a named yes. Skip for deciding what to charge, and for general API design (api-design).
+description: Adds payments and subscriptions with Stripe or similar without losing money or storing card data. Use for checkout, subscriptions, failed renewals, webhooks, double charges, refunds, invoices and test versus live mode. Keeps card data off your server, grants access from verified webhooks and makes handlers safe to repeat. Skip for deciding what to charge and for general API design (api-design).
 ---
 
 # Payments Integration
