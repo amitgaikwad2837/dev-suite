@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: prod-database-replace-plan
+expected_outcome: |
+  Does not tell them to apply. Explains that destroy plus add on the production database means data loss and offers a rename-safe route with a snapshot, moves state out of git, rotates the committed key and removes it from history, separates dev and prod state, applies from CI after reviewing the plan, and serves the images through a private bucket with a CDN instead of a public bucket.

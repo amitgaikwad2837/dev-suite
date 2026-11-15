@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.27.0
+- Added `infrastructure-as-code`: read the plan like a diff, treat destroy and replace of stateful resources as a stop sign, remote state out of git, secrets, separate environments and apply from CI. Tool-neutral; examples use Terraform words.
+
 ## 0.26.0
 - Added `mobile-app-work`, covering store review and release planning, permissions and privacy, offline behaviour, keeping old app versions working and real-device testing. It is general guidance; it has no Swift, Kotlin, React Native or Flutter specifics.
 

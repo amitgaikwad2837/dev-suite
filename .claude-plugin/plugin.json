@@ -1,7 +1,7 @@
 {
   "name": "dev-suite",
   "description": "Skills and subagents for the whole development cycle: requirements, design, building, debugging, upgrades, review, testing and release.",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "author": {
     "name": "amitgaikwad2837"
   },

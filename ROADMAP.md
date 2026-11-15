@@ -4,7 +4,7 @@ What's here: requirements interviews, UX research, new apps, design decisions, A
 
 ## Not covered yet
 
-Nothing is on the list. Areas that have only a light touch: infrastructure as code and cloud cost, and data engineering beyond what `data-ml-work` covers.
+Nothing is on the list. Areas that have only a light touch: cloud cost beyond a tagging and estimate note, and data engineering beyond what `data-ml-work` covers.
 
 ## Known weak spots
 
