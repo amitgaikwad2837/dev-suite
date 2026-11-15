@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.36.0
+- Added `scripts/routing/prompts_concise.json` (9 prompts); routing scored 9 of 9, including that a request to explain in detail does not trigger it.
+- Added `concise-answers` and `templates/CLAUDE-concise.md`: answer first, no preamble or recap, read only what is needed, batch tool calls, and never cut a safety warning or a failed check. In the one eval case the reply was 104 words against 257 without the skill.
+
 ## 0.35.0
 - Added `scripts/routing/prompts_hardening.json` (11 prompts); routing with the new skill present scored 11 of 11.
 - Added `security-hardening`: inventory what is exposed, fix the riskiest first (leaked secrets, missing MFA, open databases, public storage, over-powerful pipelines, no audit log), and change production one step at a time without locking yourself out. `security-review` keeps application code.

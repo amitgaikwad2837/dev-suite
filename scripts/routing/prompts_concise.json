@@ -1,0 +1,11 @@
+[
+{"p":"tl;dr please: what does git rebase do?","e":["concise-answers","none"]},
+{"p":"i want to cut down how many tokens this session uses, keep answers short","e":["concise-answers"]},
+{"p":"be brief: what's the python way to read a file line by line?","e":["concise-answers","none"]},
+{"p":"quick answer only, no explanation: which http status code means rate limited?","e":["concise-answers","none"]},
+{"p":"write a one-page summary report of our q3 results from these notes","e":["plain-writing"]},
+{"p":"explain in detail how oauth 2 works, step by step, with the security pitfalls","e":["none"]},
+{"p":"our llm api bill is too high, how do we reduce token cost in the app?","e":["llm-app-work"]},
+{"p":"reduce our aws bill by 30%","e":["cloud-cost"]},
+{"p":"make my readme shorter and clearer","e":["plain-writing","documentation"]}
+]

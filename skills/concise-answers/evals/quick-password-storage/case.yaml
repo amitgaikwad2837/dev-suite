@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: quick-password-storage
+expected_outcome: |
+  A short answer under about 150 words that starts with the answer, names a slow adaptive password hash through a library, never plaintext or a fast hash, keeps one relevant safety caveat, and has no preamble, recap or closing offer.
