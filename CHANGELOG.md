@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.25.0
+- Added `codebase-onboarding`, which reads CI and build files first, checks commands before recording them, traces one journey and writes a short CLAUDE.md with verified and unverified marked. The idea came from reading everything-claude-code; the method and wording are new.
+
 ## 0.24.0
 - Added `templates/CLAUDE.md`, a short always-on version of `coding-discipline` (think first, keep it simple, change only what was asked, prove it), based on Karpathy's public notes via the MIT-licensed forrestchang/andrej-karpathy-skills. `coding-discipline` now says it covers bug fixes, `bug-investigation` ends with a surgical-fix step, and a stale line in `dev-lifecycle` was corrected.
 

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: inherited-flask-shop
+expected_outcome: |
+  Reads CI and build files before trusting the README, notices the README run command and port disagree with the Makefile and CI, traces the order journey, writes a short CLAUDE.md with commands marked verified or unverified, records the cents and migrations conventions, keeps secrets out, and lists open questions without inventing answers.
