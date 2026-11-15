@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: tuesday-store-release
+expected_outcome: |
+  Warns that a Monday submission cannot guarantee a Tuesday launch and plans a buffer and staged release, moves permission requests into context with a denial path, adds offline handling, keeps the old app version working with the API change and adds a minimum-version check, requires in-app account deletion, and widens testing beyond the simulator and one new phone.

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.26.0
+- Added `mobile-app-work`, covering store review and release planning, permissions and privacy, offline behaviour, keeping old app versions working and real-device testing. It is general guidance; it has no Swift, Kotlin, React Native or Flutter specifics.
+
 ## 0.25.0
 - Added `codebase-onboarding`, which reads CI and build files first, checks commands before recording them, traces one journey and writes a short CLAUDE.md with verified and unverified marked. The idea came from reading everything-claude-code; the method and wording are new.
 
