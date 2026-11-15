@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.28.0
+- Added `data-engineering`: repeat-safe loads, incremental extracts that catch updates and deletes, data tests, backfills away from the live table and personal data in the warehouse. Tool-neutral.
+
 ## 0.27.0
 - Added `infrastructure-as-code`: read the plan like a diff, treat destroy and replace of stateful resources as a stop sign, remote state out of git, secrets, separate environments and apply from CI. Tool-neutral; examples use Terraform words.
 
