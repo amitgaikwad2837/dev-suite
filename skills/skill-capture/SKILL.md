@@ -1,6 +1,6 @@
 ---
 name: skill-capture
-description: Spots repeated work and turns it into a reusable skill. Use when the user says they do the same thing again and again, asks to "make this a skill", "automate this workflow", "save this for next time" or "teach Claude how we do X", or when you notice during a task that the same multi-step procedure, the same corrections from the user, or the same helper script has come up a second time. Propose the skill and ask before creating anything. Skip one-off tasks and anything already covered by an existing skill.
+description: Spots repeated work and turns it into a reusable skill. Use when the user does the same thing again and again, asks to make this a skill, automate a workflow, save this for next time or teach Claude how we do X, or when the same procedure or correction comes up a second time. Propose it and ask before creating anything. Skip one-off tasks and anything an existing skill covers.
 ---
 
 # Skill Capture

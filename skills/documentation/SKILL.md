@@ -1,6 +1,6 @@
 ---
 name: documentation
-description: Plans, audits and maintains a project's documentation so it is findable, correct and kept up to date. Use when docs are out of date or a mess, new people take too long to get started, deciding what docs a project needs, setting up a docs site (MkDocs, Docusaurus, Sphinx), API reference, tutorials versus how-to guides, architecture decision records, runbooks, or keeping docs in sync with code. Tests the docs by following them and checks examples and links in CI. Skip for polishing the wording of a single document (plain-writing) and for writing a CLAUDE.md of a repo (codebase-onboarding).
+description: Plans, audits and maintains a project's documentation. Use when docs are out of date or a mess, new people take too long to get started, deciding what docs a project needs, setting up a docs site (MkDocs, Docusaurus, Sphinx), API reference, decision records, runbooks, or keeping docs in sync with code. Skip for polishing one document's wording (plain-writing) and writing a repo's CLAUDE.md (codebase-onboarding).
 ---
 
 # Documentation

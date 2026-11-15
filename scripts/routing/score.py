@@ -1,9 +1,20 @@
 """Score routing answers. usage: python scripts/routing/score.py OUTDIR"""
 import json, sys, glob, os, collections
 
+def load_prompts(setname, here):
+    """setname 'all' joins every prompts*.json file in this folder."""
+    import glob, json, os
+    if setname != 'all':
+        return json.load(open(os.path.join(here, setname), encoding='utf-8'))
+    out = []
+    for f in sorted(glob.glob(os.path.join(here, 'prompts*.json'))):
+        out += json.load(open(f, encoding='utf-8'))
+    return out
+
+
 out = sys.argv[1]
 setname = sys.argv[2] if len(sys.argv) > 2 else 'prompts.json'
-prompts = json.load(open(os.path.join(os.path.dirname(__file__), setname), encoding='utf-8'))
+prompts = load_prompts(setname, os.path.dirname(os.path.abspath(__file__)))
 ans = {}
 for f in glob.glob(os.path.join(out, 'answers_*.json')):
     ans.update(json.load(open(f, encoding='utf-8')))

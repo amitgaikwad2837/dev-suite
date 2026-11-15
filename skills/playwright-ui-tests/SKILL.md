@@ -1,6 +1,6 @@
 ---
 name: playwright-ui-tests
-description: Builds and maintains a Playwright end-to-end test suite for a web UI. Use when the user says "add UI tests", "set up Playwright", "end-to-end test suite", "test the critical flows", "visual regression tests", "run the UI tests in CI", "our Playwright tests are flaky", or wants regression protection for a frontend. Covers which journeys to test, config, login reuse, test data, selectors, network handling, screenshots, accessibility checks, flake rules and a CI workflow. Skip for one-off visual checks (browser-verify) and for unit tests (test-strategy).
+description: Builds and maintains a Playwright end-to-end test suite for a web UI. Use for adding UI tests, setting up Playwright, testing critical flows, visual regression tests, running UI tests in CI and flaky Playwright tests. Skip for one-off visual checks (browser-verify) and unit tests (test-strategy).
 ---
 
 # Playwright UI Tests

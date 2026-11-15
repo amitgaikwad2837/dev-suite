@@ -1,6 +1,6 @@
 ---
 name: change-review
-description: Reviews someone else's code change (a pull request, a diff, a patch, or the user's own change before they ask others) and returns a verdict with ranked, actionable comments. Use when the user says "review this PR", "look over this diff", "is this safe to merge", "give me feedback on this change", or shares a diff or branch to check, even if they don't say review. Starts from what the change is meant to do and where it can hurt most, not from the first line. Skip for security-only audits of a whole app, and for writing the change itself.
+description: Reviews a code change (pull request, diff, patch or the user's own branch) and returns a verdict with ranked, actionable comments. Use for review this PR, look over this diff, is this safe to merge, or feedback on a change. Starts from what the change is meant to do and where it can hurt most. Skip for security-only audits of a whole app and for writing the change itself.
 ---
 
 # Change Review

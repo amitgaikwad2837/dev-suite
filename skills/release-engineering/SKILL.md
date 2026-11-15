@@ -1,6 +1,6 @@
 ---
 name: release-engineering
-description: Designs and runs safe releases and deployment pipelines. Use when the user asks to "set up CI/CD", "design our release process", "ship this to production", "cut a release", "roll back", "version this", "write release notes", or when deploys are manual, risky or have broken production. Covers versioning, pipeline design, readiness checks, rollout strategy with abort criteria, rollback including database changes, and release notes. Never deploys, tags or publishes without explicit confirmation. Skip for local-only scripts with no deploy step.
+description: Designs and runs safe releases and deployment pipelines. Use for setting up CI/CD, release processes, shipping to production, cutting a release, rollback, versioning, release notes, or deploys that are manual, risky or have broken production. Covers rollout with abort criteria and rollback including database changes. Never deploys, tags or publishes without confirmation. Skip for local-only scripts.
 ---
 
 # Release Engineering

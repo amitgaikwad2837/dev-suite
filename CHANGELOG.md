@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.38.0
+- Second trim of skill descriptions: 19 long ones shortened, and `concise-answers` no longer triggers on plain questions that were not asked to be short. The descriptions loaded every session went from 21,830 to 18,700 characters (about 14 percent fewer, roughly 4,700 tokens). Routing across all 261 prompts: 256 correct before, 260 after. Added a skip pointer to `migrate-and-upgrade` for small refactors and a six-prompt set for that pair (6 of 6). `scripts/routing/build.py` and `score.py` now accept `all` to run every prompt file together.
+
 ## 0.37.0
 - Added `scripts/routing/prompts_mobileci.json` (9 prompts); routing with the new skill present scored 9 of 9.
 - Added `mobile-ci`: pipeline shape and runner cost, signing keys kept out of the repo, scoped store credentials, automatic build numbers, tests that can be trusted and promotion in steps instead of publishing on every push.

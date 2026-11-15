@@ -1,6 +1,6 @@
 ---
 name: dev-orchestrator
-description: Runs a task as a small team when it is worth it. You act as manager, spawn specialist subagents (analyst, architects, implementer, test engineer, reviewer, security auditor, release manager) to propose, critique, settle the best approach, then implement and verify. Token-lean by design, with tiers. Use for work with a hard-to-reverse design choice or real risk, such as "use a team of agents", "get several opinions then build", large features, migrations, upgrades. Skip for small or clear tasks; one agent is cheaper and enough.
+description: Runs a task as a small team when it is worth it. You act as manager and spawn specialist subagents to propose, critique, settle the best approach, then implement and verify. Use for hard-to-reverse design choices or real risk, such as use a team of agents, get several opinions then build, large features and migrations. Skip for small or clear tasks, where one agent is cheaper.
 ---
 
 # Dev Orchestrator

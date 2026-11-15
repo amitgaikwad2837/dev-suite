@@ -1,6 +1,6 @@
 ---
 name: requirements-interview
-description: Gets the missing requirements from the user before anything is built. Use when a request is vague, ambitious or underspecified ("add notifications", "build me an app for X", "we need a new reporting tool"), when the user says "interview me", "ask me questions first" or "what do you need to know", and before a new app, a large feature, a migration or an architecture change. Sorts unknowns into what Claude can look up, what only the user can decide and what is safe to default, then asks only the last group. Skip when the request is already specific and small.
+description: Gets missing requirements from the user before anything is built. Use when a request is vague or underspecified (add notifications, build me an app for X), when the user says interview me or what do you need to know, and before a new app, large feature, migration or architecture change. Asks only what Claude cannot look up or default. Skip when the request is already specific and small.
 ---
 
 # Requirements Interview

@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Makes a user interface look deliberately designed instead of generic. Use before building or restyling any page, component or app screen, when the user says "build the UI", "make it look good", "design this page", "landing page", "dashboard", or when output so far looks like a default template. Fixes a design brief first (audience, tone, one memorable element, type, colour, spacing, layout), then builds from tokens. For landing and launch pages it also sets the offer, audience, page structure and conversion copy. Skip for backend work and for tiny copy or colour tweaks.
+description: Makes a user interface look deliberately designed instead of generic. Use before building or restyling any page, component or screen, for landing pages and dashboards, or when output looks like a default template. Fixes a design brief first (audience, tone, type, colour, spacing, layout), then builds from tokens; for landing pages it also sets offer, structure and copy. Skip for backend work and tiny copy or colour tweaks.
 ---
 
 # Frontend Design

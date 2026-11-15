@@ -1,6 +1,6 @@
 ---
 name: dev-lifecycle
-description: The entry point for building or changing software end to end. Use when the user asks to build, ship, fix, upgrade, migrate or rebuild something and it is unclear where to start, or says things like "take this from idea to production", "what's the process", "do this properly", "build me X", or "where should we begin". Routes the work through discover, design, build, verify, review, ship and learn, and says which skill handles each phase. Skip for small edits and questions.
+description: The entry point for building or changing software end to end. Use when the user asks to build, ship, fix, upgrade, migrate or rebuild something and it is unclear where to start, or says take this from idea to production, what is the process, or do this properly. Routes through discover, design, build, verify, review, ship and learn and names the skill for each phase. Skip for small edits and questions.
 ---
 
 # Dev Lifecycle

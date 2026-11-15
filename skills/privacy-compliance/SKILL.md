@@ -1,6 +1,6 @@
 ---
 name: privacy-compliance
-description: Finds and fixes privacy and data-protection gaps in a product so it handles personal data lawfully and honestly. Use for GDPR, CCPA, HIPAA, COPPA and similar rules, what personal data we store, consent and cookie banners, privacy policies, deleting or exporting a user's data, data retention, sending customer data to vendors or AI providers, DPAs, data breaches and children's data. Maps the data, finds which rules apply, builds the mechanisms, and says what needs a lawyer. Not legal advice and never certifies compliance. Skip for finding code vulnerabilities (security-review) and for threat-modelling a new feature (security-prompter).
+description: Finds and fixes privacy and data-protection gaps. Use for GDPR, CCPA, HIPAA, COPPA, what personal data we store, consent and cookie banners, privacy policies, deleting or exporting a user's data, retention, sending data to vendors or AI providers, DPAs, breaches and children's data. Not legal advice and never certifies compliance. Skip for code vulnerabilities (security-review) and threat modelling a feature (security-prompter).
 ---
 
 # Privacy and Compliance

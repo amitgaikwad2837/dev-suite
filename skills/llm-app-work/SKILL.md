@@ -1,6 +1,6 @@
 ---
 name: llm-app-work
-description: Builds applications that call a language model (chatbots, RAG over documents, agents with tools, extraction, summaries) so they are tested, safe and affordable. Use for adding a chatbot or AI feature to an app, prompts, structured output, RAG and embeddings, tool-calling agents, prompt injection, hallucinations, evaluating answers, token cost and latency, and model upgrades. Builds an eval set before polishing prompts and treats all retrieved and user text as untrusted. Skip for training or tuning your own model (data-ml-work) and for ordinary API design (api-design).
+description: Builds applications that call a language model (chatbots, RAG, agents with tools, extraction) so they are tested, safe and affordable. Use for adding an AI feature, prompts, structured output, embeddings, prompt injection, hallucinations, evaluating answers, token cost and latency, and model upgrades. Builds an eval set first. Skip for training your own model (data-ml-work) and ordinary API design (api-design).
 ---
 
 # LLM App Work

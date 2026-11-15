@@ -1,6 +1,6 @@
 ---
 name: library-cli-work
-description: Builds and publishes reusable libraries, packages and command-line tools that other people install and depend on. Use for publishing to PyPI, npm, crates.io or similar, designing a library's public surface, semantic versioning, command-line flags and exit codes, --help and --json output, supported versions, dependencies, packaging, a README for users and release steps. Keeps the public surface small, separates the library from the command line, and tests the built package in a clean environment. Skip for HTTP or GraphQL services (api-design) and for deploying your own app (release-engineering).
+description: Builds and publishes libraries, packages and command-line tools that others install. Use for publishing to PyPI, npm or crates.io, a library's public surface, semantic versioning, CLI flags and exit codes, supported versions, packaging and release steps. Skip for HTTP or GraphQL services (api-design) and deploying your own app (release-engineering).
 ---
 
 # Library and CLI Work

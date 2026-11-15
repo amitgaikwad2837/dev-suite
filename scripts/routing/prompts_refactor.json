@@ -1,0 +1,8 @@
+[
+{"p":"refactor the error handling in the payment module across five files","e":["coding-discipline"]},
+{"p":"clean up the user service: split the long function and rename things so it reads better","e":["coding-discipline"]},
+{"p":"extract the duplicated validation code in three handlers into a shared helper","e":["coding-discipline"]},
+{"p":"upgrade our django app from 3.2 to 5.0","e":["migrate-and-upgrade"]},
+{"p":"migrate the whole codebase from callbacks to async await","e":["migrate-and-upgrade"]},
+{"p":"replace our orm with a different one across the entire project","e":["migrate-and-upgrade"]}
+]

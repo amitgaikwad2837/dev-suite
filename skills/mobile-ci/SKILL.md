@@ -1,6 +1,6 @@
 ---
 name: mobile-ci
-description: Sets up automated build, test, signing and distribution for iOS and Android apps. Use for CI/CD for a mobile app, Fastlane, EAS Build, Bitrise, GitHub Actions for iOS or Android, code signing, certificates, provisioning profiles, keystores, uploading to TestFlight, App Store Connect or Google Play, build numbers, flaky emulator tests, macOS runner cost and uploading crash symbols. Keeps signing keys out of the repo, uses scoped store credentials, and promotes builds in steps instead of publishing on every push. Skip for web and server pipelines (release-engineering) and for store policy and app design (mobile-app-work).
+description: Sets up build, test, signing and distribution pipelines for iOS and Android apps. Use for mobile CI/CD, Fastlane, EAS, Bitrise, GitHub Actions for mobile, certificates, provisioning profiles, keystores, TestFlight and Google Play uploads, build numbers, flaky emulator tests, macOS runner cost and crash symbols. Skip for web and server pipelines (release-engineering) and store policy or app design (mobile-app-work).
 ---
 
 # Mobile CI

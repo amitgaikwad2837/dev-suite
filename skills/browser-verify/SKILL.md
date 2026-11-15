@@ -1,6 +1,6 @@
 ---
 name: browser-verify
-description: Drives a real browser to check that a web UI works and looks right, using Playwright. Use when the user says "test the UI", "does it work in the browser", "take a screenshot", "check the login flow", "it works on my machine but the page is broken", or after any frontend change worth seeing. Runs the app, performs the flow, captures screenshots and console errors, and writes a few quick checks. For a lasting test suite or CI, use playwright-ui-tests. Skip for pure API or unit-level work.
+description: Drives a real browser with Playwright to check that a web UI works and looks right. Use for test the UI, does it work in the browser, take a screenshot, check the login flow, works on my machine but the page is broken, or after a frontend change worth seeing. Captures screenshots and console errors. Skip for API or unit-level work; for a lasting suite use playwright-ui-tests.
 ---
 
 # Browser Verify

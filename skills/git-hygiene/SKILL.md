@@ -1,6 +1,6 @@
 ---
 name: git-hygiene
-description: Keeps git history clean and recovers from git mistakes without losing work. Use for squashing or rewriting commits, rebase versus merge, undoing a commit or push, lost changes, a pushed secret or large file, force pushes, commit messages and branching rules. Makes a backup before any history change and never force-pushes a shared branch without a named yes. Skip for deploy pipelines (release-engineering) and reviewing a change (change-review).
+description: Keeps git history clean and recovers from git mistakes without losing work. Use for squashing or rewriting commits, rebase versus merge, undoing a commit or push, lost changes, a pushed secret or large file, force pushes and branching rules. Backs up before any history change and never force-pushes a shared branch without a named yes. Skip for deploy pipelines (release-engineering) and reviewing a change (change-review).
 ---
 
 # Git Hygiene
