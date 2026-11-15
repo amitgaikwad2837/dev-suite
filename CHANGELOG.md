@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.32.0
+- Added `scripts/routing/prompts_privacy.json` (12 prompts); routing with the new skill present scored 12 of 12.
+- Added `privacy-compliance`: map the data, find which rules probably apply, collect less, build deletion and export that reach every copy and vendor, retention, breach plan and a policy that matches the product. It is not legal advice and never certifies compliance.
+
 ## 0.31.0
 - Added `scripts/routing/prompts_llm.json` (10 prompts); routing with the new skill present scored 10 of 10 on it and 46 of 46 on the hard set.
 - Added `llm-app-work` for apps that call a language model: build the eval set first, treat all input as untrusted, limit what tools may do, validate structured output, pin the model version, watch cost and launch in steps. Provider-neutral.

@@ -1,0 +1,14 @@
+[
+{"p":"a user asked us to delete all their data under gdpr. how do we actually do that?","e":["privacy-compliance"]},
+{"p":"is our cookie banner legal in the eu?","e":["privacy-compliance"]},
+{"p":"what personal data do we store and where does it go?","e":["privacy-compliance"]},
+{"p":"we're building a health app for us patients. what do we have to think about for hipaa?","e":["privacy-compliance"]},
+{"p":"do we need a data processing agreement with our analytics vendor?","e":["privacy-compliance"]},
+{"p":"we want to send customer emails to an llm for summaries. is that allowed under our privacy policy?","e":["privacy-compliance","llm-app-work"]},
+{"p":"write a privacy policy for our app","e":["privacy-compliance","plain-writing"]},
+{"p":"we found that a database backup was exposed publicly last week. what are our obligations?","e":["privacy-compliance","incident-response"]},
+{"p":"scan this code for sql injection and xss","e":["security-review"]},
+{"p":"what should i think about for security before building a file upload feature?","e":["security-prompter"]},
+{"p":"our nightly pipeline loads customer data into the warehouse and sometimes loads twice","e":["data-engineering"]},
+{"p":"what is gdpr?","e":[]}
+]
