@@ -4,7 +4,7 @@ What's here: requirements interviews, UX research, new apps, design decisions, A
 
 ## Not covered yet
 
-Nothing is on the list. Areas that have only a light touch: cloud cost beyond a tagging and estimate note.
+Nothing is on the list and no area is marked light-touch. Not yet covered in depth: provider-specific details (AWS, Azure and GCP service names and console steps), and desktop or game development.
 
 ## Known weak spots
 

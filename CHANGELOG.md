@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.29.0
+- Added `cloud-cost`: read the bill breakdown first, safe savings, commitments only after right-sizing, never trading backups or logging for a number, and budgets, tags and anomaly alerts. Tool-neutral.
+
 ## 0.28.0
 - Added `data-engineering`: repeat-safe loads, incremental extracts that catch updates and deletes, data tests, backfills away from the live table and personal data in the warehouse. Tool-neutral.
 
