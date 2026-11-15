@@ -1,0 +1,11 @@
+[
+{"p":"set up ci/cd for our ios and android app so builds go to testers automatically","e":["mobile-ci"]},
+{"p":"how do we keep the ios signing certificates and android keystore safe in github actions?","e":["mobile-ci"]},
+{"p":"our fastlane upload to testflight keeps failing on two-factor","e":["mobile-ci"]},
+{"p":"macos runner minutes are eating our budget, how do we cut the build cost","e":["mobile-ci"]},
+{"p":"our emulator tests in ci are flaky","e":["mobile-ci","playwright-ui-tests","test-strategy"]},
+{"p":"our ios app was rejected in app review for a privacy issue","e":["mobile-app-work"]},
+{"p":"set up a pipeline that deploys our web app to staging then production","e":["release-engineering"]},
+{"p":"set up end to end browser tests for signup and checkout","e":["playwright-ui-tests"]},
+{"p":"should we use react native or flutter?","e":["mobile-app-work","design-decision"]}
+]

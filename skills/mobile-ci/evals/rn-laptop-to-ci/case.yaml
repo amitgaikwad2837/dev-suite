@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: rn-laptop-to-ci
+expected_outcome: |
+  Does not approve the plan as written. Keeps signing keys and passwords out of the repo, uses scoped store API credentials instead of a personal Apple ID, does not publish to production on every push, builds Android on Linux and keeps macOS for iOS, keeps tests and handles flaky emulator tests properly, and automates build numbers.

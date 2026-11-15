@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.37.0
+- Added `scripts/routing/prompts_mobileci.json` (9 prompts); routing with the new skill present scored 9 of 9.
+- Added `mobile-ci`: pipeline shape and runner cost, signing keys kept out of the repo, scoped store credentials, automatic build numbers, tests that can be trusted and promotion in steps instead of publishing on every push.
+
 ## 0.36.0
 - Added `scripts/routing/prompts_concise.json` (9 prompts); routing scored 9 of 9, including that a request to explain in detail does not trigger it.
 - Added `concise-answers` and `templates/CLAUDE-concise.md`: answer first, no preamble or recap, read only what is needed, batch tool calls, and never cut a safety warning or a failed check. In the one eval case the reply was 104 words against 257 without the skill.
