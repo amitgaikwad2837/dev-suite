@@ -1,0 +1,10 @@
+[
+{"p":"convene a council of advisors to validate this design before we build it","e":["llm-council"]},
+{"p":"i want several independent opinions on whether our migration plan is sound, then one final decision","e":["llm-council","dev-orchestrator","design-decision"]},
+{"p":"stress-test my plan with a panel of reviewers and give me a verdict","e":["llm-council"]},
+{"p":"use a team of agents to build the whole billing system, with critique rounds","e":["dev-orchestrator"]},
+{"p":"kafka or rabbitmq for our order events?","e":["design-decision","llm-council"]},
+{"p":"review this pull request for logic bugs and style","e":["change-review"]},
+{"p":"is this design ok?","e":["design-decision","llm-council","none"]},
+{"p":"audit this code for sql injection and broken access control","e":["security-review"]}
+]

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: login-rate-limit-design
+expected_outcome: |
+  Does not approve the design as written. Finds that the first X-Forwarded-For value can be forged, that a shared office IP is locked out, that INCR then EXPIRE is not atomic, that failing open removes protection and that IP-only limiting misses distributed guessing. Delivers a verdict with acceptance tests, shows how each finding was established and keeps the dissent.

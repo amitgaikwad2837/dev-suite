@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.39.0
+- Added `scripts/routing/prompts_council.json` (8 prompts); routing with the new skill present scored 8 of 8, and the hard set stayed 46 of 46.
+- Added `llm-council`, the `council-advisor` and `council-chairman` agents and a worked example. Five advisors (solver, red team, requirements auditor, operator, prover) work blind, then dispute an anonymised pool of findings; checks settle disagreements; a chairman writes a verdict with acceptance tests; a sign-off pass checks the build. Tested against the persona-style council (contrarian, first-principles, expansionist, outsider, executor) and single reviewers on a design with six planted flaws: all found all six, so the skill says to try one strong reviewer first.
+
 ## 0.38.0
 - Second trim of skill descriptions: 19 long ones shortened, and `concise-answers` no longer triggers on plain questions that were not asked to be short. The descriptions loaded every session went from 21,830 to 18,700 characters (about 14 percent fewer, roughly 4,700 tokens). Routing across all 261 prompts: 256 correct before, 260 after. Added a skip pointer to `migrate-and-upgrade` for small refactors and a six-prompt set for that pair (6 of 6). `scripts/routing/build.py` and `score.py` now accept `all` to run every prompt file together.
 

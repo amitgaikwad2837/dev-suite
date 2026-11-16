@@ -12,7 +12,7 @@ A map for the whole job. It decides the order of work and hands each phase to th
 | # | Phase | Do this | Skill |
 |---|---|---|---|
 | 1 | **Discover** | Get requirements, constraints and success criteria answered by the user; for anything holding data or exposed to the internet, ask the security questions too | `requirements-interview`, `ux-research`, `security-prompter` |
-| 2 | **Design** | One-page spec; choose between options that are hard to reverse | `new-app-build` (spec, plan), `design-decision`, `api-design`, `estimation` |
+| 2 | **Design** | One-page spec; choose between options that are hard to reverse | `new-app-build` (spec, plan), `design-decision`, `llm-council` (validate a costly choice with five advisors), `api-design`, `estimation` |
 | 3 | **Build** | Walking skeleton with CI first, then tested vertical slices | `new-app-build`, `coding-discipline`, `data-ml-work`, `data-engineering`, `llm-app-work`, `library-cli-work`, `payments-integration`, `mobile-app-work`, `mobile-ci` |
 | 4 | **Change existing code** | Bug, refactor, migration, version upgrade, or rebuild of a legacy app | `codebase-onboarding` (new to the repo), `bug-investigation`, `migrate-and-upgrade`, `schema-changes`, `performance-work`, `api-design` (changing a live API), `app-replica` |
 | 3b | **Build a UI** | Design brief and tokens first, then states and polish, then check in a real browser | `frontend-design`, `design-reference`, `ui-polish`, `browser-verify`, `playwright-ui-tests` |
