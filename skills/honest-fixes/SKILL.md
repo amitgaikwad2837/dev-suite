@@ -19,6 +19,13 @@ The plugin also ships a hook (`hooks/guard-tests.js`) that asks the user to conf
 
 **Work the problem in a bounded loop.** For each failure: read the actual error, form a hypothesis, make one change, re-run. Keep a short log of what you tried and what each result ruled out. Don't repeat an approach that already failed.
 
+**Verify before you say green.**
+- Run the checks the project declares (build, types, lint, tests) once before you edit, so you know what was already red. Call a failure "pre-existing" only if it was red on that first run. A file you changed breaking a test you did not touch is your bug.
+- After your last edit, run the full set again on the final state of the files. Green from an earlier run, or from a partial run, is not green.
+- A check that selects no tests, or a changed file that no test covers, is not green: add a test that covers it, or say it is uncovered.
+- If a check fails for a missing tool, service, secret or network, report it with the log line. Do not stub it out, skip it or work around it.
+- Stop after five runs, when the same failure comes back twice after a fix, or on an environment failure, and say what is still red and why. Before another fix to a stubborn failure in your own change, reproduce it in one small test and trace the cause.
+
 **Stop and ask the user when:**
 - two or three genuinely different approaches have failed, or you are going in circles
 - the test and the requirement appear to contradict each other, or the requirement is ambiguous

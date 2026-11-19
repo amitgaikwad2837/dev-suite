@@ -31,6 +31,10 @@ For each data-driven part check: empty, loading, error with a next step, partial
 
 Every action gets feedback within 100 ms (pressed state, spinner, toast). Transitions are 120 to 250 ms with easing, only on properties that are cheap to animate (opacity, transform). Honour `prefers-reduced-motion`.
 
-## 6. Fix, then report
+## 6. Score it
+
+Score states, space, type and colour, motion and responsive behaviour from 0 to 10. For each, say what a 10 looks like for this screen, then close the gap. Zero means nobody thought about it.
+
+## 7. Fix, then report
 
 Fix in priority order: broken or missing states, then alignment and spacing, then type and colour, then motion. Keep the diff to styling and markup; don't change behaviour. End with a short list: what you fixed, what you left, and anything that needs a decision from the user (brand colour, copy).

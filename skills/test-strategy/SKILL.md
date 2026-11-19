@@ -1,6 +1,6 @@
 ---
 name: test-strategy
-description: Decides what to test and writes tests that catch real bugs. Use for what should I test, write tests for this, flaky or slow tests, coverage, is this test any good, setting up testing, or code about to change with weak tests. Chooses tests by risk and checks a test would fail when the code is wrong. Skip when the only task is fixing one failing test (honest-fixes).
+description: Decides what to test and writes tests that catch real bugs. Use for what should I test, write tests for this, flaky or slow tests, coverage, is this test any good, auditing a suite for low-value tests, setting up testing, or code about to change with weak tests. Chooses tests by risk and checks a test would fail when the code is wrong. Skip when the only task is fixing one failing test (honest-fixes).
 ---
 
 # Test Strategy
@@ -47,3 +47,13 @@ Before changing behavior, pin what it does now with characterization tests at th
 ## 7. Suite hygiene
 
 Run the suite in CI on every change; fail the build on any failure; keep it fast enough that people run it before pushing. Do not weaken, skip or delete a test to get green; fix the code, or show why the test itself is wrong. When reporting, say which tests you added and what each protects, what you did not cover, and what you ran.
+
+## 8. Audit a suite for tests that cost more than they protect
+
+A test is worth keeping only if it protects behavior, fails for a realistic regression, is not already covered elsewhere, and needs no production hook that only tests use. Sweep the suite, report first and delete nothing until the user approves a batch.
+
+- **Shortlist cheaply:** tests with no assertions, tests that only grep source or compare export lists, copies of the same test, tests that exist only to keep a test-only export alive, and code whose only callers are tests. A match is a lead, not a verdict.
+- **Keep** a test that is the one thing enforcing a public contract, protocol, migration, security rule, default or generated output, even if it looks odd.
+- **For each candidate fill a card:** the test, what it detects, who else calls the code it exercises (with the search you ran), what stronger proof exists, why the test was added (its history), what removing it lets you delete, and how you will validate. An incomplete card means it is not ready; say so.
+- **Verdict per test:** retire, rewrite at the real boundary, fold into an existing table, or keep.
+- **Report** the production and test lines each batch would remove, group candidates by the module that owns the behavior, and ask once per batch. Run the owning tests after an approved batch, and say if validation could not run. The plugin's test guard will ask before a test file is deleted, which is expected here.

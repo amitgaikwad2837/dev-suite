@@ -57,7 +57,7 @@ After the build, run a **sign-off pass**: the Red team and the Prover check each
 
 ## Rules
 
-- Independence in stage 1: no shared files and no talking.
+- Independence in stage 1: no shared files and no talking. If a model from another vendor is available (for example through its command-line tool), give it one advisor seat: errors that differ from yours are the most valuable ones.
 - Evidence beats opinion. Weigh a finding by how it was established, and treat a reasoned blocker as a hypothesis to test.
 - Decide on evidence, not on a vote, and keep the dissent visible.
 - Cap the work: one blind round, one dispute pass, at most three experiments, then decide or ask the user.

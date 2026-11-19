@@ -34,11 +34,12 @@ Don't create files until the user says yes. If they say no, drop it and don't ra
 3. Write the description first. It is the only part always loaded, and it decides whether the skill triggers. State what it does and list the phrases and situations that should trigger it, including ones where the user won't name it; add what to skip. Keep it under 1,000 characters.
 4. Write the body as short imperative steps with the reason behind each. Put the decision rules and output format in; leave general knowledge Claude already has out. Stay well under 500 lines; move long reference material into a `references/` file and say when to read it.
 5. Bundle repeated code as scripts in `scripts/` instead of rewriting it each time, and say how to run it.
-6. Keep secrets and personal data out. No tokens, passwords, customer data, private URLs or personal details in a skill, especially one that may be shared or published. Point to where credentials live instead.
+6. Keep it lean. Fix the tool first: if a script, linter or config change removes the need for the instruction, do that instead. Add nothing the model already does well. When improving a skill, edit the line that is wrong instead of appending a new paragraph, and write the rule, not the story of how you found it. Put each instruction at the lowest level that reaches the agent (a line in CLAUDE.md before a skill, a script before a paragraph). Check that every command, flag and file the skill names still exists.
+7. Keep secrets and personal data out. No tokens, passwords, customer data, private URLs or personal details in a skill, especially one that may be shared or published. Point to where credentials live instead.
 
 ## 4. Test before you call it done
 
-Write two or three realistic prompts a user would actually type, including one that doesn't use the skill's name. Run them (with the skill, and for a new skill also without) and compare. Check that the skill triggers, that the steps are followed, and that the output matches the format. Fix the wording that caused any miss and rerun. For a systematic evaluation or description tuning, Anthropic's `skill-creator` skill automates the loop.
+Write two or three realistic prompts a user would actually type, including one that doesn't use the skill's name. Run them (with the skill, and for a new skill also without) and compare. Check that the skill triggers, that the steps are followed, and that the output matches the format. Fix the wording that caused any miss and rerun. When you shorten a skill, prove the shorter one still works: compare before, after and no skill on the same prompts. For a systematic evaluation or description tuning, Anthropic's `skill-creator` skill automates the loop.
 
 ## 5. Hand over
 

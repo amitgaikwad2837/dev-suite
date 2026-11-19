@@ -39,6 +39,7 @@ A useful minimum for most projects: a short README that says what it is and link
 - Keep docs in the repository next to the code, reviewed in the same pull request. Add "docs updated?" to the PR template and make a code change that alters behaviour update the page that describes it.
 - Give each page an owner (a team is fine), a last-verified date or version, and a way to report an error from the page itself.
 - Reminders to "update the docs monthly" do not work. Checks in CI and updates tied to changes do.
+- On every change, check the docs: list the behavior that changed, find the pages that describe it, and mark each updated, reviewed and still correct, or blocked, then report the gaps that remain.
 - Prune on a schedule. A smaller set of correct pages beats a large set that is half wrong.
 
 ## 6. Decision records and runbooks

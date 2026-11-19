@@ -1,6 +1,6 @@
 ---
 name: release-engineering
-description: Designs and runs safe releases and deployment pipelines. Use for setting up CI/CD, release processes, shipping to production, cutting a release, rollback, versioning, release notes, or deploys that are manual, risky or have broken production. Covers rollout with abort criteria and rollback including database changes. Never deploys, tags or publishes without confirmation. Skip for local-only scripts.
+description: Designs and runs safe releases and deployment pipelines. Use for setting up CI/CD, release processes, shipping to production, cutting a release, rollback, versioning, release notes, watching a deploy, or deploys that are manual, risky or have broken production. Covers rollout with abort criteria and rollback including database changes. Never deploys, tags or publishes without confirmation. Skip for local-only scripts.
 ---
 
 # Release Engineering
@@ -37,6 +37,13 @@ A short checklist, each item pass or fail: CI green on the release commit; chang
 
 For anything beyond direct, write **abort criteria** before you start: the metrics and thresholds that stop the rollout (error rate, latency, failed payments, support tickets) and who decides.
 
+## Ship hygiene
+
+- Test the exact candidate: merge the base branch into your branch first, then run the checks on that final state, so what you test is what ships.
+- Keep commits small enough to bisect, one concern each.
+- Open the pull request with three plain lines: what changed, why, and how it was verified. Then the details.
+- Check the docs on every release: list the behavior that changed and mark each page updated, reviewed and current, or blocked.
+
 ## 5. Run the release
 
 1. Pre-flight: checklist done, owner and time agreed, no conflicting changes in flight.
@@ -44,6 +51,17 @@ For anything beyond direct, write **abort criteria** before you start: the metri
 3. Verify: smoke tests, the key dashboards, logs for new errors; hold for a bake period that matches how fast problems appear.
 4. Expand in steps, checking the abort criteria each time.
 5. Announce completion with what changed and how to report problems.
+
+## Watch the deploy (canary)
+
+After a deploy, watch for a set time instead of assuming it is fine.
+
+1. **Baseline** the key pages or endpoints before the deploy: errors, load time, status, and the main flow.
+2. **Check on a schedule** (for example every minute) against that baseline. Alert on **changes, not absolutes**: a page with three known errors is fine while it still has three; one new error is the signal.
+3. **Do not cry wolf:** a finding becomes an alert only when it shows on two checks in a row, so one network blip is ignored.
+4. **Severity:** a page that fails to load is critical; a new error is high; load time above double the baseline is medium; a new broken link is low.
+5. **On a confirmed critical or high alert,** tell the owner with the evidence and the choices: investigate, keep watching, or roll back.
+6. **Report:** healthy, degraded or broken, per page, with the alerts, and offer to update the baseline only when the deploy is healthy.
 
 ## 6. Plan the way back
 
