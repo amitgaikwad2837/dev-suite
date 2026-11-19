@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.40.0
+- Added an action guard hook (`hooks/guard-actions.js`): hard-denies a few catastrophic commands, asks before risky ones, and asks before edits outside a folder listed in `.dev-suite/freeze`. `scripts/test-hooks.js` now runs 73 checks.
+- Added four skills: `plan-challenge`, `devex-review`, `session-handoff` and `retro`.
+- Improved existing skills with ideas from a review of garrytan/gstack (MIT, rewritten here): `change-review` (scope drift, weakened gates by name, quote the line, shared-code lens, docs check), `honest-fixes` (a verify loop with stop rules), `bug-investigation` (test value bar, fail-for-the-right-reason proof, stop rule for fix loops), `security-review` (application model, try to refute, coverage statement), `test-strategy` (audit mode), `release-engineering` (post-deploy watch and ship hygiene), `skill-capture` (lean-skill rules), `documentation` (docs check per change), `ui-polish` (0 to 10 scoring), `coding-discipline` (search first, scope lock), `llm-council` (use another vendor's model for one seat).
+- Added `scripts/routing/prompts_gstack.json`.
+
 ## 0.39.0
 - Added `scripts/routing/prompts_council.json` (8 prompts); routing with the new skill present scored 8 of 8, and the hard set stayed 46 of 46.
 - Added `llm-council`, the `council-advisor` and `council-chairman` agents and a worked example. Five advisors (solver, red team, requirements auditor, operator, prover) work blind, then dispute an anonymised pool of findings; checks settle disagreements; a chairman writes a verdict with acceptance tests; a sign-off pass checks the build. Tested against the persona-style council (contrarian, first-principles, expansionist, outsider, executor) and single reviewers on a design with six planted flaws: all found all six, so the skill says to try one strong reviewer first.

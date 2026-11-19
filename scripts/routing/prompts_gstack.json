@@ -1,0 +1,20 @@
+[
+{"p":"review my plan before we start building anything. is this the right thing to build?","e":["plan-challenge"]},
+{"p":"is this project worth doing at all, or should we cut it down to a smaller version?","e":["plan-challenge"]},
+{"p":"challenge the scope of this roadmap. what are we missing and what should we drop?","e":["plan-challenge","llm-council"]},
+{"p":"review the developer experience of our new SDK before launch","e":["devex-review"]},
+{"p":"how long does it take a new developer to get our api working for the first time?","e":["devex-review"]},
+{"p":"are the error messages in our cli actually helpful?","e":["devex-review","library-cli-work"]},
+{"p":"save my progress, i'm stopping for the day","e":["session-handoff"]},
+{"p":"resume where i left off yesterday","e":["session-handoff","codebase-onboarding"]},
+{"p":"write a handoff so the next session can continue this task","e":["session-handoff"]},
+{"p":"run the weekly retro for the team","e":["retro"]},
+{"p":"what did we ship this week and how did the sprint go?","e":["retro"]},
+{"p":"audit our test suite for useless and duplicate tests","e":["test-strategy"]},
+{"p":"after we deploy tonight, watch the site and alert us if something regresses","e":["release-engineering","observability"]},
+{"p":"freeze edits to the src/api folder for this session","e":["coding-discipline","none"]},
+{"p":"write a postmortem for last night's outage","e":["incident-response"]},
+{"p":"how long will this project take with three developers?","e":["estimation"]},
+{"p":"validate this design with several independent advisors and a final verdict","e":["llm-council"]},
+{"p":"kafka or rabbitmq for our order events?","e":["design-decision","llm-council"]}
+]

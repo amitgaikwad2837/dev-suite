@@ -12,14 +12,14 @@ A map for the whole job. It decides the order of work and hands each phase to th
 | # | Phase | Do this | Skill |
 |---|---|---|---|
 | 1 | **Discover** | Get requirements, constraints and success criteria answered by the user; for anything holding data or exposed to the internet, ask the security questions too | `requirements-interview`, `ux-research`, `security-prompter` |
-| 2 | **Design** | One-page spec; choose between options that are hard to reverse | `new-app-build` (spec, plan), `design-decision`, `llm-council` (validate a costly choice with five advisors), `api-design`, `estimation` |
+| 2 | **Design** | One-page spec; choose between options that are hard to reverse | `new-app-build` (spec, plan), `plan-challenge` (review a plan before building), `design-decision`, `llm-council` (validate a costly choice with five advisors), `api-design`, `estimation` |
 | 3 | **Build** | Walking skeleton with CI first, then tested vertical slices | `new-app-build`, `coding-discipline`, `data-ml-work`, `data-engineering`, `llm-app-work`, `library-cli-work`, `payments-integration`, `mobile-app-work`, `mobile-ci` |
 | 4 | **Change existing code** | Bug, refactor, migration, version upgrade, or rebuild of a legacy app | `codebase-onboarding` (new to the repo), `bug-investigation`, `migrate-and-upgrade`, `schema-changes`, `performance-work`, `api-design` (changing a live API), `app-replica` |
 | 3b | **Build a UI** | Design brief and tokens first, then states and polish, then check in a real browser | `frontend-design`, `design-reference`, `ui-polish`, `browser-verify`, `playwright-ui-tests` |
 | 5 | **Verify** | Decide what to test and write tests that catch real bugs; fix failures for real, stop and ask when stuck | `test-strategy`, `honest-fixes`, `browser-verify`, `web-quality`, `accessibility-review` |
-| 6 | **Review** | Review a change before merge; security pass on what was built or changed | `change-review`, `security-review`, `dependency-audit` |
+| 6 | **Review** | Review a change before merge; security pass on what was built or changed | `change-review`, `devex-review` (developer-facing products), `security-review`, `dependency-audit` |
 | 7 | **Ship** | Pipeline, versioning, staged rollout with abort criteria, rollback, release notes; careful handling of production emergencies | `infrastructure-as-code` (cloud resources in code), `cloud-cost` (a high or rising cloud bill), `privacy-compliance` (personal data), `documentation` (docs that stay true), `security-hardening` (locking down a running system), `launch-gate` (first public release), `release-engineering`, `git-hygiene`, `observability`, `plain-writing`, `risky-shortcuts`, `incident-response` |
-| 8 | **Learn** | Capture repeated work as a skill | `skill-capture` |
+| 8 | **Learn** | Capture repeated work as a skill; review the period; save state for the next session | `skill-capture`, `retro`, `session-handoff` |
 
 `coding-discipline` (assumptions, smallest change, clean diff, evidence, a "Done when" on every step) wraps all of it.
 
