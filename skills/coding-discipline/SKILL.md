@@ -1,6 +1,6 @@
 ---
 name: coding-discipline
-description: Rules for any non-trivial code change, including bug fixes and any task that edits files. Use before and after editing code, when planning a multi-step task, or when a request is ambiguous. Covers stating assumptions, the smallest sufficient change, a clean diff, evidence that it works, and plans where every step has a Done when. Also locks edits to one folder on request. Skip for one-line edits and plain questions.
+description: Rules for any non-trivial code change, including bug fixes and any task that edits files. Use before and after editing code, when planning a multi-step task, or when a request is ambiguous. Also locks edits to one folder on request. Skip for one-line edits and plain questions.
 ---
 
 # Coding Discipline

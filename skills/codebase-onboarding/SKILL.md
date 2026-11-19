@@ -1,6 +1,6 @@
 ---
 name: codebase-onboarding
-description: Learns an unfamiliar codebase quickly and writes a short verified CLAUDE.md. Use when the user just joined or inherited a repo, asks how a codebase works, where to start, how to run it, or to write a CLAUDE.md. Reads CI and build files first, checks commands, traces one real journey, notes conventions and danger zones. Skip for changing a known codebase (coding-discipline) and designing something new (new-app-build).
+description: Learns an unfamiliar codebase quickly and writes a short verified CLAUDE.md. Use when the user just joined or inherited a repo, asks how a codebase works, where to start, how to run it, or to write a CLAUDE.md. Skip for changing a known codebase (coding-discipline) and designing something new (new-app-build).
 ---
 
 # Codebase Onboarding

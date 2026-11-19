@@ -1,6 +1,6 @@
 ---
 name: data-ml-work
-description: Does machine learning and data analysis work you can trust. Use for training or evaluating a model, accuracy that looks too good, leakage, train and test splits, baselines, metrics, forecasting, A/B test readouts and analysing a dataset. Checks the question, the data and a simple baseline before modelling. Skip for plain app code (new-app-build), pipelines into a warehouse (data-engineering) and designing a user study (ux-research).
+description: Does machine learning and data analysis work you can trust. Use for training or evaluating a model, accuracy that looks too good, leakage, train and test splits, baselines, metrics, forecasting, A/B test readouts and analysing a dataset. Skip for plain app code (new-app-build), pipelines into a warehouse (data-engineering) and designing a user study (ux-research).
 ---
 
 # Data and ML Work

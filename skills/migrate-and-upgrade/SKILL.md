@@ -1,6 +1,6 @@
 ---
 name: migrate-and-upgrade
-description: Plans and runs migrations, large refactors and version upgrades safely. Use to move between libraries or frameworks, upgrade a language, framework or major dependency (for example upgrade to Django 5 or move to Python 3.13), or restructure a whole codebase. Safety net first, one major version at a time, codemods in their own commit, rollback ready. Skip for a refactor inside one module or a few files (coding-discipline).
+description: Plans and runs migrations, large refactors and version upgrades safely. Use to move between libraries or frameworks, upgrade a language, framework or major dependency (for example Django 5 or Python 3.13), or restructure a whole codebase. Skip for a refactor inside one module or a few files (coding-discipline).
 ---
 
 # Migrate and Upgrade

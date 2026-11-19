@@ -1,6 +1,6 @@
 ---
 name: retro
-description: Runs a weekly or sprint engineering retrospective from git and pull request history. Use for weekly retro, what did we ship, sprint review, how did this week go, or team velocity and health. Counts what shipped, fix and test trends, hotspots and pull request sizes, compares with the previous period, and writes wins, what slowed us and what to change. Skip for incident postmortems (incident-response) and for estimating future work (estimation).
+description: Runs a weekly or sprint engineering retrospective from git and pull request history. Use for weekly retro, what did we ship, sprint review, how did this week go, team velocity and health. Skip for incident postmortems (incident-response) and estimating future work (estimation).
 ---
 
 # Retro

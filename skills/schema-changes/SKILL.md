@@ -1,6 +1,6 @@
 ---
 name: schema-changes
-description: Plans and runs database schema changes on live tables without downtime. Use for adding, renaming or dropping columns or tables, changing types, adding indexes, backfilling data and writing migrations when the app must stay up. Uses expand and contract steps and tests on production-sized data. Never runs a migration on real data without a yes. Skip for local throwaway databases and rollout planning (release-engineering).
+description: Plans and runs database schema changes on live tables without downtime. Use for adding, renaming or dropping columns or tables, changing types, adding indexes, backfilling data and writing migrations when the app must stay up. Skip for local throwaway databases and rollout planning (release-engineering).
 ---
 
 # Schema Changes

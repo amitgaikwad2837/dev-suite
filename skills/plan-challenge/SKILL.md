@@ -1,6 +1,6 @@
 ---
 name: plan-challenge
-description: Reviews a plan before anything is built, challenging its premise, scope and completeness. Use for review my plan, is this worth building, think bigger or smaller, scope review, what am I missing, or before committing to a design or project. Picks a mode (expand, selective, hold or cut), checks reuse, failure paths and tests, and lists what is out of scope. Skip for choosing between designs (design-decision), validating with several advisors (llm-council) and estimating time (estimation).
+description: Reviews a plan before anything is built, challenging its premise, scope and completeness. Use for review my plan, is this worth building, think bigger or smaller, scope review, what am I missing. Skip for choosing between designs (design-decision), validating with several advisors (llm-council) and estimating time (estimation).
 ---
 
 # Plan Challenge

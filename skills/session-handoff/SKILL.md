@@ -1,6 +1,6 @@
 ---
 name: session-handoff
-description: Saves the working state of a task so a later session can continue exactly where this one stopped, and restores it. Use for save my progress, hand this off, I'm stopping for today, resume where I left off, where was I, or before the context fills up. Records decisions, remaining work and how each item is known, and on restore checks it against the repository before acting. Skip for long-term preferences (use memory) and for project documentation (documentation).
+description: Saves the working state of a task so a later session can continue where this one stopped, and restores it. Use for save my progress, hand this off, I am stopping for today, resume where I left off, where was I, or before the context fills up. Skip for long-term preferences (memory) and project documentation (documentation).
 ---
 
 # Session Handoff

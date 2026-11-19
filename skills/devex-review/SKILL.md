@@ -1,6 +1,6 @@
 ---
 name: devex-review
-description: Reviews and scores the developer experience of an API, SDK, CLI or docs by following the first-run path as a new developer would. Use for review our developer experience, time to first success, is our onboarding good, getting started is slow, are our error messages helpful, or before launching a developer-facing product. Times each step, finds friction, scores 0 to 10 and says what a 10 looks like. Skip for end-user interfaces (ui-polish, web-quality) and for writing the docs (documentation).
+description: Reviews and scores the developer experience of an API, SDK, CLI or docs by following the first-run path. Use for review our developer experience, time to first success, is onboarding good, getting started is slow, are error messages helpful, or before launching a developer-facing product. Skip for end-user interfaces (ui-polish, web-quality) and writing docs (documentation).
 ---
 
 # Developer Experience Review

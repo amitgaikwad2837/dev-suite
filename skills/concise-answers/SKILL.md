@@ -1,6 +1,6 @@
 ---
 name: concise-answers
-description: Gives short, answer-first replies and keeps token use low. Use only when the user asks for a quick or short answer, tl;dr, be brief, save tokens or keep it cheap. Cuts preamble, recap and long formatting, and reads and runs only what the task needs. Never drops a safety warning, a failed check or an uncertainty. Skip plain questions that were not asked to be short, and when the user wants depth or a full report.
+description: Gives short, answer-first replies and keeps token use low. Use only when the user asks for a quick or short answer, tl;dr, be brief, save tokens or keep it cheap. Skip plain questions that were not asked to be short, and when the user wants depth or a full report.
 ---
 
 # Concise Answers

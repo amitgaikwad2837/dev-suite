@@ -1,6 +1,6 @@
 ---
 name: data-engineering
-description: Builds and fixes data pipelines into a warehouse or lake so the numbers can be trusted. Use for ETL or ELT jobs, duplicates after a rerun, warehouse totals that do not match the source, backfills, incremental loads, late data, schema drift and data quality checks (Airflow, dbt, Spark, BigQuery, Snowflake). Skip for training or evaluating models (data-ml-work) and for app database schema changes (schema-changes).
+description: Builds and fixes data pipelines into a warehouse or lake so the numbers can be trusted. Use for ETL or ELT jobs, duplicates after a rerun, warehouse totals that do not match the source, backfills, incremental loads, late data and data quality checks (Airflow, dbt, Spark, BigQuery, Snowflake). Skip for training models (data-ml-work) and app database schema changes (schema-changes).
 ---
 
 # Data Engineering

@@ -1,6 +1,6 @@
 ---
 name: test-strategy
-description: Decides what to test and writes tests that catch real bugs. Use for what should I test, write tests for this, flaky or slow tests, coverage, is this test any good, auditing a suite for low-value tests, setting up testing, or code about to change with weak tests. Chooses tests by risk and checks a test would fail when the code is wrong. Skip when the only task is fixing one failing test (honest-fixes).
+description: Decides what to test and writes tests that catch real bugs. Use for what should I test, write tests for this, flaky or slow tests, coverage, is this test any good, auditing a suite for low-value tests, or code about to change with weak tests. Skip when the only task is fixing one failing test (honest-fixes).
 ---
 
 # Test Strategy

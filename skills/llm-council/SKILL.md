@@ -1,6 +1,6 @@
 ---
 name: llm-council
-description: Validates a design, plan or solution with a council of five advisors and a chairman, then checks the build against the council's findings. Use when the user asks for a council, advisors or several opinions, or to validate or stress-test an approach that is costly to undo. Advisors work blind, disputes are settled by experiments, and findings become acceptance tests. Skip for small or reversible tasks (one agent is cheaper) and for running a whole build as a team (dev-orchestrator).
+description: Validates a design, plan or solution with five advisors and a chairman, then checks the build against their findings. Use when the user asks for a council, advisors or several opinions, or to stress-test an approach that is costly to undo. Skip for small or reversible tasks (one agent is cheaper) and for running a whole build as a team (dev-orchestrator).
 ---
 
 # LLM Council

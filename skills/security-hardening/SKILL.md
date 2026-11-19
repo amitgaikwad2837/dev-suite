@@ -1,6 +1,6 @@
 ---
 name: security-hardening
-description: Locks down how a system is configured and run. Use for hardening a cloud account, servers, containers, networks, databases, CI/CD pipelines and secrets, preparing for a pen test, audit or security questionnaire, fixing findings such as open ports or missing headers, MFA and least privilege, and public buckets. Fixes the riskiest exposure first in small steps. Skip for reviewing application code (security-review), threat modelling a feature (security-prompter) and a live attack (incident-response).
+description: Locks down how a system is configured and run. Use for hardening a cloud account, servers, containers, networks, CI/CD pipelines and secrets, pen test or audit prep, fixing open ports or missing headers, MFA and least privilege, public buckets. Skip for reviewing application code (security-review), threat modelling a feature (security-prompter) and a live attack (incident-response).
 ---
 
 # Security Hardening

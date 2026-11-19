@@ -1,6 +1,6 @@
 ---
 name: ui-polish
-description: Critiques and refines a built interface until it feels finished. Use when the user says "polish this", "it looks off", "make it feel professional", "review the UI", "tidy the design", or after building any screen. Checks every state (empty, loading, error, long text), spacing and alignment, type hierarchy, contrast, focus, motion and responsive behaviour, then fixes the worst problems first. Skip for non-visual code.
+description: Critiques and refines a built interface until it feels finished. Use when the user says polish this, it looks off, make it feel professional, review the UI or tidy the design, or after building any screen. Checks states, spacing, type, contrast, motion and responsive behaviour. Skip for non-visual code.
 ---
 
 # UI Polish

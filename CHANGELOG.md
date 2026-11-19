@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.41.0
+- Third trim of skill descriptions: 26 of the longest shortened, from 21,245 to 18,703 characters in total (about 12 percent fewer, roughly 4,675 tokens loaded every session). Routing across all 293 prompts was 292 correct before and 292 after, with the same single miss.
+
 ## 0.40.0
 - Added an action guard hook (`hooks/guard-actions.js`): hard-denies a few catastrophic commands, asks before risky ones, and asks before edits outside a folder listed in `.dev-suite/freeze`. `scripts/test-hooks.js` now runs 73 checks.
 - Added four skills: `plan-challenge`, `devex-review`, `session-handoff` and `retro`.
