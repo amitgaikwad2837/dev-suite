@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: notification-platform-plan
+expected_outcome: |
+  Does not approve the plan as written. Challenges the premise (the real pain is late invoice reminders), offers a smallest version, recommends a mode and lets the user choose, walks failure paths and observability, and lists what is out of scope.

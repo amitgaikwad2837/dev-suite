@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: auth-migration-stop
+expected_outcome: |
+  Writes an append-only timestamped handoff with goal, decisions with reasons, remaining work with how each item is known, and the dead end, marks the unverified setting name as assumed, leaves out the password, and describes a restore that verifies assumptions first.

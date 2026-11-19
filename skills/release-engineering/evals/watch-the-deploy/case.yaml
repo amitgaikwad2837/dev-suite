@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: watch-the-deploy
+expected_outcome: |
+  Does not simply approve. Adds a pre-deploy baseline, alerts on changes instead of absolutes, requires two checks in a row, defines severities and abort criteria with who decides, checks the key flow and not only page load, and questions whether ten minutes is long enough.

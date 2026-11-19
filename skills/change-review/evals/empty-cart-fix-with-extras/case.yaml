@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: empty-cart-fix-with-extras
+expected_outcome: |
+  Returns a verdict that does not approve. Finds the scope creep (the rename and the new dependency), lists the weakened gates by name (loosened assertion, timeout, skipped test), ties each finding to a file and line, and says what it could not run or review.

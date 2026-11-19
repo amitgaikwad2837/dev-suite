@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: week-of-this-repo
+expected_outcome: |
+  Uses git to gather real numbers for the window, leads with what shipped, shows hotspots and sizes, compares or says there is nothing to compare, proposes three changes with signals, and says what git cannot show.

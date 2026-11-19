@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: shipit-cli-launch
+expected_outcome: |
+  Estimates time to hello world and flags it, walks the first-run path, audits errors, help, docs, upgrades and non-interactive use, scores each area 0 to 10 with what a 10 looks like, ranks the fixes, and says what it could not verify because it could not run the tool.

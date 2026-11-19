@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: audit-low-value-suite
+expected_outcome: |
+  Finds the assertion-free probe, the source grep, the duplicate pair and the test-only helper as candidates, keeps the public API contract test and the refund tests, gives evidence for each verdict, and stays report-only until a batch is approved.
