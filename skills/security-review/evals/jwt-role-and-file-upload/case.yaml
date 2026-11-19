@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: jwt-role-and-file-upload
+expected_outcome: |
+  Finds the client-controlled role and the hardcoded secret, the path traversal and webroot upload, gives locations, exploits and fixes, and states coverage.

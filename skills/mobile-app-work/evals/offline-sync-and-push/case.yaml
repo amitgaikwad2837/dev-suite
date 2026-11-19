@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: offline-sync-and-push
+expected_outcome: |
+  Designs conflict handling and an idempotent sync queue, investigates push delivery on android, keeps old versions working and tests offline and on real devices.

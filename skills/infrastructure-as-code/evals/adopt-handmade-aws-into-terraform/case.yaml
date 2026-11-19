@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: adopt-handmade-aws-into-terraform
+expected_outcome: |
+  Says to import and reach a no-change plan first, never to apply from memory or delete unknowns, and to start small with remote state and CI.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: checkout-modal-keyboard-blocker
+expected_outcome: |
+  Finds the keyboard and screen reader blockers, prefers native elements, fixes error presentation, prioritises by who is blocked and separates the quick fix from the formal audit.

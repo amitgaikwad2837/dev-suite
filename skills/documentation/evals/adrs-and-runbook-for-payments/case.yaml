@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: adrs-and-runbook-for-payments
+expected_outcome: |
+  Starts with the highest-risk items, gives a short decision record format and a runbook format, and ties upkeep to changes.

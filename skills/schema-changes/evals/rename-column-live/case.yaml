@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: rename-column-live
+expected_outcome: |
+  Treats the rename as a compatibility problem and not just a lock problem, uses expand and contract with dual writes and batched backfill, tests at scale and asks before running.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: multi-currency-unknowns
+expected_outcome: |
+  Gives a range with confidence and not one number, names the unknowns that dominate the risk, includes forgotten work and proposes a spike.

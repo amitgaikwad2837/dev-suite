@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: payments-degraded-vendor-status
+expected_outcome: |
+  Mitigates first, assigns roles, gives a status update format with known and unknown facts and the next update time, and avoids guessing at causes.

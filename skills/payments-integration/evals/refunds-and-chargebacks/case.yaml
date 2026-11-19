@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: refunds-and-chargebacks
+expected_outcome: |
+  Handles refund and dispute events through verified webhooks, defines access rules, makes refunds authorised and idempotent and tests in test mode.

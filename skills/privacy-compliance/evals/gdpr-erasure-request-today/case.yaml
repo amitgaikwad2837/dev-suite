@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: gdpr-erasure-request-today
+expected_outcome: |
+  Verifies identity and tracks the deadline, deletes or anonymises in every store including vendors, handles backups and logs, records the request and flags legal exceptions for counsel.

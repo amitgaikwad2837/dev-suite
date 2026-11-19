@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: first-pilot-customer
+expected_outcome: |
+  Adapts the gate to a small pilot, credits what is done, flags the single on-call person and the manual billing path, and gives a go with conditions.

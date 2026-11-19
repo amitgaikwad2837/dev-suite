@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: late-arriving-mobile-events
+expected_outcome: |
+  Separates event time from load time, reprocesses a late-data window idempotently, defines when numbers become final and reconciles.

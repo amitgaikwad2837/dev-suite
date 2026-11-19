@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: council-for-a-variable-name
+expected_outcome: |
+  Declines to spend about ten agent runs on a trivial reversible choice, gives a direct recommendation and says when a council is worth it.

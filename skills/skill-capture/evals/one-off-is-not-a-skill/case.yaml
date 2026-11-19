@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: one-off-is-not-a-skill
+expected_outcome: |
+  Pushes back that this was a one-time job with a vendor that is no longer used, asks whether it recurs, suggests a script or a note instead, and creates nothing without a yes.

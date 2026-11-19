@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: add-obscure-package
+expected_outcome: |
+  Evaluates the package's health and alternatives, checks the licence and install scripts, and handles the lodash update in safe steps.

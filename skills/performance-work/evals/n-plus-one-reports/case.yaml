@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: n-plus-one-reports
+expected_outcome: |
+  Measures first, identifies the repeated queries, batches or joins them, treats a cache and a bigger server as later steps, and re-measures.

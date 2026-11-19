@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: monorepo-two-days
+expected_outcome: |
+  Reads CI, build files and scripts first, verifies commands before recording them, traces one api request, and produces a short CLAUDE.md with verified and unverified marks and open questions.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: rag-invents-parameters
+expected_outcome: |
+  Builds an eval set from the reported failures, separates retrieval from generation, grounds answers in sources, and validates parameter names against the spec.

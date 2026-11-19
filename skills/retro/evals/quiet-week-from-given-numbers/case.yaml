@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: quiet-week-from-given-numbers
+expected_outcome: |
+  Works only from the data given, leads with what shipped, explains the low volume honestly, flags the revert and untested changes, and gives changes with signals.

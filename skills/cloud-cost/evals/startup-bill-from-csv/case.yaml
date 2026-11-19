@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: startup-bill-from-csv
+expected_outcome: |
+  Ranks by size and ease with numbers, right-sizes compute, adds lifecycle rules after checking, trims logging and bigquery cost, and gives a realistic range.

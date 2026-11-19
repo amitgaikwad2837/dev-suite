@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: one-in-two-hundred-500s-after-cache
+expected_outcome: |
+  States hypotheses with predictions, gathers evidence by correlating failures, reproduces deterministically, fixes the cause and not the symptom, and adds a regression test.

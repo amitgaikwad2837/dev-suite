@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: orders-endpoint-before-partners
+expected_outcome: |
+  Flags the raw where parameter, unbounded paging, 200 on errors and enumerable ids, and asks for a contract with examples and a compatibility plan before partners depend on it.

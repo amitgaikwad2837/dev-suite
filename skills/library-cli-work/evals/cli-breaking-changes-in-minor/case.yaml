@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: cli-breaking-changes-in-minor
+expected_outcome: |
+  Identifies all three as breaking, proposes a major version or a deprecation path, protects scripts, and asks for a changelog and migration notes.

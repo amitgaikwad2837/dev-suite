@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: rebase-gone-wrong
+expected_outcome: |
+  Stays calm, backs up first, finds the original tip in the reflog, restores it with the least destructive command and verifies by diff.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: flaky-in-ci-retries-and-timeouts
+expected_outcome: |
+  Says retries and long timeouts hide the problem, finds causes with traces, isolates data and state, removes fixed sleeps and quarantines with owners.

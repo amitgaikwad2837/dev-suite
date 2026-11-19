@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: already-specific-small-change
+expected_outcome: |
+  Recognises the request is specific and small, does not interview, states assumptions and gets on with it.

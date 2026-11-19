@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: blank-page-in-production-build
+expected_outcome: |
+  Runs both builds in a browser, captures console errors and failed requests, compares them, tests likely causes with evidence and proposes a stable regression test.

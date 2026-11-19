@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: churn-interviews-not-survey
+expected_outcome: |
+  Says a multiple choice survey will not explain churn, proposes interviews with lapsed users and neutral past-behavior questions, uses behavioral data first and names the decision it informs.

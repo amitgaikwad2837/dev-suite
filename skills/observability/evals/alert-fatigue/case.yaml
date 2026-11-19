@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: alert-fatigue
+expected_outcome: |
+  Audits and deletes non-actionable alerts, alerts on user-facing symptoms and error budget burn, ties each alert to an action and sets review metrics.

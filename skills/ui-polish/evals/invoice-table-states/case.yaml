@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: invoice-table-states
+expected_outcome: |
+  Checks every state including large data, aligns numbers, makes status more than colour, covers keyboard and focus, scores the dimensions and says it could not see the screen.

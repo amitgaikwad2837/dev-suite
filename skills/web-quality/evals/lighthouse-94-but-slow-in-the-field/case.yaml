@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: lighthouse-94-but-slow-in-the-field
+expected_outcome: |
+  Says a lab score is not field experience, tests on a throttled low-end profile, fixes images and javascript and third-party scripts, and measures before and after.

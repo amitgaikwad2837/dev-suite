@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: release-note-keep-numbers
+expected_outcome: |
+  Keeps every number and the code unchanged, removes the hype, puts what changed and what users must do first and lists what it changed.

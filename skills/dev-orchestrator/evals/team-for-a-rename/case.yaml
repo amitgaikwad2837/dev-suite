@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: team-for-a-rename
+expected_outcome: |
+  Declines the team as disproportionate, works solo at tier zero with a check, and says when a team would be worth it.

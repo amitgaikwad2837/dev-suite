@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: ab-test-trending-win
+expected_outcome: |
+  Says the result is not significant and underpowered, flags the segment fishing, and recommends a power calculation and an extended or repeated test.
