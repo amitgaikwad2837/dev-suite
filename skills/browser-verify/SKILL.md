@@ -9,7 +9,7 @@ Frontend code that was never rendered is unverified. This skill gets the page in
 
 ## 1. Get the app running
 
-Find the start command (`package.json` scripts, README) and the URL. Start the server in the background and wait until the URL answers; don't sleep for a fixed time. If Playwright is missing, ask before installing it: `npm i -D @playwright/test` then `npx playwright install chromium` (a download of a few hundred MB).
+If a browser tool is already available in the session, use it instead of installing anything. Otherwise find the start command (`package.json` scripts, README) and the URL. Start the server in the background and wait until the URL answers; don't sleep for a fixed time. If Playwright is missing, ask before installing it: `npm i -D @playwright/test` then `npx playwright install chromium` (a download of a few hundred MB).
 
 ## 2. Look before you script
 

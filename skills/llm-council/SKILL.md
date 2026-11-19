@@ -13,7 +13,7 @@ You are the **orchestrator**. Run it from the main session, because subagents ca
 
 Convene for hard-to-reverse designs, migrations, security-sensitive or money-handling changes, and plans the user wants stress-tested. For small, clear or easily reversed work, say so and answer directly.
 
-Be honest about the price. In a test with six planted flaws, one strong reviewer found all six, while the council cost about eleven agent runs. The council earned its cost in other ways: it caught problems that only appeared when ideas were combined (a fix that brought an earlier flaw back), it produced acceptance tests, and it settled disagreements. So when the user only wants to know whether a design is sound, offer one strong reviewer first, and convene the council when the choice is contested, expensive to undo, or the single review leaves open questions.
+Be honest about the price. In a test with six planted flaws, one strong reviewer found all six, while the council cost about eleven agent runs. It earned its cost elsewhere: it caught a problem that only appeared when ideas were combined, produced acceptance tests and settled disagreements. When the user only wants to know whether a design is sound, offer one strong reviewer first, and convene the council when the choice is contested, expensive to undo, or the single review leaves open questions.
 
 ## 2. Frame it and list the claims
 
@@ -23,13 +23,7 @@ Write `.dev-suite/council/<topic>/00-brief.md` in under 25 lines: the decision, 
 
 Spawn all five in one step, in parallel, each writing `10-<seat>.md`. They may not read each other's files.
 
-| Seat | Job |
-|---|---|
-| **Solver** | Designs its own solution before seeing the proposal, so there is a real alternative |
-| **Red team** | Assumes the proposal fails and shows how, running something where it can |
-| **Requirements auditor** | Traces every must-have to the proposal and finds the undefined and the assumed |
-| **Operator** | Runs, monitors, scales, costs and rolls it back; swap in a domain specialist (security, data, UX, money) when the risk sits there |
-| **Prover** | Turns the riskiest claims into tests, spikes or calculations and drafts the acceptance tests |
+The seats are the **solver** (designs its own solution before seeing the proposal, so there is a real alternative), the **red team** (assumes it fails and shows how), the **requirements auditor** (traces every must-have), the **operator** (runs, monitors, scales and rolls it back; swap in a domain specialist such as security, data, UX or money when the risk sits there) and the **prover** (turns the riskiest claims into tests and drafts the acceptance tests). Each seat's full job is in `council-advisor`.
 
 Findings are written as `F<n> | severity | claim | evidence | fix`, with evidence marked ran, read or reasoned. Use different models for different seats where you can, so their mistakes differ. If all five agree at once, that is a warning: check the framing and ask the red team to try again against the strongest point.
 
@@ -43,23 +37,23 @@ For each crux that would change the decision (three at most), run the named chec
 
 ## 6. Chairman verdict
 
-Spawn `council-chairman` on the strongest model you have, pointing at the brief, `10-*`, the stage-2 files and `25-cruxes.md`. It writes `30-verdict.md`: the verdict, the approach (including the best of the Solver's alternative), the ranked findings, the settled and unsettled disagreements, the dissent, **acceptance tests**, first steps and tripwires. Read it. It must pick the smallest design that meets the must-haves, and separate what must be done before launch from what can wait; reject scope that only expands the work. Check that every blocker has a test and that nothing decisive rests on a claim nobody ran or read. Run any such check yourself before reporting.
+Spawn `council-chairman` on the strongest model you have, pointing at the brief, `10-*`, the stage-2 files and `25-cruxes.md`. It writes `30-verdict.md`: the verdict, the approach (including the best of the Solver's alternative), the ranked findings, the settled and unsettled disagreements, the dissent, **acceptance tests**, first steps and tripwires. Read it: it must pick the smallest design that meets the must-haves, split launch work from later work, and give every blocker a test. Before reporting, run any check it relied on that nobody ran.
 
 ## 7. Report, then build and re-check
 
-Report in under 200 words: the verdict, the changes required, the findings and how each was established, the dissent, the acceptance tests and the first steps. For a hard-to-reverse choice, ask for the user's yes before anything is built. Offer `dev-orchestrator` or `new-app-build` to carry it out, with the acceptance tests as the definition of done.
+Report in under 200 words: the verdict, the changes required, how each finding was established, the dissent, the acceptance tests and the first steps. For a hard-to-reverse choice, get the user's yes before building, and offer `dev-orchestrator` or `new-app-build` with the acceptance tests as the definition of done.
 
 After the build, run a **sign-off pass**: the Red team and the Prover check each blocker and major finding against the build and report closed, open or untested, and the chairman signs off or reopens. Never ship on a blocker that is not closed by a passing test.
 
-## Example
-
-`example.md` shows a finished brief and verdict for a login rate limiter, including what the council found beyond a single review.
-
 ## Rules
 
+See `example.md` for a finished brief and verdict.
+
 - Independence in stage 1: no shared files and no talking. If a model from another vendor is available (for example through its command-line tool), give it one advisor seat: errors that differ from yours are the most valuable ones.
-- Evidence beats opinion. Weigh a finding by how it was established, and treat a reasoned blocker as a hypothesis to test.
-- Decide on evidence, not on a vote, and keep the dissent visible.
 - Cap the work: one blind round, one dispute pass, at most three experiments, then decide or ask the user.
 - Do not rank answers by polish: the most concrete plan is not always the deepest analysis.
 - Stay proportionate: if the council costs more than a mistake would, answer directly.
+
+## Related skills
+
+- `plan-challenge`: a single-reviewer plan critique

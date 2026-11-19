@@ -1,6 +1,6 @@
 ---
 name: app-replica
-description: Rebuilds or replaces an existing application from its observed behavior, without copying its code. Use for replacing a legacy system you own or matching an existing tool's features for internal use. Scope, black-box behavior spec, fresh build in slices, parity checks, cutover with rollback.
+description: Rebuilds or replaces an existing application from its observed behavior, without copying its code. Use for replacing a legacy system you own or matching an existing tool's features for internal use. Skip for upgrading the same codebase (migrate-and-upgrade) and for new products (new-app-build).
 ---
 
 # App Replica
@@ -8,6 +8,8 @@ description: Rebuilds or replaces an existing application from its observed beha
 Use when the user wants to recreate an application's behavior: replacing a legacy system they own, matching a vendor tool's feature set for internal use, or building something inspired by existing software. Rebuild from observed behavior, not from the original's code.
 
 **Boundaries first.** Confirm the user owns the original or has permission, or that the goal is a functionally similar product, not a lookalike. Never copy source code, assets, text, branding, trademarks or proprietary data, and never bypass access controls or licensing to inspect it. If the request is to impersonate another company's look and name, say so and ask for a distinct identity instead.
+
+If copyright is a real risk, separate observing from building: write the behavior spec first, then build from the spec alone and not from the original, and keep a log of what you looked at.
 
 1. Scope. What must match (workflows, data, integrations) and what may differ (UI, stack, features to drop or improve). Write both lists.
 2. Observe as a black box. Capture user flows, screens, data model, API contracts, validation rules, error states and edge cases from the running system, public docs or the user's own materials. Record them as a behavior spec and a parity checklist, one line per behavior.

@@ -40,3 +40,8 @@ If the team wants targets, set an SLO per key journey (for example 99.9 percent 
 Break something on purpose in a safe place (stop a dependency, return errors from a route, fill a queue) and check that the metric moves, the alert fires, the right person is told, and the logs and trace lead to the cause in a few minutes. An alert that has never fired is a guess. Add one dashboard per service with the key journeys on top and the cause-finding panels below.
 
 Report: the questions it answers, signals added with their names and labels, the alerts with owner and first action, what is deliberately not logged, the cost and retention settings, and the test that proved it.
+
+## Related skills
+
+- `incident-response`: handling a live outage
+- `bug-investigation`: one known bug

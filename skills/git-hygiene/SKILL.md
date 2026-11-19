@@ -50,3 +50,8 @@ This is a rotation problem first, a history problem second.
 ## 5. Report
 
 Say what state you found, the backup made, each command run and why, what changed, and anything the team now needs to do (re-clone, rotate, close PRs). If you stopped before a destructive step, say what is waiting on a yes.
+
+## Related skills
+
+- `release-engineering`: tags, versions and deploys
+- `change-review`: reviewing what a change contains

@@ -47,3 +47,7 @@ Sort into: fix now, fix this sprint, accept with a written reason and an expiry 
 Add what's missing, ask before enabling: a scheduled Dependabot or Renovate config with grouped updates and a weekly cadence, a scanner and licence check in CI that fails on new high-severity findings or banned licences, and a generated SBOM if customers or rules ask for one. Pin CI actions and base images to digests or versions. Write the accepted-risk list in one file with owner and expiry.
 
 Report: what was scanned and when, counts after triage (not raw counts), the fix-now list with the change made, accepted risks with reasons and dates, licence flags for a decision, anything that couldn't be checked, and the guards added.
+
+## Related skills
+
+- `security-review`: your own code

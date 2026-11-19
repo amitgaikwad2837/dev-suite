@@ -43,3 +43,8 @@ Stop when the target is met. Don't keep optimizing.
 Add a guard: a benchmark or a threshold check in CI, or a dashboard and an alert on the metric. Note the cause and the fix in the commit or PR so the next person doesn't undo it.
 
 Report: baseline, target, what the profile showed, each change with its before and after, what was left alone, and the guard added.
+
+## Related skills
+
+- `cloud-cost`: when the problem is the bill, not the speed
+- `web-quality`: slow pages in the browser

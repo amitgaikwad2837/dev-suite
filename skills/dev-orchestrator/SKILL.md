@@ -52,3 +52,7 @@ Report in under 200 words: decision and why, what was built, what was verified a
 - Subagent output is evidence to check, not truth.
 - Keep the dissent visible in the decision record.
 - Stay proportionate: if the team is costing more than the risk justifies, drop a tier and say so.
+
+## Related skills
+
+- `llm-council`: validating a design before building

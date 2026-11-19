@@ -54,3 +54,9 @@ Titles should match what people search for. One topic per page, a clear navigati
 ## 8. Hand over
 
 Report what was audited and what failed the stranger test, the structure proposed, what is generated and what is hand-written, the checks added to CI, the owners, the pages deleted or marked stale, and what you could not verify without running the project or asking the team.
+
+## Related skills
+
+- `codebase-onboarding`: a short verified CLAUDE.md for a repo
+- `session-handoff`: state for the next session, not project docs
+- `devex-review`: scoring the developer experience

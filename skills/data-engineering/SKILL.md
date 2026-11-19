@@ -49,3 +49,7 @@ Use an orchestrator or scheduler with retries, timeouts and alerts that reach a 
 ## 8. Hand over
 
 Report the grain and key, how reruns and late data are handled, the checks added and their results, how the totals reconcile with the source, what was not run, and what the user must decide (retention, who may see personal data).
+
+## Related skills
+
+- `schema-changes`: application database changes

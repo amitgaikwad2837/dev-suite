@@ -48,3 +48,8 @@ If `.dev-suite/retro/` has the previous period, show the change in each key numb
 - Report what the data shows and what it cannot show (reviews, meetings, design work and non-code effort do not appear in git).
 - Never put secrets, tokens or private details from commit messages into the report.
 - Keep the report short enough to read in five minutes.
+
+## Related skills
+
+- `estimation`: future work
+- `incident-response`: a postmortem for one incident

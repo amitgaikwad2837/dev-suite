@@ -47,3 +47,8 @@ Score each area from 0 to 10: 9 to 10 best in class, 7 to 8 good with small gaps
 ## 6. Report
 
 A scorecard table (area, score, evidence, what a 10 looks like, fix), the time to hello world with its steps, the top three fixes, and what you could not verify. If an earlier plan review exists, compare it with what you found, and say where the plan was wrong.
+
+## Related skills
+
+- `documentation`: writing the docs
+- `library-cli-work`: CLI and library conventions

@@ -32,3 +32,7 @@ A new session knows nothing about the last one. A good handoff is short, says wh
 
 - One handoff per stopping point, small and specific. A long history is not a handoff.
 - The point is the next action: someone reading only the first ten lines should know what to do.
+
+## Related skills
+
+- `documentation`: project docs

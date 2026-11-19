@@ -37,3 +37,8 @@ Keep it under about 60 lines and in this order: what the project is in two lines
 ## 6. Hand over
 
 Say what you verified and what you could not, the questions someone on the team has to answer (things the code cannot tell you), and two or three small, safe first tasks with the file to start in. Offer to keep the file current when the commands or layout change.
+
+## Related skills
+
+- `documentation`: the project documentation set
+- `coding-discipline`: changing a known codebase

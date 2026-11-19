@@ -13,3 +13,11 @@ Most failed builds fail at the start: unclear requirements, or a big-bang implem
 5. Vertical slices. Build one user-visible feature at a time, each with tests written alongside (test first for logic-heavy code), each ending in a working, demoable state. Commit per slice.
 6. Harden. Auth and authorization, input validation, secrets out of code, error handling, logging, a README with run/test/deploy steps, then `security-review` on the finished app.
 Use `design-decision` for choices that are expensive to reverse (data model, auth approach, framework).
+
+Bring in the other skills at the right moments:
+- Before the spec on a risky or large build: `plan-challenge`. Before building anything that holds personal data, logins or payments: `security-prompter`, and `privacy-compliance` or `payments-integration` where they apply. For a high-stakes choice, `llm-council`.
+- While building: `coding-discipline` and `test-strategy`; `frontend-design` for a UI; `llm-app-work` for an AI feature; `data-engineering` for pipelines.
+- Hardening and release: `observability`, `documentation`, then `launch-gate` before the first public release and `release-engineering` to ship.
+- Keep a short progress note so a stopped build can resume (`session-handoff`).
+
+Finish with a report: what exists, what runs, what is tested, what is left, and what the user must decide.

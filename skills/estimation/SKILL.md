@@ -50,3 +50,8 @@ Don't just say yes or no. Show what fits: the work in order of value, which part
 Record the estimate, its assumptions and the date it was made. Check it at milestones and update as soon as an assumption fails, telling stakeholders early with the new range. After the work, compare the estimate to the actual and note why it differed; that history is the best input for the next one (`skill-capture`).
 
 Report: what was estimated and what "done" means, the breakdown with ranges, the unknowns and the plan to resolve them, the rolled-up range and confidence, the assumptions, and the options if the date is fixed.
+
+## Related skills
+
+- `plan-challenge`: whether the plan is the right size
+- `retro`: how long similar work really took

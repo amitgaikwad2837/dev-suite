@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.42.0
+- Full-repo review. Expanded the thin early skills (`risky-shortcuts`, `security-review`, `bug-investigation`, `design-decision`, `new-app-build`, `app-replica`, `plain-writing`, `browser-verify`) and gave about 40 skills a short Related skills list so neighbouring skills point at each other (loaded only when a skill triggers). Moved the deploy watch in `release-engineering` into `references/watch-the-deploy.md`, trimmed `llm-council` and gave `honest-fixes`, `risky-shortcuts` and `app-replica` a skip clause.
+- `scripts/validate.py` now also checks that neighbour pointers in descriptions name real skills, that each description has a skip clause, that packages in `dist/` match their source, that routing prompts expect real skills, that the plugin version matches the changelog, that the README lists every skill, and warns on bodies over 1,000 words.
+
 ## 0.41.0
 - Third trim of skill descriptions: 26 of the longest shortened, from 21,245 to 18,703 characters in total (about 12 percent fewer, roughly 4,675 tokens loaded every session). Routing across all 293 prompts was 292 correct before and 292 after, with the same single miss.
 

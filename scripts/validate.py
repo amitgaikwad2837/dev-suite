@@ -4,7 +4,10 @@
 Checks: SKILL.md frontmatter has name and description, name matches the folder,
 name is lowercase-hyphen, description is at most 1024 characters, body length is
 reasonable, every eval case has a prompt, case.yaml and at least one grader, and
-the plugin JSON files parse and reference the right fields.
+the plugin JSON files parse and reference the right fields. Also: neighbour pointers
+in descriptions name real skills, each description says what to skip, packages in
+dist/ match their source, routing prompts expect real skills, the plugin version
+matches the changelog, and the README lists every skill.
 
 Run from the repo root:  python scripts/validate.py
 Exit code is 1 if any check fails.
@@ -163,6 +166,84 @@ for f in list(skills_dir.rglob("SKILL.md")) + list((ROOT / "agents").rglob("*.md
         m = MODE_ROUTING.search(line)
         if m:
             warn(f"{f.relative_to(ROOT)}:{n}: 'mode' used as a routing term ('{m.group(0)}'); say skill instead")
+
+# ---- consistency checks added after a full-repo review ----
+import zipfile
+
+desc_by = {}
+word_count = {}
+for skill in sorted(p for p in skills_dir.iterdir() if p.is_dir()):
+    md = skill / "SKILL.md"
+    if md.exists():
+        txt = md.read_text(encoding="utf8")
+        desc_by[skill.name] = (frontmatter(txt) or {}).get("description", "")
+        word_count[skill.name] = len(txt.split())
+
+# neighbour pointers in descriptions must name real skills, and every description says what to skip
+for n, d in desc_by.items():
+    for grp in re.findall(r"\(([^()]*)\)", d):
+        for part in [x.strip() for x in grp.split(",")]:
+            if re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)+", part) and part not in desc_by:
+                err(f"{n}: description points at '{part}', which is not a skill")
+    if not re.search(r"(?i)\bskip\b", d):
+        warn(f"{n}: description has no 'Skip for' clause saying what the skill is not for")
+    if word_count.get(n, 0) > 1000:
+        warn(f"{n}: SKILL.md is {word_count[n]} words; move optional detail to references/")
+
+# a package in dist must match its source
+for s_name in skill_names:
+    pkg = dist / f"{s_name}.skill"
+    if not pkg.exists():
+        continue
+    try:
+        z = zipfile.ZipFile(pkg)
+        inner = [x for x in z.namelist() if x.replace("\\", "/").endswith("SKILL.md") and x.replace("\\", "/").count("/") <= 1]
+        if inner:
+            a = z.read(inner[0]).replace(b"\r\n", b"\n")
+            b = (skills_dir / s_name / "SKILL.md").read_bytes().replace(b"\r\n", b"\n")
+            if a != b:
+                warn(f"dist/{s_name}.skill is out of date (run the packager)")
+    except Exception as ex:  # noqa: BLE001
+        warn(f"dist/{s_name}.skill could not be read ({ex})")
+
+# routing prompts must expect real skills, and every skill should have a prompt that expects it
+routing = ROOT / "scripts" / "routing"
+expected_for = set()
+if routing.exists():
+    for f in sorted(routing.glob("prompts*.json")):
+        try:
+            items = json.loads(f.read_text(encoding="utf8"))
+        except Exception as ex:  # noqa: BLE001
+            err(f"scripts/routing/{f.name}: not valid JSON ({ex})")
+            continue
+        for it in items:
+            for e in it.get("e", []):
+                if e in ("none", ""):
+                    continue
+                if e not in desc_by:
+                    err(f"scripts/routing/{f.name}: expects '{e}', which is not a skill")
+                else:
+                    expected_for.add(e)
+    for s_name in skill_names:
+        if s_name not in expected_for:
+            warn(f"{s_name}: no routing prompt expects it (add one to scripts/routing/)")
+
+# versions agree, and the README lists every skill
+cl = ROOT / "CHANGELOG.md"
+if cl.exists() and pj.exists():
+    m = re.search(r"^## ([0-9][0-9.]*)", cl.read_text(encoding="utf8"), re.M)
+    try:
+        v = json.loads(pj.read_text(encoding="utf8")).get("version")
+    except Exception:  # noqa: BLE001
+        v = None
+    if m and v and m.group(1) != v:
+        err(f"plugin.json version {v} does not match the top CHANGELOG entry {m.group(1)}")
+readme = ROOT / "README.md"
+if readme.exists():
+    rt = readme.read_text(encoding="utf8")
+    for s_name in skill_names:
+        if f"| {s_name} |" not in rt:
+            warn(f"README.md skill table does not list {s_name}")
 
 print(f"skills checked: {', '.join(skill_names)}")
 for w in warnings:

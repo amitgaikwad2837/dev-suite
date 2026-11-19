@@ -52,16 +52,9 @@ For anything beyond direct, write **abort criteria** before you start: the metri
 4. Expand in steps, checking the abort criteria each time.
 5. Announce completion with what changed and how to report problems.
 
-## Watch the deploy (canary)
+## Watch the deploy
 
-After a deploy, watch for a set time instead of assuming it is fine.
-
-1. **Baseline** the key pages or endpoints before the deploy: errors, load time, status, and the main flow.
-2. **Check on a schedule** (for example every minute) against that baseline. Alert on **changes, not absolutes**: a page with three known errors is fine while it still has three; one new error is the signal.
-3. **Do not cry wolf:** a finding becomes an alert only when it shows on two checks in a row, so one network blip is ignored.
-4. **Severity:** a page that fails to load is critical; a new error is high; load time above double the baseline is medium; a new broken link is low.
-5. **On a confirmed critical or high alert,** tell the owner with the evidence and the choices: investigate, keep watching, or roll back.
-6. **Report:** healthy, degraded or broken, per page, with the alerts, and offer to update the baseline only when the deploy is healthy.
+After a deploy, watch for a set time instead of assuming it is fine: take a baseline first, check on a schedule, alert on changes from the baseline (not on absolutes), and act only when a problem shows on two checks in a row. For the steps, severities and report, read `references/watch-the-deploy.md`.
 
 ## 6. Plan the way back
 
@@ -74,3 +67,11 @@ Write notes for the reader, grouped by what they can do or must change (new, cha
 ## Confirm before acting
 
 Production deploys, tags, package publishes, force pushes, migrations on live data and flag changes affect other people and are hard to undo. Show the exact command, target and effect, and wait for a clear yes for each such action. Approval for one step does not cover the next.
+
+## Related skills
+
+- `mobile-ci`: iOS and Android pipelines and signing
+- `launch-gate`: a go or no-go check before a first public release
+- `library-cli-work`: publishing a package
+- `infrastructure-as-code`: the cloud resources a release runs on
+- `schema-changes`: database changes that must ship with a release

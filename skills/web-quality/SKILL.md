@@ -28,3 +28,9 @@ Test at 320, 375, 768, 1024 and 1440 px, portrait and landscape. No horizontal s
 ## 4. Report
 
 Table of finding, where, effect on a user, fix, and the measure before and after. Fix the worst few; list the rest in order. Don't claim a score you did not measure.
+
+## Related skills
+
+- `mobile-app-work`: native iOS and Android apps
+- `performance-work`: backend and service performance
+- `accessibility-review`: a formal WCAG audit

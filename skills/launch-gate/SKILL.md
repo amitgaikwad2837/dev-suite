@@ -59,3 +59,7 @@ Show the table, the verdict in one sentence, and the list of open items with own
 ## 4. After the go
 
 Plan the first hour: who watches which dashboard, the numbers that mean stop (error rate, failed payments, signup drop), and when to widen the audience. Write down the decision and the accepted risks so the postmortem can compare.
+
+## Related skills
+
+- `incident-response`: a live outage

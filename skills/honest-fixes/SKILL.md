@@ -1,6 +1,6 @@
 ---
 name: honest-fixes
-description: Makes failing tests, builds or CI pass for real instead of silencing them. Use whenever a check fails and the fix is not obvious, or the user says just make the tests pass. Never deletes, skips or loosens tests, hardcodes expected values or swallows errors. Stops and asks with options when stuck.
+description: Makes failing tests, builds or CI pass for real instead of silencing them. Use whenever a check fails and the fix is not obvious, or the user says just make the tests pass. Never deletes, skips or loosens tests, hardcodes expected values or swallows errors. Stops and asks with options when stuck. Skip for deciding what to test (test-strategy).
 ---
 
 # Honest Fixes
@@ -33,3 +33,8 @@ The plugin also ships a hook (`hooks/guard-tests.js`) that asks the user to conf
 - you lack access or information you can't get yourself (credentials, a service, real data, a log from their environment)
 
 **How to ask:** one message with (1) what you were trying to achieve, (2) what is failing, with the exact error, (3) what you tried and what each attempt showed, (4) your best current theory, and (5) two or three concrete options with your recommendation, for example "fix X, or confirm the test expectation is outdated and I'll update it". Don't ask open-ended "what should I do?", and don't hide a failure in the summary: if something still fails, say so first.
+
+## Related skills
+
+- `test-strategy`: deciding what to test and auditing a suite
+- `bug-investigation`: finding a cause you cannot explain

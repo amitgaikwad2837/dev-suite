@@ -48,3 +48,10 @@ Then deprecate the old one on purpose: mark it in the docs and spec, send a `Dep
 ## 6. Report
 
 Give the contract (or its path), the decisions on errors, pagination, retries and limits, which changes are breaking and the path chosen for each, the deprecation dates, and what was left open.
+
+## Related skills
+
+- `library-cli-work`: a library or command-line surface and its publishing
+- `payments-integration`: payment webhooks and provider APIs
+- `llm-app-work`: APIs that call a language model
+- `mobile-app-work`: keeping old app versions working

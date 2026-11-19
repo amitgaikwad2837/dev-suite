@@ -52,3 +52,7 @@ Red-team it before launch with the injection and abuse cases. Release to staff o
 ## 8. Hand over
 
 Report the task and the measure, the eval set size and scores, the injection tests run, the limits on tools, the cost per request, the model version pinned, what was not tested, and what needs the user's decision (spend cap, data sent to the provider).
+
+## Related skills
+
+- `data-ml-work`: training your own model

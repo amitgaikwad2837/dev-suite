@@ -10,4 +10,10 @@ Some choices are expensive to undo once users, data or other teams depend on the
 2. Set the bar before looking at options. List 3 to 5 criteria, mark any as must-haves that eliminate an option outright (for example "must not lose events", "must run on our current hosting"), and note which criteria matter most.
 3. Sketch three genuinely different options, each in about ten lines: the idea, what it makes easy, what it makes hard. Make them differ in principle (for example centralized vs local state, build vs buy, synchronous vs queued), not in minor details. Use subagents for independent sketches if available.
 4. Stress each option with the same scenarios: a failure in the middle of an operation, ten times the load, and one realistic change request next quarter. Where possible run something real (a spike, a query plan, a prototype of the risky part) instead of arguing from memory.
-5. Decide and record it. Eliminate options that fail a must-have, pick the best of the rest, and borrow a specific safeguard or idea from a rejected option when it fits. Write a short decision record: what was chosen, why, what was rejected and why, and the evidence that would make you revisit it.
+5. Decide and record it. Tag each option with what it would cost to reverse. Eliminate options that fail a must-have, pick the best of the rest, and borrow a specific safeguard or idea from a rejected option when it fits. Write a short decision record: what was chosen, why, what was rejected and why, and the evidence that would make you revisit it.
+6. Say who decides. Recommend one option and why, and let the user decide a hard-to-reverse choice. Keep the record in the repository (for example `docs/decisions/NNN-title.md`, see `documentation`) with the date and its status. If the stakes are high or the options are close, test the choice with `llm-council` before committing; if the real question is whether to build at all, use `plan-challenge`.
+
+## Related skills
+
+- `api-design`: the shape and compatibility of an API
+- `infrastructure-as-code`: carrying out a cloud infrastructure choice

@@ -60,3 +60,8 @@ Close with what you did not review (generated files, parts you could not run, ar
 ## Reviewing your own change before asking others
 
 Run the same steps against your diff: write the intent sentence, list the riskiest behaviors, make sure a test would fail if each were wrong, remove debug code and unrelated edits, and write a description that says what changed, why and how to verify it.
+
+## Related skills
+
+- `security-review`: a security-focused pass
+- `git-hygiene`: cleaning up the history before review

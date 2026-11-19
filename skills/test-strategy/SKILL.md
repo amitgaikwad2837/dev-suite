@@ -57,3 +57,8 @@ A test is worth keeping only if it protects behavior, fails for a realistic regr
 - **For each candidate fill a card:** the test, what it detects, who else calls the code it exercises (with the search you ran), what stronger proof exists, why the test was added (its history), what removing it lets you delete, and how you will validate. An incomplete card means it is not ready; say so.
 - **Verdict per test:** retire, rewrite at the real boundary, fold into an existing table, or keep.
 - **Report** the production and test lines each batch would remove, group candidates by the module that owns the behavior, and ask once per batch. Run the owning tests after an approved batch, and say if validation could not run. The plugin's test guard will ask before a test file is deleted, which is expected here.
+
+## Related skills
+
+- `playwright-ui-tests`: a lasting end-to-end suite for a web UI
+- `honest-fixes`: making one failing test pass for real

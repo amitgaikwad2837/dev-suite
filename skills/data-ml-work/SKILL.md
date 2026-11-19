@@ -50,3 +50,8 @@ Leakage is when the model sees something at training time that it won't have at 
 - **Documentation:** a short model card covering the purpose, data, metric, limits, known biases and the owner (`plain-writing`).
 
 Report: the question and metric, data findings and fixes, leakage checks, the baseline and the final score with uncertainty, the error analysis, what can't be claimed, the deployment and monitoring plan, and the next step.
+
+## Related skills
+
+- `llm-app-work`: apps that call a language model
+- `data-engineering`: pipelines that feed the model

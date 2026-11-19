@@ -12,3 +12,6 @@ Applies to every document you produce or edit: READMEs, specs, design docs, runb
 4. Pass 3, facts. Check that every claim has a number, source or example behind it. Never alter code, commands, names, numbers, versions or quotations while editing prose.
 5. Match the writer. If the user supplies a sample or an existing document, follow its vocabulary, sentence length and formality instead of a generic tone.
 6. Delete test. Remove any sentence the document still works without.
+7. When you edit someone's document, return it with a short list of what you changed and anything you could not verify (numbers, links, claims).
+
+For planning or auditing a whole documentation set, use `documentation`.

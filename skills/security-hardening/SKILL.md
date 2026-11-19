@@ -62,3 +62,7 @@ Hardening can break things and can lock you out. Change one thing at a time, in 
 ## 10. Hand over
 
 Report what you inspected, the findings ranked by risk, what was changed and how it was checked, what remains and who owns it, and what you could not verify. Offer a short checklist the team can rerun each quarter.
+
+## Related skills
+
+- `security-prompter`: requirements for something new

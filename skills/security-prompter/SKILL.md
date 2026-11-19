@@ -47,3 +47,8 @@ Feed the brief to `design-decision` when it changes the design, to `test-strateg
 - Never guess a sensitive answer. A wrong "default" about who can see data is worse than asking again.
 - Don't ask for actual passwords, keys or personal data; ask where they are kept.
 - Don't lecture. Questions and a short brief, not an essay about threats.
+
+## Related skills
+
+- `security-hardening`: locking down a running system
+- `privacy-compliance`: personal data and consent

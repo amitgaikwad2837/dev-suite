@@ -44,3 +44,7 @@ Do not turn off backups, replicas, monitoring or security logging to hit a targe
 ## 6. Say what is realistic
 
 Give a range with the effort and risk of each step, the saving per month and how sure you are. A target such as "cut 50 percent by Friday" is rarely met safely; say what is achievable by then and what needs more time. Report what you measured, what you assumed, what you did not touch and what needs the user's yes.
+
+## Related skills
+
+- `performance-work`: making code faster

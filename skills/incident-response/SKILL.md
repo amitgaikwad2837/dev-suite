@@ -49,3 +49,9 @@ Write the review from the timeline, blame-free, with the people closest to the e
 - Actions, each with an owner, a due date and how we will know it worked. Prefer fixes that make the failure impossible or loud over reminders to be careful. Add a test or alert with `test-strategy` and rollout changes with `release-engineering`.
 
 Report: the current state, the last action taken, what needs a yes, and who needs to be told.
+
+## Related skills
+
+- `observability`: so the next outage is seen sooner
+- `launch-gate`: a check before a first launch
+- `retro`: reviewing a whole period, not one incident

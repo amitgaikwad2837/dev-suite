@@ -38,3 +38,8 @@ Before reporting done, scan for these and change any you did not choose delibera
 ## 5. Hand over
 
 Report the brief in six lines, where the tokens live, and which parts you left as defaults on purpose. Then run `ui-polish` for states and detail, and `browser-verify` to see it rendered.
+
+## Related skills
+
+- `ux-research`: what users need before the design
+- `accessibility-review`: a formal audit of the result

@@ -45,3 +45,7 @@ Never run, apply or hand over as ready to run any migration against real data (s
 - Rollout order, bake time and abort criteria go to `release-engineering`.
 
 Report: the classification, each step with its lock and rewrite risk, how long it should take, and what needs a yes.
+
+## Related skills
+
+- `data-engineering`: warehouse and pipeline loads

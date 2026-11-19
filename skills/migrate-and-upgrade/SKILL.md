@@ -25,3 +25,7 @@ Upgrades break because the breaking changes were never listed. Make them explici
 6. Check what tests can't see: bundle size and performance, config and environment differences, CI images, Docker base images, and behavior changes with no compile error (defaults, serialization, time zones, ordering).
 7. Ship safely: staging first, canary or flag where possible, a rollback path (previous lockfile and image), and a list of removed deprecations for the release notes.
 Report: versions from/to, breaking changes hit (and not hit), what each codemod changed, tests before/after, and anything still deprecated.
+
+## Related skills
+
+- `dependency-audit`: which updates matter for security and licences

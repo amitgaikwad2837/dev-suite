@@ -38,3 +38,8 @@ Score states, space, type and colour, motion and responsive behaviour from 0 to 
 ## 7. Fix, then report
 
 Fix in priority order: broken or missing states, then alignment and spacing, then type and colour, then motion. Keep the diff to styling and markup; don't change behaviour. End with a short list: what you fixed, what you left, and anything that needs a decision from the user (brand colour, copy).
+
+## Related skills
+
+- `accessibility-review`: a formal accessibility audit
+- `ux-research`: whether the design works for users

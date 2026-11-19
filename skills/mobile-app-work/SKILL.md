@@ -48,3 +48,7 @@ Users stay on old versions for months. Every API change must work for versions a
 ## 7. Hand over
 
 Give the release plan with dates and the fallback, the permission and privacy list, the minimum-version mechanism, the devices tested and the ones not, and what could still be rejected. Say what you could not run (store submission, real devices) rather than implying it passed.
+
+## Related skills
+
+- `mobile-ci`: build, signing and store upload pipelines

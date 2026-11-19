@@ -53,3 +53,8 @@ Plan on every pull request and post the plan for review (`change-review`). Apply
 ## 8. Hand over
 
 Report what the plan will change, which lines are destroys or replacements, what was not run, and what needs the user's yes before anything is applied. Include the rollback: what to restore and from where.
+
+## Related skills
+
+- `release-engineering`: application deploy pipelines
+- `cloud-cost`: the bill

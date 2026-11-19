@@ -28,3 +28,8 @@ If the user asks to restrict edits to a folder ("freeze edits to src/api"), writ
 ## Report shape
 
 Short and scannable. Bug: symptom, root cause, evidence, fix, test, remaining risk. Security: findings as above. Long task: done / unverified / left. Lead with what the user must decide or fix first.
+
+## Related skills
+
+- `codebase-onboarding`: when the codebase is new to you
+- `migrate-and-upgrade`: a change that touches the whole codebase

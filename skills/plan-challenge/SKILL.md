@@ -60,3 +60,9 @@ Prefer covering the whole requirement, with tests, edge cases and error paths, o
 5. Open questions only the user can answer.
 
 Say what you could not check (the code you did not read, numbers you could not verify).
+
+## Related skills
+
+- `design-decision`: choosing between designs
+- `llm-council`: validating with several advisors
+- `estimation`: how long it will take

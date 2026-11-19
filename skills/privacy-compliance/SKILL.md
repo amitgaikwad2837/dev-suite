@@ -42,3 +42,7 @@ The privacy policy must describe what the product actually does, in plain langua
 ## 8. Hand over
 
 Give the data map, the rules that probably apply and why, the gaps ranked by risk, what was built or changed, what needs a lawyer or the data owner, and what was not checked. State plainly that this is not a compliance sign-off.
+
+## Related skills
+
+- `security-prompter`: threat modelling a feature
