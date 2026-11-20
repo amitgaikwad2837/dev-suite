@@ -1,0 +1,217 @@
+[
+ {
+  "skill": "accessibility-review",
+  "name": "checkout-modal-keyboard-blocker",
+  "idx": "01"
+ },
+ {
+  "skill": "api-design",
+  "name": "orders-endpoint-before-partners",
+  "idx": "02"
+ },
+ {
+  "skill": "app-replica",
+  "name": "competitor-lookalike-by-copying",
+  "idx": "03"
+ },
+ {
+  "skill": "browser-verify",
+  "name": "blank-page-in-production-build",
+  "idx": "04"
+ },
+ {
+  "skill": "bug-investigation",
+  "name": "one-in-two-hundred-500s-after-cache",
+  "idx": "05"
+ },
+ {
+  "skill": "cloud-cost",
+  "name": "startup-bill-from-csv",
+  "idx": "06"
+ },
+ {
+  "skill": "codebase-onboarding",
+  "name": "monorepo-two-days",
+  "idx": "07"
+ },
+ {
+  "skill": "coding-discipline",
+  "name": "noticed-extra-problems",
+  "idx": "08"
+ },
+ {
+  "skill": "data-engineering",
+  "name": "late-arriving-mobile-events",
+  "idx": "09"
+ },
+ {
+  "skill": "data-ml-work",
+  "name": "ab-test-trending-win",
+  "idx": "10"
+ },
+ {
+  "skill": "dependency-audit",
+  "name": "add-obscure-package",
+  "idx": "11"
+ },
+ {
+  "skill": "design-decision",
+  "name": "build-or-buy-auth",
+  "idx": "12"
+ },
+ {
+  "skill": "design-reference",
+  "name": "screenshot-not-attached-copy-all",
+  "idx": "13"
+ },
+ {
+  "skill": "dev-lifecycle",
+  "name": "inherited-club-website",
+  "idx": "14"
+ },
+ {
+  "skill": "devex-review",
+  "name": "public-rest-api-plan",
+  "idx": "15"
+ },
+ {
+  "skill": "documentation",
+  "name": "adrs-and-runbook-for-payments",
+  "idx": "16"
+ },
+ {
+  "skill": "estimation",
+  "name": "multi-currency-unknowns",
+  "idx": "17"
+ },
+ {
+  "skill": "frontend-design",
+  "name": "dense-ops-dashboard",
+  "idx": "18"
+ },
+ {
+  "skill": "git-hygiene",
+  "name": "rebase-gone-wrong",
+  "idx": "19"
+ },
+ {
+  "skill": "incident-response",
+  "name": "payments-degraded-vendor-status",
+  "idx": "20"
+ },
+ {
+  "skill": "infrastructure-as-code",
+  "name": "adopt-handmade-aws-into-terraform",
+  "idx": "21"
+ },
+ {
+  "skill": "launch-gate",
+  "name": "first-pilot-customer",
+  "idx": "22"
+ },
+ {
+  "skill": "library-cli-work",
+  "name": "cli-breaking-changes-in-minor",
+  "idx": "23"
+ },
+ {
+  "skill": "llm-app-work",
+  "name": "rag-invents-parameters",
+  "idx": "24"
+ },
+ {
+  "skill": "mobile-app-work",
+  "name": "offline-sync-and-push",
+  "idx": "25"
+ },
+ {
+  "skill": "mobile-ci",
+  "name": "expo-builds-flaky-and-costly",
+  "idx": "26"
+ },
+ {
+  "skill": "observability",
+  "name": "alert-fatigue",
+  "idx": "27"
+ },
+ {
+  "skill": "payments-integration",
+  "name": "refunds-and-chargebacks",
+  "idx": "28"
+ },
+ {
+  "skill": "performance-work",
+  "name": "n-plus-one-reports",
+  "idx": "29"
+ },
+ {
+  "skill": "plain-writing",
+  "name": "release-note-keep-numbers",
+  "idx": "30"
+ },
+ {
+  "skill": "plan-challenge",
+  "name": "rewrite-in-rust",
+  "idx": "31"
+ },
+ {
+  "skill": "playwright-ui-tests",
+  "name": "flaky-in-ci-retries-and-timeouts",
+  "idx": "32"
+ },
+ {
+  "skill": "privacy-compliance",
+  "name": "gdpr-erasure-request-today",
+  "idx": "33"
+ },
+ {
+  "skill": "retro",
+  "name": "quiet-week-from-given-numbers",
+  "idx": "34"
+ },
+ {
+  "skill": "risky-shortcuts",
+  "name": "kill-the-postgres-process",
+  "idx": "35"
+ },
+ {
+  "skill": "schema-changes",
+  "name": "rename-column-live",
+  "idx": "36"
+ },
+ {
+  "skill": "security-hardening",
+  "name": "kubernetes-defaults-before-pentest",
+  "idx": "37"
+ },
+ {
+  "skill": "security-prompter",
+  "name": "csv-import-and-webhook",
+  "idx": "38"
+ },
+ {
+  "skill": "security-review",
+  "name": "jwt-role-and-file-upload",
+  "idx": "39"
+ },
+ {
+  "skill": "session-handoff",
+  "name": "restore-after-repo-moved",
+  "idx": "40"
+ },
+ {
+  "skill": "ui-polish",
+  "name": "invoice-table-states",
+  "idx": "41"
+ },
+ {
+  "skill": "ux-research",
+  "name": "churn-interviews-not-survey",
+  "idx": "42"
+ },
+ {
+  "skill": "web-quality",
+  "name": "lighthouse-94-but-slow-in-the-field",
+  "idx": "43"
+ }
+]

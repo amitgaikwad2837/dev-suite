@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.45.0
+- Hooks: added a Threat model section to the README and 15 `known gap` cases to `scripts/test-hooks.js` (88 checks), each a bypass that gets through today. Closing a gap makes its test fail until updated.
+- Evals: published the raw replies, blind grades and A/B mapping for the 43 second cases in `eval-runs/second-cases/`.
+- Added issue templates for skill and hook problems.
+
 ## 0.44.0
 - Ran the remaining 43 second eval cases, each with and without the skill, graded blind by a separate agent. 201 of 215 checks passed with the skill against 143 without; the skill scored higher in 33 cases, tied in 8 and lower in 2 (api-design, git-hygiene). Results are in `EVAL-RESULTS.md` and summarised in the README. No skill text changed.
 

@@ -1,0 +1,7 @@
+{"checks":[
+{"n":1,"A":true,"B":true,"note":"Both say rewrite targets a proxy; real pain is scary deploys, customers happy"},
+{"n":2,"A":false,"B":true,"note":"A lists alternatives but no do-nothing and no per-option risk; B has options table with effort, risk, learning"},
+{"n":3,"A":false,"B":true,"note":"A recommends but names no mode and does not leave mode choice; B recommends Cut and leaves choice to user"},
+{"n":4,"A":true,"B":true,"note":"A covers feature freeze/two codebases, undocumented edge cases, Rust learning/hiring; B has failure table"},
+{"n":5,"A":false,"B":true,"note":"A has no not-in-scope or could-not-check; B has both"}
+]}

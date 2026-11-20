@@ -1,0 +1,7 @@
+{"checks":[
+{"n":1,"A":false,"B":true,"note":"A lacks one-row and very large amounts cases; B covers all"},
+{"n":2,"A":false,"B":true,"note":"A has right-align and tabular numerals but no alignment/spacing check; B does"},
+{"n":3,"A":true,"B":true,"note":"Both: not colour alone, contrast, focus, keyboard"},
+{"n":4,"A":false,"B":true,"note":"Only B scores 0-10 and says what a 10 looks like, with priority order"},
+{"n":5,"A":false,"B":true,"note":"A asks for screenshot but does not say it cannot judge visuals; B does"}
+]}
