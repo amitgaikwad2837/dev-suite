@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.44.0
+- Ran the remaining 43 second eval cases, each with and without the skill, graded blind by a separate agent. 201 of 215 checks passed with the skill against 143 without; the skill scored higher in 33 cases, tied in 8 and lower in 2 (api-design, git-hygiene). Results are in `EVAL-RESULTS.md` and summarised in the README. No skill text changed.
+
 ## 0.43.0
 - Added a second eval case to each of the 49 skills that had only one, so every skill now has at least two (108 cases in all). Each new case tests something the first does not: a pushback, a trap, a smaller or ambiguous request, a missing attachment or a request the skill should decline or keep small. The graders were written with the cases, and only a sample of 6 cases was run to check them.
 
